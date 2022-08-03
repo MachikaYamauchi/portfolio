@@ -1,0 +1,31 @@
+GET https://cms.machikayamauchi.me/api/about-me?populate=deep,5
+
+###
+GET https://cms.machikayamauchi.me/api/about-me-cards?populate=deep,3
+
+###
+GET https://cms.machikayamauchi.me/api/testimonials?populate=deep,3
+
+###
+GET https://cms.machikayamauchi.me/api/projects-categories?populate=deep,6
+
+###
+GET https://cms.machikayamauchi.me/api/projects?populate=deep,3
+
+###
+GET https://cms.machikayamauchi.me/api/projects/1?populate=deep,3
+
+###
+GET https://cms.machikayamauchi.me/api/skills?populate=deep,3
+
+###
+GET http://localhost:1337/api/about-me?populate=deep,5
+
+###
+GET http://localhost:1337/api/projects-categories?populate=deep,6
+
+###
+GET http://localhost:1337/api/projects/1?populate=deep,3
+
+###
+GET http://localhost:4400/products

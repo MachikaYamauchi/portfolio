@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@charset "UTF-8";
+
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%; // In px, it is 10px
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.07rem;
+  color: #032059;
+  background-color: #F8F7F7;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: #032059;
+  font-size: 20px;
+}
+
+img {
+  max-width: 100%;// To prevent the image size getting bigger than prarent element
+}

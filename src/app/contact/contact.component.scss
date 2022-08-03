@@ -1,0 +1,138 @@
+$breakpoints: (
+  'xs': 'screen and (min-width: 1px)',
+  'sm': 'screen and (min-width: 576px)',
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 992px)',
+)!default;
+
+@mixin media($breakpoint:md){
+  @media #{map-get($breakpoints,$breakpoint)}{
+    @content;
+  }
+}
+
+.contact_page {
+  padding-top: 150px;
+  width: 90%;
+  margin: 0 auto;
+  @include media(xs) {
+    margin-bottom: 13%;
+  }
+  .pageTitle {
+    font-weight: 800;
+    letter-spacing: 0.5rem;
+    @include media(xs) {
+      font-size: 3.2rem;
+      margin-bottom: 13%;
+    }
+    @include media(sm) {
+      font-size: 3.2rem;
+      margin-bottom: 7%;
+    }
+    @include media(md) {
+      font-size: 5.6rem;
+      margin-bottom: 10%;
+    }
+    @include media(lg) {
+      font-size: 6.4rem;
+      margin-bottom: 7%;
+    }
+    img {
+      width: 9%;
+      margin-right: 16px;
+      @include media(sm) {
+        width: 8%;
+      }
+      @include media(md) {
+        width: 7%;
+        margin-right: 20px;
+      }
+      @include media(lg) {
+        width: 4%;
+        margin-right: 20px;
+      }
+    }
+  }
+  .contact_container {
+    @include media(sm) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include media(md) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include media(lg) {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+    }
+    .left_message {
+      @include media(xs) {
+        margin-bottom: 10%;
+      }
+      @include media(sm) {
+        margin-bottom: 10%;
+      }
+      @include media(lg) {
+        width: 50%;
+      }
+      h2.message {
+        font-weight: 700;
+        @include media(xs) {
+          font-size: 2rem;
+          margin-bottom: 5%;
+        }
+        @include media(sm) {
+          font-size: 2.4rem;
+          margin-bottom: 3%;
+        }
+        @include media(md) {
+          font-size: 2.8rem;
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          font-size: 3.2rem;
+          margin-bottom: 5%;
+        }
+      }
+      i {
+        color: #F27F3D;
+        @include media(xs) {
+          font-size: 2.4rem;
+        }
+
+      }
+      i.github {
+        margin-left: 5%;
+      }
+    }
+    .right_form {
+      position: relative;
+      width: 100%;
+      padding: 8%;
+      @include media(xs) {
+        min-height: 350px;
+      }
+      @include media(sm) {
+        min-height: 400px;
+      }
+      @include media(lg) {
+        width: 50%;
+      }
+      img.form_bg {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 50px 5px 50px 5px;
+      }
+      .forminput {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

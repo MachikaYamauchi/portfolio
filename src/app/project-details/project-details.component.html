@@ -1,0 +1,59 @@
+<header></header>
+<section class="projectDetail_page">
+  <div class="hero">
+    <div class="heroContent_wrapper">
+      <h1 class="project_title">{{project.attributes.Title}}</h1>
+      <div class="link_wrapper">
+        <a class="viewSite" href="">View Site</a>
+        <a class="github" href="">Github<i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+    <div class="heroImage_wrapper">
+      <img [src]="project.attributes.ProjectsHero.data.attributes.url" alt="">
+    </div>
+  </div>
+  <div class="overview">
+    <div class="container">
+      <h2 class="title_overview">Overview</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="left_panel">
+            <div class="row">
+              <div class="col-5">
+                <h3 class="title">Duration</h3>
+              </div>
+              <div class="col-7">
+                <p> {{project.attributes.Startdate}} / {{project.attributes.EndDate}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5">
+                <h3 class="title">Technology Used</h3>
+              </div>
+              <div class="col-7">
+                <ul class="technology_useds">
+                  <li *ngFor="let tech of technologyUsed">{{tech.attributes.TechnologyName}} / </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="right_panel">
+            <div class="overview">
+              <!-- <p>{{project.attributes.Description}}</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="images">
+    <div class="bg_image" *ngFor="let image of project.attributes.DetailsPageImages.data">
+      <img [src]="image.attributes.url" alt="">
+    </div>
+  </div>
+</section>
+<footer></footer>
+
+

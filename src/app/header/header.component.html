@@ -1,0 +1,30 @@
+
+<div class="header">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid p-0">
+        <a class="navbar-brand" routerLink="/"><img class="logo" [src]="aboutMe.data.attributes.Logo.data.attributes.url" alt="Machika Yamauchi Portfolio Logo"></a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav main_nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [href]="aboutMe.data.attributes.Resume.data.attributes.url" target="_blank">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/contact">Contact</a>
+              </li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+</div>
+
+
+

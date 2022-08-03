@@ -1,0 +1,239 @@
+
+<div class="hero_home">
+  <img class="hero_img_home" [src]="aboutMe.data.attributes.HomeHeroImage.data.attributes.url" alt="Machika Yamauchi portfolio homepage hero image">
+  <div class="hero_content">
+    <div class="hero_mainContent">
+      <!-- <div class="arrow_wrapper">
+        <img class="arrow_img" [src]="aboutMe.data.attributes.ArrowImage_homepage.data.attributes.url" alt="arrow image">
+      </div> -->
+      <div class="name_wrapper">
+        <h1>{{aboutMe.data.attributes.Name}}</h1>
+        <h1>{{aboutMe.data.attributes.JobTitle}}</h1>
+      </div>
+      <!-- <div class="arrow_wrapper">
+        <img class="arrow_img" [src]="aboutMe.data.attributes.ArrowImage_homepage.data.attributes.url" alt="arrow image">
+      </div> -->
+      <!-- <p class="quote">{{aboutMe.data.attributes.Quote}}</p> -->
+    </div>
+    <div class=" mouse_wrapper">
+      <div class="mouse"></div>
+    </div>
+  </div>
+  <header></header>
+</div>
+
+<div class="title">
+  <h2 class="title_clip">Projects</h2>
+  <span class="title_clip_line"></span>
+</div>
+
+<!-- <section class="textScrollX" data-scroll>
+  <div class="textScrollX_wrap">
+    <p class="textScrollX_x">
+      PROJECTSPROJECTSPROJECTSPROJECTSPROJECTSPROJECTS
+    </p>
+  </div>
+</section> -->
+
+<section class="projects">
+  <div class="project_wrapper1" data-scroll>
+    <span class="project_bg1"></span>
+    <div class="project_desc">
+      <div class="project_title">
+        <h2 class="project_title_clip">Bench Bakery</h2>
+        <!-- <span class="ttl__clip__line"></span>　元々、コメントアウトしていた場所 -->
+      </div>
+      <div class="projects_summary">
+        <p class="summary">E-commerce app with 8 stored procedures on MySQL and Rest APIs.</p>
+        <ul class="technology_useds">
+          <li>Angular JS</li>
+          <li>MySQL</li>
+          <li>REST APIs</li>
+          <li>Node.js</li>
+        </ul>
+      </div>
+      <div class="link_wrapper">
+        <a class="viewSite" href="">View Site</a>
+        <a class="github" href="">Github<i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+    <p class="project_img" data-scroll>
+      <img [src]="aboutMe.data.attributes.HomeProject1.data.attributes.url" alt="E-commerce Crud App Machika Yamauchi portfolio projects">
+    </p>
+  </div>
+
+  <div class="project_wrapper2" data-scroll>
+    <span class="project_bg2"></span>
+    <div class="project_desc">
+      <div class="project_title">
+        <h2 class="project_title_clip">Sprites & Selkies Daycare</h2>
+        <!-- <span class="ttl__clip__line"></span> 元々、コメントアウトしていた場所 -->
+      </div>
+      <div class="projects_summary">
+        <p class="summary">Daycare website for 6-month - 6 years old children. Branding and designing the website from scratch.</p>
+        <ul class="technology_useds">
+          <li>Jquery</li>
+          <li>SCSS animation</li>
+          <li>Responsive</li>
+          <li>Adobe XD</li>
+        </ul>
+      </div>
+      <div class="link_wrapper" data-scroll>
+        <a class="viewSite" href="">View Site</a>
+        <a class="github" href="">Github<i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+    <p class="project_img" data-scroll>
+      <img [src]="aboutMe.data.attributes.HomeProject2.data.attributes.url" alt="Sprites & Selkies Daycare Website Machika Yamauchi portfolio projects">
+    </p>
+  </div>
+
+  <div class="project_wrapper3" data-scroll>
+    <span class="project_bg3"></span>
+    <div class="project_desc">
+      <div class="project_title">
+        <h2 class="project_title_clip">UX/UI designer portfolio</h2>
+        <!-- <span class="ttl__clip__line"></span>　元々、コメントアウトしていた場所 -->
+      </div>
+      <div class="projects_summary">
+        <p class="summary">UX/UI designer portfolio from branding to launch with implementing CMS by WordPress.</p>
+        <ul class="technology_useds">
+          <li>WordPress</li>
+          <li>Responsive</li>
+          <li>CMS</li>
+          <li>Figma</li>
+        </ul>
+      </div>
+      <div class="link_wrapper" data-scroll>
+        <a class="viewSite" href="">View Site</a>
+        <a class="github" href="">Github<i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+    <p class="project_img" data-scroll>
+      <img [src]="aboutMe.data.attributes.HomeProject3.data.attributes.url" alt="UX/UI designer portfolio Machika Yamauchi portfolio projects">
+    </p>
+  </div>
+  <div class="projectsPageLink_btn">
+    <a routerLink="/projects">View All Projects
+      <img class="arrow_btn" [src]="aboutMe.data.attributes.Arrow_White_Right.data.attributes.url" alt="">
+    </a>
+  </div>
+</section>
+
+<div class="title" data-scroll>
+  <h2 class="title_clip">Skills</h2>
+  <span class="title_clip_line"></span>
+</div>
+
+<section class="skills">
+  <div class="skill_container">
+    <div class="skill_card">
+      <i class="devicon-angularjs-plain"></i>
+      <p>Angular</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-javascript-plain"></i>
+      <p>Javascript</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-typescript-plain"></i>
+      <p>Typescript</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-jquery-plain"></i>
+      <p>jQuery</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-html5-plain"></i>
+      <p>HTML5</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-css3-plain"></i>
+      <p>CSS3</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-sass-original"></i>
+      <p>SCSS</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-bootstrap-plain"></i>
+      <p>Bootstrap</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-php-plain"></i>
+      <p>PHP</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-wordpress-plain"></i>
+      <p>WordPress</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-nodejs-plain"></i>
+      <p>Node.js</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-mysql-plain-wordmark colored"></i>
+      <p>MySQL</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-mongodb-plain"></i>
+      <p>mongoDB</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-digitalocean-plain colored"></i>
+      <p>DigitalOcean</p>
+    </div>
+    <div class="skill_card">
+      <img src="../../assets/strapi_logo.svg" alt="">
+      <p>Strapi</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-github-original"></i>
+      <p>GitHub</p>
+    </div>
+    <div class="skill_card">
+      <i class="fa-brands fa-figma"></i>
+      <p>Figma</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-illustrator-plain"></i>
+      <p>Illustrator</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-photoshop-plain"></i>
+      <p>Photoshop</p>
+    </div>
+    <div class="skill_card">
+      <i class="devicon-aftereffects-plain"></i>
+      <p>After Effects</p>
+    </div>
+    <div class="skill_card">
+      <i class="fa-solid fa-people-group"></i>
+      <p>Agile</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact">
+  <div class="text_up contact_title">
+    <span class="text_up_js">C</span>
+    <span class="text_up_js">o</span>
+    <span class="text_up_js">n</span>
+    <span class="text_up_js">t</span>
+    <span class="text_up_js">a</span>
+    <span class="text_up_js">c</span>
+    <span class="text_up_js">t</span>
+  </div>
+  <div class="contactMessage">
+    <p>Please Feel Free to Contact Me!</p>
+  </div>z
+  <div class="contact_btn_wrapper">
+    <a href="#">Lets's Talk with me!
+      <img class="arrow_btn" [src]="aboutMe.data.attributes.Arrow_White_Right.data.attributes.url" alt="">
+    </a>
+  </div>
+
+</section>
+
+<footer></footer>

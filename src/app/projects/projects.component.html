@@ -1,0 +1,55 @@
+<!-- <div class="hero_projects">
+    <img class="hero_img_projects" [src]="heroImage" alt="">
+    <div class="hero_content">
+      <div class="pageTitle_wrapper">
+        <h1>Projects</h1>
+      </div>
+    </div>
+    <header></header>
+</div> -->
+<header></header>
+<section class="projects_page">
+  <h1 class="pageTitle"><img [src]="aboutMe.data.attributes.Arrow_Orange_Right.data.attributes.url" alt="">Projects
+  </h1>
+  <div class="projects_card">
+    <div class="container" *ngFor="let project of projects.data">
+      <h2 class="projects_category">
+        {{project.attributes.CategoryName}}
+        <img [src]="aboutMe.data.attributes.Arrow_Navy_Bottom.data.attributes.url" alt="">
+      </h2>
+      <section class="category_container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6" *ngFor="let item of project.attributes.projects.data">
+            <div class="project_card_container">
+              <a [routerLink]="[ '/projects', item.id, item.attributes.Slug]">
+                <div class="projectImg_wrapper">
+                  <img [src]="item.attributes.ProjectsHero.data.attributes.url">
+                </div>
+                <div class="project_desc">
+                  <h3 class="project_title">{{item.attributes.Title}}</h3>
+                  <p class="project_summary">{{item.attributes.Summary}}</p>
+                  <ul class="technology_used">
+                    <li *ngFor="let tech of item.attributes.technology_useds.data">{{tech.attributes.TechnologyName}}</li>
+                  </ul>
+                  <div class="arrowIcon_wrapper">
+                    <img [src]="aboutMe.data.attributes.Arrow_Orange_Right.data.attributes.url" alt="">
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="btn_home_wrapper">
+    <a routerLink="/">
+      <img [src]="aboutMe.data.attributes.Arrow_Orange_Left.data.attributes.url" alt="">
+      Back to Home</a>
+  </div>
+</section>
+<footer></footer>
+
+
+
