@@ -178,7 +178,6 @@ $breakpoints: (
             @include media(xs) {
               width: 40%;
               margin-bottom: 24px;
-              // margin: 0 auto;
             }
             @include media(sm) {
               width: 40%;
@@ -294,7 +293,6 @@ $breakpoints: (
       img {
         width: 8%;
         margin-right: 8px;
-        transform: rotate(90deg);
         @include media(sm) {
           width: 5%;
         }
@@ -303,7 +301,7 @@ $breakpoints: (
           margin-right: 20px;
         }
         @include media(lg) {
-          width: 3%;
+          width: 2%;
           // margin-right: 3px;
         }
       }
@@ -400,7 +398,6 @@ $breakpoints: (
       img {
         width: 8%;
         margin-right: 8px;
-        transform: rotate(90deg);
         @include media(sm) {
           width: 5%;
         }
@@ -409,7 +406,7 @@ $breakpoints: (
           margin-right: 20px;
         }
         @include media(lg) {
-          width: 3%;
+          width: 2%;
           // margin-right: 3px;
         }
       }

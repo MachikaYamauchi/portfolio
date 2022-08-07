@@ -5,32 +5,33 @@
   </h1>
   <div class="contact_container">
     <div class="left_message">
-      <h2 class="message">I am looking forward to listenig to your story!</h2>
+      <h2 class="message">I'm looking for <span>full-time work</span> in the Vancouver area. I'm open to <span>all possibilities.</span></h2>
+      <h2 class="message">If you are interested in me, I am looking forward to <span>talking with you.</span></h2>
       <h2 class="message">Thank you!</h2>
-      <i class="fa-brands fa-linkedin-in linkedin"></i>
-      <i class="fa-brands fa-github github"></i>
+      <a class="social_icon_bg" [href]="aboutMe.data.attributes.LinkedInLink" target="_blank"><i class="fa-brands fa-linkedin-in linkedin"></i></a>
+      <a class="social_icon_bg" [href]="aboutMe.data.attributes.GithubLink" target="_blank"><i class="fa-brands fa-github github"></i></a>
 
     </div>
     <div class="right_form">
       <img class="form_bg" [src]="aboutMe.data.attributes.HomeHeroImage.data.attributes.url" alt="">
       <div class="container">
-        <div class="forminput">
+        <div class="inputList">
           <label for="name" class="form-label">Your Name</label>
-          <input [(ngModel)]="name" type="text" class="form-control" id="name" aria-describedby="nameHelp">
+          <input [(ngModel)]="name" type="text" class="form-control input-lg" id="name" aria-describedby="nameHelp">
         </div>
-        <div class="forminput">
+        <div class="inputList">
           <label for="email" class="form-label">Email Address</label>
-          <input [(ngModel)]="email" type="email" class="form-control" id="email">
+          <input [(ngModel)]="email" type="email" class="form-control input-lg" id="email">
         </div>
-        <div class="forminput">
+        <div class="inputList">
           <label for="message" class="form-label">Message</label>
           <textarea [(ngModel)]="message" class="form-control" id="message" rows="3"></textarea>
         </div>
-        <!-- <div class="mt-3">
+        <!-- <div class="inputList">
           <re-captcha (resolved)="resolved($event)"
           siteKey="6LcjP-cgAAAAACtadodEUZTplCfGX3u6yXZ3e4fq"></re-captcha>
         </div> -->
-        <button (click)="submit()" [disabled]="formInvalid">Submit<i class="fa-solid fa-paper-plane"></i></button>
+        <button class="submit_btn" (click)="submit()" [disabled]="formInvalid">Submit<i class="fa-solid fa-paper-plane"></i></button>
       </div>
     </div>
   </div>
