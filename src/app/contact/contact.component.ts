@@ -21,7 +21,6 @@ export class ContactComponent implements OnInit {
   constructor(private cs:CommonService) { }
 
   submit() {
-    this.formInvalid = true;
     let newlead = {
       "data": {
         "Name": this.name,
@@ -30,12 +29,12 @@ export class ContactComponent implements OnInit {
       }
     }
     this.cs.postLead(newlead).subscribe(res => {
+      console.log(res)
       this.formMessageHidden = false;
     })
   }
 
   resolved(event:any) {
-    // if "私はロボットではありません"にチェックが入ったら、eventに文字列がはいるので、入ったらチェックされたということで、formInvalidをfalseにして、submitボタンがクリックできるようにしている。
     if(event) {
       this.formInvalid = false;
     }
