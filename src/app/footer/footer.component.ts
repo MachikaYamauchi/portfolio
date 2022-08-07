@@ -3,7 +3,7 @@ import { AboutMe, Project, Skill } from '../interfaces/interface';
 import { CommonService } from '../services/common.service';
 
 @Component({
-  selector: 'footer',
+  selector: 'portfolio-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })

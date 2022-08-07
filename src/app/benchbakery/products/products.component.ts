@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { Product } from '../interfaces/benchbakeryInterface';
 import { CommonService } from './../services/common.service';
 
@@ -8,6 +9,8 @@ import { CommonService } from './../services/common.service';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
+
+  server = environment.bakeryserver;
 
   productsJSON:Product[] =[];
   display:any = false;

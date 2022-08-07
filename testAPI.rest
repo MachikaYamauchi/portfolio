@@ -19,6 +19,18 @@ GET https://cms.machikayamauchi.me/api/projects/1?populate=deep,3
 GET https://cms.machikayamauchi.me/api/skills?populate=deep,3
 
 ###
+POST https://cms.machikayamauchi.me/api/leads
+Content-Type: application/json
+
+{
+  "data": {
+    "Name": "test name",
+    "Email": "test@test.com",
+    "Message": "test test test"
+  }
+}
+
+###
 GET http://localhost:1337/api/about-me?populate=deep,5
 
 ###
@@ -29,3 +41,5 @@ GET http://localhost:1337/api/projects/1?populate=deep,3
 
 ###
 GET http://localhost:4400/products
+
+

@@ -41,5 +41,9 @@ export class CommonService {
     return this.http.get<{data:Project}>(this.url + "/api/projects/" + id + "?populate=deep,5")
   }
 
+  postLead(data:any) {
+    return this.http.post(this.url + "/api/leads", data);
+  }
+
 
 }

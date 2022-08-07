@@ -15,6 +15,9 @@ export class HomeComponent implements OnInit {
   skills:Skill[] = [];
   aboutMe:AboutMe;
   projects:Project[] = [];
+  project1:Project;
+  project2:Project;
+  project3:Project;
 
   server = environment.server;
 
@@ -245,9 +248,11 @@ export class HomeComponent implements OnInit {
     })
     this.cs.getProjects().subscribe(projects => {
       console.log(projects);
+      this.project1 = projects.data[0];
+      this.project2 = projects.data[1];
+      this.project3 = projects.data[4];
     })
     this.cs.getSkills().subscribe( skills => {
-      console.log(skills);
       this.skills=skills.data;
     })
 

@@ -5,7 +5,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 @Component({
-  selector: 'header',
+  selector: 'portfolio-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

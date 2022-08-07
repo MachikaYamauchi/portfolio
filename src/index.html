@@ -30,18 +30,19 @@
 </head>
 <body>
   <app-root></app-root>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-  $(function() {
-  var rotate = function(logo, angle) {
-    logo.css({
-    "transform" : "rotate("+angle+"deg)"
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function() {
+      var rotate = function(logo, angle) {
+        logo.css({
+        "transform" : "rotate("+angle+"deg)"
+        });
+      }
+      $(window).scroll(function(){
+        rotate($(".logo"), $(window).scrollTop()*0.2);
+      })
     });
-  }
-  $(window).scroll(function(){
-    rotate($(".logo"), $(window).scrollTop()*0.2);
-  })
-  });
-</script>
+  </script>
+</body>
+
 </html>

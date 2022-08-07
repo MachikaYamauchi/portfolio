@@ -130,9 +130,9 @@
           <tbody>
             <tr *ngFor="let item of productsJSON">
               <th scope="row">{{item.id}}</th>
-              <td><img src="../../{{item.image1}}" alt=""></td>
-              <td><img src="../../{{item.image2}}" alt=""></td>
-              <td><img src="../../{{item.image3}}" alt=""></td>
+              <td><img [src]="server + '/' + item.image1" alt=""></td>
+              <td><img [src]="server + '/' + item.image2" alt=""></td>
+              <td><img [src]="server + '/' + item.image3" alt=""></td>
               <td>{{item.name}}</td>
               <td>{{item.rating}}</td>
               <td>{{item.price}}</td>
@@ -159,21 +159,15 @@
         <h3>Add new products</h3>
         <div class="mb-3">
           <label for="formFile" class="form-label">Image1</label>
-          <input class="form-control" type="file" id="formFile" (change)="trackFile($event)">
-          <label for="exampleInputPassword1" class="form-label">Input File name of Image 1</label>
-          <input [(ngModel)]="image1" type="text" class="form-control form-control-lg" id="exampleInputPassword1">
+          <input class="form-control" type="file" id="formFile" (change)="trackFile1($event)">
         </div>
         <div class="mb-3">
           <label for="formFile" class="form-label">Image2</label>
-          <input class="form-control" type="file" id="formFile" (change)="trackFile($event)">
-          <label for="exampleInputPassword1" class="form-label">Input File name of Image 2</label>
-          <input [(ngModel)]="image2" type="text" class="form-control form-control-lg" id="exampleInputPassword1">
+          <input class="form-control" type="file" id="formFile" (change)="trackFile2($event)">
         </div>
         <div class="mb-3">
           <label for="formFile" class="form-label">Image3</label>
-          <input class="form-control" type="file" id="formFile" (change)="trackFile($event)">
-          <label for="exampleInputPassword1" class="form-label">Input File name of Image 3</label>
-          <input [(ngModel)]="image3" type="text" class="form-control form-control-lg" id="exampleInputPassword1">
+          <input class="form-control" type="file" id="formFile" (change)="trackFile3($event)">
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">name</label>

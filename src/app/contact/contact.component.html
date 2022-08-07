@@ -1,4 +1,4 @@
-<header></header>
+<portfolio-header></portfolio-header>
 <section class="contact_page">
   <h1 class="pageTitle">
     <span><img [src]="aboutMe.data.attributes.Arrow_Orange_Right.data.attributes.url" alt="">Contact me</span>
@@ -16,19 +16,23 @@
       <div class="container">
         <div class="forminput">
           <label for="name" class="form-label">Your Name</label>
-          <input [(ngModel)]="name" type="text" class="form-control" id="name" aria-describedby="emailHelp">
+          <input [(ngModel)]="name" type="text" class="form-control" id="name" aria-describedby="nameHelp">
         </div>
         <div class="forminput">
           <label for="email" class="form-label">Email Address</label>
           <input [(ngModel)]="email" type="email" class="form-control" id="email">
         </div>
         <div class="forminput">
-          <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-          <textarea [(ngModel)]="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <label for="message" class="form-label">Message</label>
+          <textarea [(ngModel)]="message" class="form-control" id="message" rows="3"></textarea>
         </div>
-        <button>Submit<i class="fa-solid fa-paper-plane"></i></button>
+        <!-- <div class="mt-3">
+          <re-captcha (resolved)="resolved($event)"
+          siteKey="6LcjP-cgAAAAACtadodEUZTplCfGX3u6yXZ3e4fq"></re-captcha>
+        </div> -->
+        <button (click)="submit()" [disabled]="formInvalid">Submit<i class="fa-solid fa-paper-plane"></i></button>
       </div>
     </div>
   </div>
 </section>
-<footer></footer>
+<portfolio-footer></portfolio-footer>

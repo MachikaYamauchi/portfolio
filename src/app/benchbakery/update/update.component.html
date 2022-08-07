@@ -1,16 +1,16 @@
 <div class="container update">
   <h3>Update products</h3>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Image1</label>
-    <input [(ngModel)]="image1" type="text" class="form-control form-control-lg" id="exampleInputPassword1">
+    <label for="formFile" class="form-label">Image1</label>
+    <input class="form-control" type="file" id="formFile" (change)="trackFile1($event)">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Image2</label>
-    <input [(ngModel)]="image2" type="text" class="form-control form-control-lg" id="exampleInputPassword1">
+    <label for="formFile" class="form-label">Image2</label>
+    <input class="form-control" type="file" id="formFile" (change)="trackFile2($event)">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Image3</label>
-    <input [(ngModel)]="image3" type="text" class="form-control form-control-lg" id="exampleInputPassword1">
+    <label for="formFile" class="form-label">Image3</label>
+    <input class="form-control" type="file" id="formFile" (change)="trackFile3($event)">
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">name</label>

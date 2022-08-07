@@ -9,16 +9,18 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav main_nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="/projects">Projects</a>
+                <a class="nav-link active" aria-current="page" routerLink="/projects">
+                  <img [src]="aboutMe.data.attributes.Arrow_Orange_45deg.data.attributes.url" alt="">
+                  Projects</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/about">About</a>
+                <a class="nav-link" routerLink="/about"><img [src]="aboutMe.data.attributes.Arrow_Orange_45deg.data.attributes.url" alt="">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" [href]="aboutMe.data.attributes.Resume.data.attributes.url" target="_blank">Resume</a>
+                <a class="nav-link" href="../../assets/resume.pdf" target="_blank"><img [src]="aboutMe.data.attributes.Arrow_Orange_45deg.data.attributes.url" alt="">Resume</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLink="/contact">Contact</a>
+                <a class="nav-link" routerLink="/contact"><img [src]="aboutMe.data.attributes.Arrow_Orange_45deg.data.attributes.url" alt="">Contact</a>
               </li>
           </ul>
         </div>
