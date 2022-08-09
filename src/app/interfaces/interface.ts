@@ -162,6 +162,9 @@ export interface Project {
     EndDate:string;
     WebsiteLink:string;
     Slug:string;
+    Role:string;
+    GithubLink:string;
+    RouterLink:string;
     ProjectsHero: {
       data: {
         attributes: {
@@ -193,6 +196,14 @@ export interface Project {
           }
         }
       ]
+    },
+    projects_category: {
+      data: {
+        id:number;
+        attributes: {
+          CategoryName:string;
+        }
+      }
     }
   }
 }

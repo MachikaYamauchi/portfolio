@@ -20,6 +20,8 @@ import { LoginComponent } from './benchbakery/login/login.component';
 import { ProductsComponent } from './benchbakery/products/products.component';
 import { StockComponent } from './benchbakery/stock/stock.component';
 import { UpdateComponent } from './benchbakery/update/update.component';
+import { PlusvaultComponent } from './plusvault/plusvault.component';
+import { BirdbooksComponent } from './birdbooks/birdbooks.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { UpdateComponent } from './benchbakery/update/update.component';
     LoginComponent,
     ProductsComponent,
     StockComponent,
-    UpdateComponent
+    UpdateComponent,
+    PlusvaultComponent,
+    BirdbooksComponent
 
 
   ],

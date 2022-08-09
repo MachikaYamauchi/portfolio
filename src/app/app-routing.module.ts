@@ -13,6 +13,8 @@ import { LoginComponent } from './benchbakery/login/login.component';
 import { ProductsComponent } from './benchbakery/products/products.component';
 import { StockComponent } from './benchbakery/stock/stock.component';
 import { UpdateComponent } from './benchbakery/update/update.component';
+import { PlusvaultComponent } from './plusvault/plusvault.component';
+import { BirdbooksComponent } from './birdbooks/birdbooks.component';
 
 const routes: Routes = [
   {path:"header", component:HeaderComponent},
@@ -27,7 +29,9 @@ const routes: Routes = [
   {path:"benchbakery/login", component:LoginComponent},
   {path:"benchbakery/products", component:ProductsComponent},
   {path:"benchbakery/stock", component:StockComponent},
-  {path:"benchbakery/update/:id", component:UpdateComponent}
+  {path:"benchbakery/update/:id", component:UpdateComponent},
+  {path:"case_studies/plusvault", component:PlusvaultComponent},
+  {path:"case_studies/birdbooks", component:BirdbooksComponent}
 ];
 
 @NgModule({

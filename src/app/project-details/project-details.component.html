@@ -3,9 +3,14 @@
   <div class="hero">
     <div class="heroContent_wrapper">
       <h1 class="project_title">{{project.attributes.Title}}</h1>
-      <div class="link_wrapper">
-        <a class="viewSite" href="">View Site</a>
-        <a class="github" href="">Github<i class="fa-brands fa-github"></i></a>
+      <div class="link_wrapper" *ngIf="project.attributes.projects_category.data.attributes.CategoryName === 'Web Development'">
+        <a class="viewSite" [href]="project.attributes.WebsiteLink" [hidden]="isWebDevRouterLink">View Site</a>
+        <a class="viewSite" [routerLink]="project.attributes.RouterLink" *ngIf="isWebDevRouterLink">View Site</a>
+        <a class="github" [href]="project.attributes.GithubLink" [hidden]="isGithub">Github<i class="fa-brands fa-github"></i></a>
+      </div>
+      <div class="link_wrapper" *ngIf="project.attributes.projects_category.data.attributes.CategoryName === 'Case Studies'">
+        <a class="viewSite" [href]="project.attributes.WebsiteLink">Prototype</a>
+        <a class="github" [routerLink]="project.attributes.RouterLink">Case Study</a>
       </div>
     </div>
     <div class="heroImage_wrapper">

@@ -17,18 +17,26 @@ export class ProjectDetailsComponent implements OnInit {
   technologyUsed:any[] =[];
   server = environment.server;
 
+  isGithub:boolean = false;
+  isWebDevRouterLink = false;
+
   constructor(private cs:CommonService, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     let id:any = this.route.snapshot.paramMap.get("id");
     this.cs.getProjectByID(id).subscribe(res => {
       this.project = res.data;
-      this.projectTitle = res.data.attributes.Title;
-      this.heroImage = this.server + res.data.attributes.DetailsPageHero.data.attributes.url;
-      this.projectDescription = res.data.attributes.Description;
-      this.technologyUsed = res.data.attributes.technology_useds.data;
+      // this.projectTitle = res.data.attributes.Title;
+      // this.heroImage = this.server + res.data.attributes.DetailsPageHero.data.attributes.url;
+      // this.projectDescription = res.data.attributes.Description;
+      // this.technologyUsed = res.data.attributes.technology_useds.data;
       console.log(this.technologyUsed);
-      // this.heroImage = res.data.attributes.;
+      if(res.data.attributes.GithubLink == null) {
+        this.isGithub = true;
+      }
+      if(res.data.attributes.WebsiteLink === "") {
+        this.isWebDevRouterLink = true;
+      }
     })
   }
 

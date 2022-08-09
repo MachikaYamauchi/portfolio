@@ -44,6 +44,7 @@ export class ContactComponent implements OnInit {
     this.cs.getAboutMe().subscribe( aboutMe => {
       this.aboutMe = aboutMe;
     })
+    this.submit();
   }
 
 }

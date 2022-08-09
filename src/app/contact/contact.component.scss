@@ -137,15 +137,16 @@ $breakpoints: (
       width: 100%;
       @include media(xs) {
         padding: 10%;
-        min-height: 480px;
+        min-height: 500px;
         margin-bottom: 20%;
-
       }
       @include media(sm) {
         min-height: 400px;
       }
       @include media(lg) {
         width: 50%;
+        padding: 5%;
+        margin-bottom: 3%;
       }
       img.form_bg {
         position: absolute;
@@ -155,22 +156,36 @@ $breakpoints: (
         top: 0;
         left: 0;
         z-index: -1;
-        border-radius: 50px 5px 50px 5px;
+        border-radius: 60px 5px 60px 5px;
+        box-shadow: 0 0 10px 0 rgb(96 108 123 / 20%);
       }
       .inputList {
         @include media(xs) {
-          margin-bottom: 8%;
+          margin-bottom: 10%;
         }
         @include media(lg) {
-          margin-bottom: 12%;
+          margin-bottom: 8%;
         }
         label {
           font-weight: 600;
           @include media(xs) {
             font-size: 1.6rem;
           }
+          @include media(md) {
+            font-size: 1.8rem;
+          }
           @include media(lg) {
             font-size: 2.4rem;
+          }
+        }
+        .form-control {
+          border: 1px solid #032059;
+          box-shadow: 0 0 5px 0 rgb(96 108 123 / 20%);
+          @include media(xs) {
+            font-size: 1.6rem;
+          }
+          @include media(md) {
+            font-size: 2rem;
           }
         }
       }
@@ -180,18 +195,56 @@ $breakpoints: (
         text-align: center;
         color: white;
         border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(80, 90, 103, 0.4);
         @include media(xs) {
           margin-top: 10%;
           font-size: 2rem;
           width: 100%;
           padding: 5px 0;
+          margin-bottom: 8%;
+        }
+        @include media(sm) {
+          margin-top: 3%;
+          padding: 8px 0;
+          margin-bottom: 5%;
+        }
+        @include media(md) {
+          margin-top: 0;
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          margin-top: 0;
+          padding: 16px 0;
         }
         i {
           @include media(xs) {
             margin-left: 16px;
           }
         }
-
+      }
+      .submission_success {
+        font-weight: 700;
+        @include media(xs) {
+          font-size: 1.8rem;
+        }
+        @include media(sm) {
+          font-size: 2rem;
+        }
+        @include media(lg) {
+          font-size: 2.4rem;
+        }
+        span {
+          color: #F27F3D;
+          @include media(xs) {
+            font-size: 2rem;
+          }
+          @include media(sm) {
+            font-size: 2.4rem;
+          }
+          @include media(lg) {
+            font-size: 2.8rem;
+          }
+        }
       }
     }
   }
