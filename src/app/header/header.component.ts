@@ -25,7 +25,6 @@ export class HeaderComponent implements OnInit {
         start: 'top top',
         end: 'top 300px',
         scrub: true,
-
       }
     })
   }

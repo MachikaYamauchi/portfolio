@@ -142,6 +142,8 @@ export interface Testimonial {
   attributes: {
     Name:string;
     Testimonial:string;
+    JobTitle:string;
+    VanArts_instructor_link:string
     Image: {
       data: {
         attributes: {

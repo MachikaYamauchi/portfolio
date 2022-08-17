@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonService } from '../services/common.service';
 import { environment } from 'src/environments/environment.prod';
-import { Project } from '../interfaces/interface';
+import { AboutMe, Project } from '../interfaces/interface';
 
 @Component({
   selector: 'app-project-details',
@@ -10,6 +10,7 @@ import { Project } from '../interfaces/interface';
   styleUrls: ['./project-details.component.scss']
 })
 export class ProjectDetailsComponent implements OnInit {
+  aboutMe:AboutMe;
   project:Project;
   projectTitle:string = "";
   heroImage:string = "";
@@ -26,10 +27,6 @@ export class ProjectDetailsComponent implements OnInit {
     let id:any = this.route.snapshot.paramMap.get("id");
     this.cs.getProjectByID(id).subscribe(res => {
       this.project = res.data;
-      // this.projectTitle = res.data.attributes.Title;
-      // this.heroImage = this.server + res.data.attributes.DetailsPageHero.data.attributes.url;
-      // this.projectDescription = res.data.attributes.Description;
-      // this.technologyUsed = res.data.attributes.technology_useds.data;
       console.log(this.technologyUsed);
       if(res.data.attributes.GithubLink == null) {
         this.isGithub = true;
@@ -37,6 +34,10 @@ export class ProjectDetailsComponent implements OnInit {
       if(res.data.attributes.WebsiteLink === "") {
         this.isWebDevRouterLink = true;
       }
+    })
+
+    this.cs.getAboutMe().subscribe( aboutMe => {
+      this.aboutMe = aboutMe;
     })
   }
 

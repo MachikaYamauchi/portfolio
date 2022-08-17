@@ -15,7 +15,7 @@
     <div class="right_form">
       <img class="form_bg" [src]="aboutMe.data.attributes.HomeHeroImage.data.attributes.url" alt="">
       <div class="container">
-        <form #form="ngForm">
+        <form #form="ngForm" (ngSubmit)="submit(form)">
           <div class="inputList">
             <label for="name" class="form-label">Your Name</label>
             <input
@@ -85,7 +85,7 @@
             <re-captcha (resolved)="resolved($event)"
             siteKey="6LcjP-cgAAAAACtadodEUZTplCfGX3u6yXZ3e4fq"></re-captcha>
           </div>
-          <button type="submit" class="btn submit_btn" (click)="submit()" [disabled]="formInvalid">Submit<i class="fa-solid fa-paper-plane"></i></button>
+          <button type="submit" class="btn submit_btn" [disabled]="formInvalid">Submit<i class="fa-solid fa-paper-plane"></i></button>
           <div class="submission_success" [hidden]="formMessageHidden">
             Thank you for contacting me, <span>{{name}}</span>!<br>I will get in touch with you soon!
           </div>

@@ -210,36 +210,31 @@ $breakpoints: (
       }
     }
     .resume_btn {
+      @include media(xs) {
+        margin-bottom: 30%;
+      }
+      @include media(md) {
+        margin-bottom: 20%;
+      }
+      @include media(lg) {
+        margin-bottom: 16%;
+      }
       a {
-        background: #F27F3D;
-        border-radius: 3px;
+        position: relative;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
         margin: 0 auto;
-
-        @include media(xs) {
-          width: 90%;
-          padding: 10px 32px;
-          font-size: 2rem;
-        }
-        @include media(sm) {
-          width: 50%;
-          font-size: 2rem;
-        }
-        @include media(md) {
-          width: 50%;
-          font-size: 2rem;
-        }
-        @include media(lg) {
-          width: 30%;
-          font-size: 2.4rem;
-          // padding: 10px 24px;
-
-        }
+        max-width: 340px;
+        padding: 10px 25px;
         color: white;
         transition: 0.3s ease-in-out;
-        font-weight: 500;
+        font-weight: 700;
+        font-size: 2.4rem;
+        background: #F27F3D;
+        border-radius: 50px;
+        border: 0.2rem solid #032059;
+        box-shadow: 0.3rem 0.3rem 0px 0.2rem #032059;
         i {
           color: white;
           width: 8%;
@@ -252,8 +247,20 @@ $breakpoints: (
         }
       }
       a:hover {
-        background: #032059;
-        letter-spacing: 0.1em;
+        transform: translate3d(0.2rem, 0.2rem, 0);
+        box-shadow: none;
+        opacity: 1;
+        transition: all 0.2s;
+      }
+      @keyframes slideBlink {
+        from {
+          // opacity: 0;
+          transform: translateX(3);
+        }
+        to {
+          // opacity: 1;
+          transform: translateX(20px);
+        }
       }
     }
   }
@@ -336,8 +343,9 @@ $breakpoints: (
         }
       }
       .cite {
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
+        display: flex;
         img {
           margin-right: 16px;
           @include media(xs) {
@@ -356,8 +364,10 @@ $breakpoints: (
             border-radius: 50%;
           }
         }
-        span {
-          font-size: 16px;
+        .name_container {
+          .school_name {
+            font-size: 18px;
+          }
         }
       }
 

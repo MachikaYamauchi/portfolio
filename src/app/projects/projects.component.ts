@@ -12,17 +12,22 @@ import { AboutMe, Project, ProjectsByCategory } from '../interfaces/interface';
 export class ProjectsComponent implements OnInit {
   aboutMe:AboutMe;
   projects:ProjectsByCategory;
+  loading = false;
+  showElement = false;
 
   server = environment.server;
 
   constructor(private cs:CommonService) { }
 
   ngOnInit(): void {
+    this.loading = true;
     this.cs.getAboutMe().subscribe( aboutMe => {
       this.aboutMe = aboutMe;
     })
 
     this.cs.getProjectsByCategory().subscribe(res => {
+      this.loading = false;
+      this.showElement = true;
       this.projects = res;
       console.log(this.projects);
     })

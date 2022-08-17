@@ -102,9 +102,8 @@ export class HomeComponent implements OnInit {
     });
   }
 
-
+  // Fade In from Bottom
   fadein() {
-    //下からフェードイン
     const fadeUps = document.querySelectorAll('.project_desc, .project_img, .projectsPageLink_btn, .skills, .contactMessage, .contact_btn_wrapper');
     fadeUps.forEach((fadeUp, index) => {
       gsap.fromTo(fadeUp, {
@@ -132,24 +131,8 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  // // 背景テキストがスクロールに合わせて左へ動く
-  // slideText() {
-  //   gsap.fromTo( '.textScrollX_x', {
-  //     x: "-15.1797px",
-  //   },
-  //   {
-  //     x: '-1603.18px',
-  //     scrollTrigger: {
-  //       trigger: '.textScrollX',
-  //       start: 'top center+=300' ,
-  //       end: 'bottom top',
-  //       scrub: 0.8,
-  //     }
-  //   }
-  //   );
-  // }
 
-  // 背景が徐々に表示
+  // Background shows gradually FROM LEFT
   slideBackgroundLeft () {
     gsap.fromTo('.project_bg1', {
         x: "0",
@@ -187,7 +170,7 @@ export class HomeComponent implements OnInit {
   )
   }
 
-  // 背景が徐々に表示
+  // Background shows gradually FROM RIGHT
   slideBackgroundRight () {
     gsap.fromTo('.project_bg2', {
         x: "0",
@@ -232,25 +215,25 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  ngAfterViewInit(): void {
+  // ngAfterViewInit(): void {
 
-    // this.slideTitle();
-    // this.slideText();
-    // this.slideBackgroundLeft();
-    // this.slideBackgroundRight();
-    // this.fadeinProjectSummary();
-    // this.fadeinImage();
-  }
+  //   this.slideTitle();
+  //   this.slideText();
+  //   this.slideBackgroundLeft();
+  //   this.slideBackgroundRight();
+  //   this.fadeinProjectSummary();
+  //   this.fadeinImage();
+  // }
 
   ngOnInit(): void {
     this.cs.getAboutMe().subscribe( aboutMe => {
       this.aboutMe = aboutMe;
     })
     this.cs.getProjects().subscribe(projects => {
-      console.log(projects);
+      console.log(projects)
       this.project1 = projects.data[0];
-      this.project2 = projects.data[1];
-      this.project3 = projects.data[4];
+      this.project2 = projects.data[5];
+      this.project3 = projects.data[1];
     })
     this.cs.getSkills().subscribe( skills => {
       this.skills=skills.data;
@@ -258,12 +241,10 @@ export class HomeComponent implements OnInit {
 
     this.slideTitle();
     this.slideProjectTitle();
-    // this.slideText();
     this.slideBackgroundLeft();
     this.slideBackgroundRight();
     this.fadein();
     this.textUp();
-    // this.fadeinImage();
   }
 
 }

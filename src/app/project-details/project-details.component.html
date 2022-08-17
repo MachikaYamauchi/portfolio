@@ -46,7 +46,7 @@
         <div class="col-lg-6">
           <div class="right_panel">
             <div class="overview">
-              <p>{{project.attributes.Description}}</p>
+              <p [innerHTML]="project.attributes.Description"></p>
             </div>
           </div>
         </div>
@@ -57,6 +57,11 @@
     <div class="bg_image" *ngFor="let image of project.attributes.DetailsPageImages.data">
       <img [src]="image.attributes.url" alt="">
     </div>
+  </div>
+  <div class="btn_projects_wrapper">
+    <a routerLink="/projects">View All projects
+      <img class="arrow_btn" [src]="aboutMe.data.attributes.Arrow_White_Right.data.attributes.url" alt="">
+    </a>
   </div>
 </section>
 <portfolio-footer></portfolio-footer>

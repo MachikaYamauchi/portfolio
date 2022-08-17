@@ -214,5 +214,61 @@ $breakpoints: (
     }
 
   }
+
+  .btn_projects_wrapper {
+    @include media(xs) {
+      margin-bottom: 30%;
+    }
+    @include media(md) {
+      margin-bottom: 20%;
+    }
+    @include media(lg) {
+      margin-bottom: 16%;
+    }
+    a {
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 340px;
+      padding: 10px 25px;
+      color: white;
+      transition: 0.3s ease-in-out;
+      font-weight: 700;
+      font-size: 2.4rem;
+      background: #F27F3D;
+      border-radius: 50px;
+      border: 0.2rem solid #032059;
+      box-shadow: 0.3rem 0.3rem 0px 0.2rem #032059;
+      img {
+        width: 8%;
+        @include media(md) {
+          width: 7%;
+        }
+        @include media(lg) {
+          width: 7%;
+        }
+        animation: slideBlink 1.2s linear infinite;
+        transition: ease-in-out;
+      }
+    }
+    a:hover {
+      transform: translate3d(0.2rem, 0.2rem, 0);
+      box-shadow: none;
+      opacity: 1;
+      transition: all 0.2s;
+    }
+    @keyframes slideBlink {
+      from {
+        // opacity: 0;
+        transform: translateX(3);
+      }
+      to {
+        // opacity: 1;
+        transform: translateX(20px);
+      }
+    }
+  }
 }
 

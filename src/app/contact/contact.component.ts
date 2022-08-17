@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AboutMe } from '../interfaces/interface';
 import { CommonService } from '../services/common.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -20,7 +21,7 @@ export class ContactComponent implements OnInit {
 
   constructor(private cs:CommonService) { }
 
-  submit() {
+  submit(form: NgForm) {
     let newlead = {
       "data": {
         "Name": this.name,
@@ -31,6 +32,10 @@ export class ContactComponent implements OnInit {
     this.cs.postLead(newlead).subscribe(res => {
       console.log(res)
       this.formMessageHidden = false;
+      // this.name = "";
+      // this.email = "";
+      // this.message = "";
+      form.resetForm();
     })
   }
 
@@ -44,7 +49,6 @@ export class ContactComponent implements OnInit {
     this.cs.getAboutMe().subscribe( aboutMe => {
       this.aboutMe = aboutMe;
     })
-    this.submit();
   }
 
 }

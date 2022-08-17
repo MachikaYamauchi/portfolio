@@ -1,15 +1,13 @@
-<!-- <div class="hero_projects">
-    <img class="hero_img_projects" [src]="heroImage" alt="">
-    <div class="hero_content">
-      <div class="pageTitle_wrapper">
-        <h1>Projects</h1>
-      </div>
-    </div>
-    <header></header>
-</div> -->
-<portfolio-header></portfolio-header>
+
+<portfolio-header *ngIf="showElement"></portfolio-header>
+<div class="d-flex justify-content-center align-items-center loadingScreeen" *ngIf="loading">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div>Loading pages...</div>
+</div>
 <section class="projects_page">
-  <h1 class="pageTitle"><img [src]="aboutMe.data.attributes.Arrow_Orange_Right.data.attributes.url" alt="">Projects
+  <h1 class="pageTitle" *ngIf="showElement"><img [src]="aboutMe.data.attributes.Arrow_Orange_Right.data.attributes.url" alt="">Projects
   </h1>
   <div class="projects_card">
     <div class="container" *ngFor="let project of projects.data">
@@ -19,7 +17,7 @@
       </h2>
       <section class="category_container">
         <div class="row">
-          <div class="col-lg-4 col-sm-6" *ngFor="let item of project.attributes.projects.data">
+          <div class="col-lg-4" *ngFor="let item of project.attributes.projects.data">
             <div class="project_card_container">
               <a [routerLink]="[ '/projects', item.id, item.attributes.Slug]">
                 <div class="projectImg_wrapper">
@@ -37,19 +35,19 @@
                 </div>
               </a>
             </div>
-
           </div>
         </div>
       </section>
     </div>
   </div>
-  <div class="btn_home_wrapper">
-    <a routerLink="/">
-      <img [src]="aboutMe.data.attributes.Arrow_Orange_Left.data.attributes.url" alt="">
-      Back to Home</a>
+  <div class="btn_home_wrapper" *ngIf="showElement">
+    <a routerLink="/">Back to Home
+      <img class="arrow_btn" [src]="aboutMe.data.attributes.Arrow_White_Right.data.attributes.url" alt="">
+    </a>
   </div>
 </section>
-<portfolio-footer></portfolio-footer>
+
+<portfolio-footer *ngIf="showElement"></portfolio-footer>
 
 
 

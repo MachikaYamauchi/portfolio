@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 import { Product } from '../interfaces/benchbakeryInterface';
 import { CommonService } from './../services/common.service';
 

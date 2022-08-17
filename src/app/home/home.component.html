@@ -5,7 +5,7 @@
     <div class="hero_mainContent">
       <div class="name_wrapper">
         <h1 class="myName">MACHIKA YAMAUCHI</h1>
-        <h1 class="job_title">{{aboutMe.data.attributes.JobTitle}}</h1>
+        <h1 class="job_title"><span>F</span>ront-End <span>D</span>eveloper</h1>
       </div>
     </div>
     <div class="scroll_bar_wrapper">
@@ -17,42 +17,29 @@
 
 <div class="title">
   <h2 class="title_clip">Projects</h2>
-  <!-- <span class="title_clip_line"></span> -->
 </div>
-
-<!-- <section class="textScrollX" data-scroll>
-  <div class="textScrollX_wrap">
-    <p class="textScrollX_x">
-      PROJECTSPROJECTSPROJECTSPROJECTSPROJECTSPROJECTS
-    </p>
-  </div>
-</section> -->
 
 <section class="projects">
   <div class="project_wrapper1" data-scroll>
     <span class="project_bg1"></span>
-    <div class="project_desc">
-      <div class="project_title">
-        <h2 class="project_title_clip">{{project1.attributes.Title}}</h2>
-        <!-- <span class="ttl__clip__line"></span>　元々、コメントアウトしていた場所 -->
+      <div class="project_desc">
+        <div class="project_title">
+          <h2 class="project_title_clip">{{project1.attributes.Title}}</h2>
+        </div>
+        <div class="projects_summary">
+          <p class="summary">{{project1.attributes.Summary}}</p>
+          <ul class="technology_useds">
+            <li *ngFor="let tech of project1.attributes.technology_useds.data">{{tech.attributes.TechnologyName}}</li>
+          </ul>
+        </div>
+        <div class="link_wrapper">
+          <a class="viewSite" [routerLink]="[ '/projects', project1.id, project1.attributes.Slug]">More Details</a>
+          <a class="github" [href]="project1.attributes.GithubLink" target="_blank">Github<i class="fa-brands fa-github"></i></a>
+        </div>
       </div>
-      <div class="projects_summary">
-        <p class="summary">{{project1.attributes.Summary}}</p>
-        <ul class="technology_useds">
-          <li *ngFor="let tech of project1.attributes.technology_useds.data">{{tech.attributes.TechnologyName}}</li>
-          <!-- <li>MySQL</li>
-          <li>REST APIs</li>
-          <li>Node.js</li> -->
-        </ul>
-      </div>
-      <div class="link_wrapper">
-        <a class="viewSite" [routerLink]="[ '/projects', project1.id, project1.attributes.Slug]">More Details</a>
-        <a class="github" href="">Github<i class="fa-brands fa-github"></i></a>
-      </div>
-    </div>
-    <p class="project_img" data-scroll>
-      <img [src]="project1.attributes.ProjectsHero.data.attributes.url" alt="E-commerce Crud App Machika Yamauchi web developer portfolio projects">
-    </p>
+      <p class="project_img" data-scroll>
+        <img [src]="project1.attributes.ProjectsHero.data.attributes.url" alt="E-commerce Crud App Machika Yamauchi web developer portfolio projects">
+      </p>
   </div>
 
   <div class="project_wrapper2" data-scroll>
@@ -60,20 +47,16 @@
     <div class="project_desc">
       <div class="project_title">
         <h2 class="project_title_clip">{{project2.attributes.Title}}</h2>
-        <!-- <span class="ttl__clip__line"></span> 元々、コメントアウトしていた場所 -->
       </div>
       <div class="projects_summary">
         <p class="summary">{{project2.attributes.Summary}}</p>
         <ul class="technology_useds">
           <li *ngFor="let tech of project2.attributes.technology_useds.data">{{tech.attributes.TechnologyName}}</li>
-          <!-- <li>SCSS</li>
-          <li>Animation</li>
-          <li>Adobe XD</li> -->
         </ul>
       </div>
       <div class="link_wrapper" data-scroll>
         <a class="viewSite" [routerLink]="[ '/projects', project2.id, project2.attributes.Slug]">More Details</a>
-        <a class="github" href="">Github<i class="fa-brands fa-github"></i></a>
+        <a class="github" [href]="project2.attributes.GithubLink" target="_blank">Github<i class="fa-brands fa-github"></i></a>
       </div>
     </div>
     <p class="project_img" data-scroll>
@@ -86,7 +69,6 @@
     <div class="project_desc">
       <div class="project_title">
         <h2 class="project_title_clip">{{project3.attributes.Title}}</h2>
-        <!-- <span class="ttl__clip__line"></span>　元々、コメントアウトしていた場所 -->
       </div>
       <div class="projects_summary">
         <p class="summary">{{project3.attributes.Summary}}</p>
@@ -96,7 +78,7 @@
       </div>
       <div class="link_wrapper" data-scroll>
         <a class="viewSite" [routerLink]="[ '/projects', project3.id, project3.attributes.Slug]">More Details</a>
-        <a class="github" href="">Github<i class="fa-brands fa-github"></i></a>
+        <a class="github" [href]="project3.attributes.GithubLink" target="_blank">Github<i class="fa-brands fa-github"></i></a>
       </div>
     </div>
     <p class="project_img" data-scroll>
@@ -112,7 +94,6 @@
 
 <div class="title" data-scroll>
   <h2 class="title_clip">Skills</h2>
-  <!-- <span class="title_clip_line"></span> -->
 </div>
 
 <section class="skills">
@@ -222,7 +203,7 @@
     <p>Please Feel Free to Contact Me!</p>
   </div>
   <div class="contact_btn_wrapper">
-    <a href="#">Let's Talk with me!
+    <a routerLink="/contact">Let's Talk with me!
       <img class="arrow_btn" [src]="aboutMe.data.attributes.Arrow_White_Right.data.attributes.url" alt="">
     </a>
   </div>

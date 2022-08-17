@@ -18,11 +18,17 @@ $breakpoints: (
   top: 0;
   z-index: 10000;
   nav {
+    width: 90%;
+    margin: 0 auto;
     .logo {
       width: 70px;
       margin: 8px 0;
       @include media(md) {
         width: 75px;
+      }
+      &:hover {
+        transform: scale(1.1);
+
       }
     }
     .container-fluid {

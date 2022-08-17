@@ -1,0 +1,1111 @@
+$breakpoints: (
+  'xs': 'screen and (min-width: 1px)',
+  'sm': 'screen and (min-width: 576px)',
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 992px)',
+)!default;
+
+@mixin media($breakpoint:md){
+  @media #{map-get($breakpoints,$breakpoint)}{
+    @content;
+  }
+}
+
+.plusvault_casestudy {
+  padding-top: 180px;
+  width: 80%;
+  margin: 0 auto;
+  .introduction {
+    @include media(xs) {
+      margin-bottom: 30%;
+    }
+    @include media(sm) {
+      margin-bottom: 16%;
+    }
+    @include media(md) {
+      margin-bottom: 14%;
+    }
+    @include media(lg) {
+      margin-bottom: 8%;
+    }
+    .left_panel{
+      @include media(xs) {
+        margin-bottom: 16%;
+      }
+      @include media(sm) {
+        margin-bottom: 10%;
+      }
+      h1.project_title {
+        font-weight: 800;
+        letter-spacing: 0.2rem;
+        @include media(xs) {
+          font-size: 5.6rem;
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          font-size: 6.4rem;
+          margin-bottom: 5%;
+        }
+      }
+      p.project_summary {
+        line-height: 1.5;
+        @include media(xs) {
+          font-size: 3.2rem;
+        }
+        @include media(lg) {
+          padding-right: 24px;
+        }
+      }
+    }
+    .right_panel {
+      h2.title {
+        color: #F27F3D;
+        @include media(xs) {
+          font-size: 2.4rem;
+          margin-bottom: 5%;
+        }
+      }
+    }
+  }
+}
+
+.project_overview {
+  background-color: #f0efef;
+  border-radius: 30px;
+  @include media(xs) {
+    padding: 12% 8%;
+    margin-bottom: 30%;
+  }
+  @include media(sm) {
+    padding: 8% 5%;
+    margin-bottom: 20%;
+  }
+  @include media(lg) {
+    padding: 6% 5% 3% 5%;
+    margin-bottom: 12%;
+  }
+  .objective {
+    @include media(xs) {
+      margin-bottom: 20%;
+    }
+    @include media(sm) {
+      margin-bottom: 10%;
+    }
+    h2.title {
+      color: #F27F3D;
+      @include media(xs) {
+        font-size: 2.4rem;
+        margin-bottom: 5%;
+      }
+      @include media(lg) {
+        font-size: 2.8rem;
+        margin-bottom: 5%;
+      }
+    }
+    p {
+      @include media(xs) {
+        margin-bottom: 8%;
+      }
+      @include media(sm) {
+        margin-bottom: 5%;
+      }
+    }
+
+  }
+  .what_I_did {
+    @include media(lg) {
+      padding-left: 15%;
+    }
+    h2.title {
+      color: #F27F3D;
+      @include media(xs) {
+        font-size: 2.4rem;
+        margin-bottom: 5%;
+      }
+      @include media(lg) {
+        font-size: 2.8rem;
+        margin-bottom: 5%;
+      }
+    }
+    ul {
+      @include media(xs) {
+        margin-bottom: 20%;
+      }
+      @include media(sm) {
+        margin-bottom: 5%;
+      }
+      @include media(lg) {
+        margin-bottom: 3%;
+      }
+      li {
+        list-style-type: none;
+        position: relative;
+        padding-left: 20px;
+        @include media(xs) {
+          margin-bottom: 5%;
+        }
+        @include media(sm) {
+          margin-bottom: 3%;
+        }
+        @include media(lg) {
+          margin-bottom: 2%;
+        }
+      }
+      li:before {
+        content: "";
+        position: absolute; /*絶対配置*/
+        left: 0; /*点の位置*/
+        top: 0.6em; /*点の位置*/
+        border-radius: 50%; /*丸くする*/
+        width: 8px; /*点の幅*/
+        height: 8px; /*点の高さ*/
+        display: block;
+        background: #F27F3D; /*点の色*/
+      }
+    }
+  }
+}
+
+.step1 {
+  @include media(xs) {
+    margin-bottom: 24%;
+  }
+  @include media(sm) {
+    margin-bottom: 16%;
+  }
+  @include media(md) {
+    margin-bottom: 14%;
+  }
+  @include media(lg) {
+    margin-bottom: 8%;
+  }
+  .stepTag {
+    text-align: center;
+    background-color: #032059;
+    color: white;
+    border-radius: 50px;
+    @include media(xs) {
+      padding: 2% 8%;
+      width: 40%;
+      margin-bottom: 16%;
+    }
+    @include media(sm) {
+      padding: 1% 5%;
+      width: 20%;
+      margin-bottom: 5%;
+    }
+    @include media(lg) {
+      padding: 2% 10%;
+      width: 70%;
+    }
+  }
+  .step1_text {
+    h2.title {
+      color: #F27F3D;
+      @include media(xs) {
+        font-size: 2.4rem;
+        margin-bottom: 8%;
+      }
+      @include media(sm) {
+        margin-bottom:3%;
+      }
+      @include media(lg) {
+        font-size: 2.8rem;
+        margin-bottom: 2%;
+      }
+    }
+
+    .market_research {
+      @include media(xs) {
+        margin-bottom: 20%;
+      }
+      @include media(sm) {
+        margin-bottom: 16%;
+      }
+      @include media(md) {
+        margin-bottom: 15%;
+      }
+      @include media(lg) {
+        margin-bottom: 10%;
+      }
+      h3.subtitle {
+        font-weight: 700;
+        @include media(xs) {
+          font-size: 2.8rem;
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 8%;
+        }
+        @include media(md) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          font-size: 3.2rem;
+          margin-bottom: 3%;
+        }
+      }
+      p {
+        @include media(xs) {
+          margin-bottom: 8%;
+        }
+        @include media(sm) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          margin-bottom: 3%;
+        }
+      }
+      ul {
+        @include media(xs) {
+          margin-bottom: 20%;
+        }
+        @include media(sm) {
+          margin-bottom: 8%;
+        }
+        @include media(lg) {
+          margin-bottom: 3%;
+        }
+        li {
+          list-style-type: none;
+          position: relative;
+          padding-left: 20px;
+          @include media(xs) {
+            margin-bottom: 5%;
+          }
+          @include media(sm) {
+            margin-bottom: 3%;
+          }
+          @include media(lg) {
+            margin-bottom: 2%;
+          }
+        }
+        li:before {
+          content: "";
+          position: absolute; /*絶対配置*/
+          left: 0; /*点の位置*/
+          top: 0.6em; /*点の位置*/
+          border-radius: 50%; /*丸くする*/
+          width: 8px; /*点の幅*/
+          height: 8px; /*点の高さ*/
+          display: block;
+          background: #F27F3D; /*点の色*/
+        }
+      }
+
+    }
+
+    .competitive_analysis {
+      @include media(xs) {
+        margin-bottom: 20%;
+      }
+      @include media(sm) {
+        margin-bottom: 3%;
+      }
+      @include media(md) {
+        margin-bottom: 5%;
+      }
+      @include media(lg) {
+        margin-bottom: 8%;
+      }
+      h3.subtitle {
+        font-weight: 700;
+        @include media(xs) {
+          font-size: 2.8rem;
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 8%;
+        }
+        @include media(md) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          font-size: 3.2rem;
+          margin-bottom: 3%;
+        }
+      }
+      p {
+        @include media(xs) {
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          margin-bottom: 5%;
+        }
+      }
+      .analysis_card {
+        box-shadow: 0 0 10px 0 rgb(96 108 123 / 20%);
+        background-color: white;
+        border-radius: 10px;
+        padding: 10%;
+        @include media(xs) {
+          margin-bottom: 16%;
+        }
+        @include media(md) {
+          margin-bottom: 10%;
+        }
+        img {
+          display: block;
+          margin: 0 auto;
+          @include media(xs) {
+            width: 90%;
+            margin-bottom: 16%;
+          }
+          @include media(sm) {
+            width: 60%;
+            margin-bottom: 10%;
+          }
+          @include media(lg) {
+            width: 80%;
+            margin-bottom: 20%;
+          }
+        }
+        .strength_container {
+          @include media(xs) {
+            margin-bottom: 16%;
+          }
+          @include media(sm) {
+            margin-bottom: 10%;
+          }
+          @include media(lg) {
+            margin-bottom: 20%;
+          }
+        }
+        h4 {
+          font-weight: 800;
+          @include media(xs) {
+            font-size: 2rem;
+            margin-bottom: 8%;
+          }
+          @include media(sm) {
+            font-size: 2rem;
+            margin-bottom: 5%;
+          }
+        }
+        ul {
+          li {
+            list-style-type: none;
+            position: relative;
+            padding-left: 20px;
+            @include media(xs) {
+              margin-bottom: 5%;
+            }
+            @include media(sm) {
+              margin-bottom: 3%;
+            }
+            @include media(lg) {
+              margin-bottom: 5%;
+            }
+          }
+          li:before {
+            content: "";
+            position: absolute; /*絶対配置*/
+            left: 0; /*点の位置*/
+            top: 0.6em; /*点の位置*/
+            border-radius: 50%; /*丸くする*/
+            width: 8px; /*点の幅*/
+            height: 8px; /*点の高さ*/
+            display: block;
+            background: #F27F3D; /*点の色*/
+          }
+        }
+
+      }
+    }
+    .user_survey {
+      @include media(xs) {
+        margin-bottom: 20%;
+      }
+      @include media(sm) {
+        margin-bottom: 10%;
+      }
+      @include media(md) {
+        margin-bottom: 5%;
+      }
+      @include media(lg) {
+        margin-bottom: 10%;
+      }
+      h3.subtitle {
+        font-weight: 700;
+        @include media(xs) {
+          font-size: 2.8rem;
+          margin-bottom: 10%;
+        }
+        @include media(md) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          font-size: 3.2rem;
+          margin-bottom: 3%;
+        }
+      }
+      p {
+        @include media(xs) {
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          margin-bottom: 5%;
+        }
+      }
+      h4 {
+        font-weight: 800;
+        @include media(xs) {
+          font-size: 2rem;
+          margin-bottom: 8%;
+        }
+        @include media(sm) {
+          font-size: 2rem;
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          font-size: 2.4rem;
+          margin-bottom: 3%;
+        }
+      }
+      ul {
+        @include media(xs) {
+          margin-bottom: 20%;
+        }
+        @include media(sm) {
+          margin-bottom: 8%;
+        }
+        @include media(lg) {
+          margin-bottom: 5%;
+        }
+        li {
+          list-style-type: none;
+          position: relative;
+          padding-left: 20px;
+          @include media(xs) {
+            margin-bottom: 5%;
+          }
+          @include media(sm) {
+            margin-bottom: 3%;
+          }
+          @include media(lg) {
+            margin-bottom: 2%;
+          }
+        }
+        li:before {
+          content: "";
+          position: absolute; /*絶対配置*/
+          left: 0; /*点の位置*/
+          top: 0.6em; /*点の位置*/
+          border-radius: 50%; /*丸くする*/
+          width: 8px; /*点の幅*/
+          height: 8px; /*点の高さ*/
+          display: block;
+          background: #F27F3D; /*点の色*/
+        }
+      }
+    }
+  }
+}
+
+.step2 {
+  @include media(xs) {
+    margin-bottom: 40%;
+  }
+  @include media(sm) {
+    margin-bottom: 32%;
+  }
+  @include media(md) {
+    margin-bottom: 24%;
+  }
+  @include media(lg) {
+    margin-bottom: 18%;
+  }
+  .stepTag {
+    text-align: center;
+    background-color: #032059;
+    color: white;
+    border-radius: 50px;
+    @include media(xs) {
+      padding: 2% 8%;
+      width: 40%;
+      margin-bottom: 16%;
+    }
+    @include media(sm) {
+      padding: 1% 5%;
+      width: 20%;
+      margin-bottom: 5%;
+    }
+    @include media(lg) {
+      padding: 2% 10%;
+      width: 70%;
+    }
+  }
+  .step2_text {
+    h2.title {
+      color: #F27F3D;
+      @include media(xs) {
+        font-size: 2.4rem;
+        margin-bottom: 8%;
+      }
+      @include media(sm) {
+        margin-bottom:3%;
+      }
+      @include media(lg) {
+        font-size: 2.8rem;
+        margin-bottom: 2%;
+      }
+    }
+    .persona {
+      @include media(xs) {
+        margin-bottom: 30%;
+      }
+      @include media(sm) {
+        margin-bottom: 18%;
+      }
+      @include media(md) {
+        margin-bottom: 16%;
+      }
+      @include media(lg) {
+        margin-bottom: 12%;
+      }
+      h3.subtitle {
+        font-weight: 700;
+        @include media(xs) {
+          font-size: 2.8rem;
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 8%;
+        }
+        @include media(md) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          font-size: 3.2rem;
+          margin-bottom: 3%;
+        }
+      }
+      p {
+        @include media(xs) {
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          margin-bottom: 5%;
+        }
+      }
+      .personaImage_container {
+        img {
+          display: block;
+          @include media(xs) {
+            margin-bottom: 10%;
+          }
+          @include media(sm) {
+            margin-bottom: 8%;
+          }
+          @include media(md) {
+            margin-bottom: 8%;
+          }
+          @include media(lg) {
+            margin-bottom: 5%;
+          }
+
+        }
+      }
+    }
+    .user_journey_map {
+      @include media(xs) {
+        margin-bottom: 30%;
+      }
+      @include media(sm) {
+        margin-bottom: 16%;
+      }
+      @include media(md) {
+        margin-bottom: 16%;
+      }
+      @include media(lg) {
+        margin-bottom: 12%;
+      }
+      h3.subtitle {
+        font-weight: 700;
+        @include media(xs) {
+          font-size: 2.8rem;
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 8%;
+        }
+        @include media(md) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          font-size: 3.2rem;
+          margin-bottom: 3%;
+        }
+      }
+      p {
+        @include media(xs) {
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          margin-bottom: 5%;
+        }
+      }
+      .user_journeyImage_container {
+        img {
+          display: block;
+          @include media(xs) {
+            margin-bottom: 10%;
+          }
+          @include media(sm) {
+            margin-bottom: 8%;
+          }
+          @include media(md) {
+            margin-bottom: 8%;
+          }
+          @include media(lg) {
+            margin-bottom: 5%;
+          }
+        }
+      }
+    }
+    .information_architecture {
+      h3.subtitle {
+        font-weight: 700;
+        @include media(xs) {
+          font-size: 2.8rem;
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 8%;
+        }
+        @include media(md) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          font-size: 3.2rem;
+          margin-bottom: 3%;
+        }
+      }
+      p {
+        @include media(xs) {
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          margin-bottom: 5%;
+        }
+      }
+    }
+  }
+}
+
+.step3 {
+  @include media(xs) {
+    margin-bottom: 40%;
+  }
+  @include media(sm) {
+    margin-bottom: 20%;
+  }
+  @include media(md) {
+    margin-bottom: 24%;
+  }
+  @include media(lg) {
+    margin-bottom: 16%;
+  }
+  .stepTag {
+    text-align: center;
+    background-color: #032059;
+    color: white;
+    border-radius: 50px;
+    @include media(xs) {
+      padding: 2% 8%;
+      width: 40%;
+      margin-bottom: 16%;
+    }
+    @include media(sm) {
+      padding: 1% 5%;
+      width: 20%;
+      margin-bottom: 5%;
+    }
+    @include media(lg) {
+      padding: 2% 10%;
+      width: 70%;
+    }
+  }
+  .step3_text {
+    h2.title {
+      color: #F27F3D;
+      @include media(xs) {
+        font-size: 2.4rem;
+        margin-bottom: 8%;
+      }
+      @include media(sm) {
+        margin-bottom:3%;
+      }
+      @include media(lg) {
+        font-size: 2.8rem;
+        margin-bottom: 2%;
+      }
+    }
+    .wireframe {
+      @include media(xs) {
+        margin-bottom: 30%;
+      }
+      @include media(sm) {
+        margin-bottom: 16%;
+      }
+      @include media(md) {
+        margin-bottom: 16%;
+      }
+      @include media(lg) {
+        margin-bottom: 12%;
+      }
+      h3.subtitle {
+        font-weight: 700;
+        @include media(xs) {
+          font-size: 2.8rem;
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 8%;
+        }
+        @include media(md) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          font-size: 3.2rem;
+          margin-bottom: 3%;
+        }
+      }
+      p {
+        @include media(xs) {
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          margin-bottom: 5%;
+        }
+      }
+    }
+    .branding {
+      @include media(xs) {
+        margin-bottom: 30%;
+      }
+      @include media(sm) {
+        margin-bottom: 16%;
+      }
+      @include media(md) {
+        margin-bottom: 16%;
+      }
+      @include media(lg) {
+        margin-bottom: 12%;
+      }
+      h3.subtitle {
+        font-weight: 700;
+        @include media(xs) {
+          font-size: 2.8rem;
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 8%;
+        }
+        @include media(md) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          font-size: 3.2rem;
+          margin-bottom: 3%;
+        }
+      }
+      p {
+        @include media(xs) {
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          margin-bottom: 5%;
+        }
+      }
+      h4 {
+        font-weight: 800;
+        @include media(xs) {
+          font-size: 2rem;
+          margin-bottom: 8%;
+        }
+        @include media(sm) {
+          font-size: 2rem;
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          font-size: 2.4rem;
+          margin-bottom: 3%;
+        }
+      }
+    }
+    .mockup_prototype {
+      h3.subtitle {
+        font-weight: 700;
+        @include media(xs) {
+          font-size: 2.8rem;
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 8%;
+        }
+        @include media(md) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          font-size: 3.2rem;
+          margin-bottom: 3%;
+        }
+      }
+      h4 {
+        font-weight: 800;
+        @include media(xs) {
+          font-size: 2rem;
+          margin-bottom: 8%;
+        }
+        @include media(sm) {
+          font-size: 2rem;
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          font-size: 2.4rem;
+          margin-bottom: 3%;
+        }
+      }
+      p {
+        @include media(xs) {
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          margin-bottom: 5%;
+        }
+      }
+      .mockupImage_container {
+        @include media(xs) {
+          margin-bottom: 20%;
+        }
+        @include media(sm) {
+          margin-bottom: 16%;
+        }
+        @include media(md) {
+          margin-bottom: 12%;
+        }
+        @include media(lg) {
+          margin-bottom: 10%;
+        }
+      }
+      .prototype_btn {
+        a {
+          background: #F27F3D;
+          border-radius: 10px;
+          color: white;
+          font-weight: 500;
+          @include media(xs) {
+            // width: 100%;
+            padding: 10px 32px;
+            font-size: 2rem;
+          }
+          @include media(sm) {
+            width: 50%;
+            font-size: 2rem;
+          }
+          @include media(md) {
+            width: 50%;
+            font-size: 2.4rem;
+          }
+          @include media(lg) {
+            width: 40%;
+            font-size: 2.4rem;
+            padding: 10px 32px;
+
+          }
+          &:hover {
+            background-color: #f6a374;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.step4 {
+  @include media(xs) {
+    margin-bottom: 20%;
+  }
+  @include media(sm) {
+    margin-bottom: 16%;
+  }
+  @include media(md) {
+    margin-bottom: 10%;
+  }
+  @include media(lg) {
+    margin-bottom: 8%;
+  }
+  .stepTag {
+    text-align: center;
+    background-color: #032059;
+    color: white;
+    border-radius: 50px;
+    @include media(xs) {
+      padding: 2% 8%;
+      width: 40%;
+      margin-bottom: 16%;
+    }
+    @include media(sm) {
+      padding: 1% 5%;
+      width: 20%;
+      margin-bottom: 5%;
+    }
+    @include media(lg) {
+      padding: 2% 10%;
+      width: 70%;
+    }
+  }
+  .step4_text {
+    h2.title {
+      color: #F27F3D;
+      @include media(xs) {
+        font-size: 2.4rem;
+        margin-bottom: 8%;
+      }
+      @include media(sm) {
+        margin-bottom:3%;
+      }
+      @include media(lg) {
+        font-size: 2.8rem;
+        margin-bottom: 2%;
+      }
+    }
+    .reflection_container {
+      h3.subtitle {
+        font-weight: 700;
+        @include media(xs) {
+          font-size: 2.8rem;
+          margin-bottom: 10%;
+        }
+        @include media(sm) {
+          margin-bottom: 8%;
+        }
+        @include media(md) {
+          margin-bottom: 5%;
+        }
+        @include media(lg) {
+          font-size: 3.2rem;
+          margin-bottom: 3%;
+        }
+      }
+      ul {
+        @include media(xs) {
+          margin-bottom: 20%;
+        }
+        @include media(sm) {
+          margin-bottom: 8%;
+        }
+        @include media(lg) {
+          margin-bottom: 5%;
+        }
+        li {
+          list-style-type: none;
+          position: relative;
+          padding-left: 20px;
+          @include media(xs) {
+            margin-bottom: 5%;
+          }
+          @include media(sm) {
+            margin-bottom: 3%;
+          }
+          @include media(lg) {
+            margin-bottom: 2%;
+          }
+        }
+        li:before {
+          content: "";
+          position: absolute; /*絶対配置*/
+          left: 0; /*点の位置*/
+          top: 0.6em; /*点の位置*/
+          border-radius: 50%; /*丸くする*/
+          width: 8px; /*点の幅*/
+          height: 8px; /*点の高さ*/
+          display: block;
+          background: #F27F3D; /*点の色*/
+        }
+      }
+      .thank_you {
+        font-weight: 800;
+        color: #F27F3D;
+        @include media(xs) {
+          font-size: 2.4rem;
+        }
+        @include media(sm) {
+          font-size: 2.8rem;
+        }
+        @include media(md) {
+          font-size: 3.2rem;
+        }
+      }
+    }
+  }
+}
+
+.btn_projects_wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20%;
+  a {
+    display: block;
+    background-color: #F8F7F7;
+    border: 2px solid #032059;
+    font-weight: 700;
+    padding: 10px 24px;
+    width: 100%;
+    text-align: center;
+    @include media(sm) {
+      width: 90%;
+    }
+    @include media(md) {
+      width: 70%;
+    }
+    @include media(lg) {
+      width: 60%;
+    }
+    img {
+      width: 8%;
+      margin-right: 8px;
+      @include media(sm) {
+        width: 5%;
+      }
+      @include media(md) {
+        width: 5%;
+        margin-right: 20px;
+      }
+      @include media(lg) {
+        width: 3%;
+        // margin-right: 3px;
+      }
+    }
+    &:hover {
+      background-color: #032059;
+      color: white;
+    }
+  }
+}
