@@ -4,7 +4,7 @@
   <div class="hero_content">
     <div class="hero_mainContent">
       <div class="name_wrapper">
-        <h1 class="myName">MACHIKA YAMAUCHI</h1>
+        <h1 class="myName">{{aboutMe.data.attributes.Name}}</h1>
         <h1 class="job_title"><span>F</span>ront-End <span>D</span>eveloper</h1>
       </div>
     </div>
@@ -92,12 +92,9 @@
   </div>
 </section>
 
-<div class="title" data-scroll>
-  <h2 class="title_clip">Skills</h2>
-</div>
-
 <section class="skills">
-  <p>
+  <h2 class="skill_title">Skills</h2>
+  <p class="skill_desc">
     I have learned web development and web design skills to become a front-end developer.<br>I list all the skills that I have learned until now.
   </p>
   <div class="skill_container">
@@ -188,7 +185,6 @@
   </div>
 </section>
 
-
 <section class="contact">
   <div class="text_up contact_title">
     <span class="text_up_js">C</span>
@@ -203,11 +199,10 @@
     <p>Please Feel Free to Contact Me!</p>
   </div>
   <div class="contact_btn_wrapper">
-    <a routerLink="/contact">Let's Talk with me!
+    <a routerLink="/contact">Let's Talk!
       <img class="arrow_btn" [src]="aboutMe.data.attributes.Arrow_White_Right.data.attributes.url" alt="">
     </a>
   </div>
-
 </section>
 
 <portfolio-footer></portfolio-footer>

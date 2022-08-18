@@ -1,11 +1,22 @@
+<div class="loadingScreen" *ngIf="loading">
+  <div class="flower-spinner">
+    <div class="dots-container">
+      <div class="bigger-dot">
+        <div class="smaller-dot"></div>
+      </div>
+    </div>
+  </div>
+  <div>Page Loading...</div>
+</div>
 
 <portfolio-header *ngIf="showElement"></portfolio-header>
-<div class="d-flex justify-content-center align-items-center loadingScreeen" *ngIf="loading">
+<!-- <div class="d-flex justify-content-center align-items-center loadingScreeen" *ngIf="loading">
   <div class="spinner-border" role="status">
     <span class="visually-hidden">Loading...</span>
   </div>
   <div>Loading pages...</div>
-</div>
+</div> -->
+
 <section class="projects_page">
   <h1 class="pageTitle" *ngIf="showElement"><img [src]="aboutMe.data.attributes.Arrow_Orange_Right.data.attributes.url" alt="">Projects
   </h1>

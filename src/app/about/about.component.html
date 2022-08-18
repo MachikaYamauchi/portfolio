@@ -1,7 +1,18 @@
-<portfolio-header></portfolio-header>
+<div class="loadingScreen" *ngIf="loading">
+  <div class="flower-spinner">
+    <div class="dots-container">
+      <div class="bigger-dot">
+        <div class="smaller-dot"></div>
+      </div>
+    </div>
+  </div>
+  <div>Page Loading...</div>
+</div>
+
+<portfolio-header *ngIf="showElement"></portfolio-header>
 <section class="about_page">
-  <h1 class="pageTitle">
-    <span><img [src]="aboutMe.data.attributes.Arrow_Orange_Right.data.attributes.url" alt="Machika Yamauchi Portfolio arrow icon">About me</span>
+  <h1 class="pageTitle" *ngIf="showElement">
+    <span><img [src]="aboutMe.data.attributes.Arrow_Orange_Right.data.attributes.url" alt="">About me</span>
   </h1>
   <div class="about_me">
     <div class="container">
@@ -36,7 +47,7 @@
         </div>
       </div>
     </div>
-    <div class="resume_btn">
+    <div class="resume_btn" *ngIf="showElement">
       <a href="../../assets/resume.pdf" target="_blank">See My Resume
         <i class="fa-solid fa-file-arrow-down"></i>
       </a>
@@ -112,7 +123,7 @@
       <p>Please Feel Free to Contact Me!</p>
     </div>
     <div class="contact_btn_wrapper">
-      <a href="#">Lets's Talk with me!
+      <a href="#">Lets's Talk!
         <img class="arrow_btn" [src]="aboutMe.data.attributes.Arrow_White_Right.data.attributes.url" alt="">
       </a>
     </div>

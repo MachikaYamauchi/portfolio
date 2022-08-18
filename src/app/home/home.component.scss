@@ -118,20 +118,27 @@ $breakpoints: (
   // Title "Projects"
   .title {
     display: table;
-    margin-left: 5%;
     position: relative;
+    @include media(xs) {
+      margin-bottom: 40px;
+      margin-left: 10%;
+    }
+    @include media(lg) {
+      margin-left: 5%;
+    }
     &_clip {
       position: relative;
       display: inline-block;
       font-weight: 700;
+
       @include media(xs) {
         font-size: 3.2rem;
       }
       @include media(sm) {
-        font-size: 3.2rem;
+        font-size: 4.8rem;
       }
       @include media(md) {
-        font-size: 4rem;
+        font-size: 4.8rem;
       }
       @include media(lg) {
         font-size: 5.6rem;
@@ -147,9 +154,6 @@ $breakpoints: (
 
   section.projects {
     margin: 100px 0;
-    @include media(sm) {
-      margin: 150px 0;
-    }
     @include media(lg) {
       margin: 120px 0 150px;
     }
@@ -161,12 +165,12 @@ $breakpoints: (
       justify-content: space-between;
       align-items: center;
       margin-bottom: 80px;
+      @include media(md) {
+        padding: 8% 0;
+      }
       @include media(lg) {
         display: flex;
         flex-direction:row;
-        padding: 5% 0;
-      }
-      @include media(lg) {
         padding: 5% 0;
       }
       .project_bg1, .project_bg3{
@@ -180,9 +184,11 @@ $breakpoints: (
         height: 100%;
       }
       .project_desc {
-        width: 80%;
-        margin: 0 auto;
-        @include media(md) {
+        @include media(xs) {
+          width: 80%;
+          margin: 0 auto;
+        }
+        @include media(lg) {
           padding: 5%;
         }
         .project_title {
@@ -195,11 +201,11 @@ $breakpoints: (
               margin-bottom: 20px;
             }
             @include media(sm) {
-              font-size: 2.8rem;
+              font-size: 3.2rem;
               margin-bottom: 20px;
             }
             @include media(md) {
-              font-size: 3rem;
+              font-size: 4rem;
             }
             @include media(lg) {
               font-size: 4rem;
@@ -218,12 +224,13 @@ $breakpoints: (
         }
         .projects_summary {
           .summary {
-            margin-bottom: 20px;
             @include media(xs) {
               font-size: 1.6rem;
+              margin-bottom: 20px;
             }
             @include media(sm) {
               font-size: 1.8rem;
+              margin-bottom: 40px;
             }
             @include media(lg) {
               font-size: 2.4rem;
@@ -231,9 +238,14 @@ $breakpoints: (
             }
           }
           ul.technology_useds {
-            margin-bottom: 20px;
+            @include media(xs) {
+              margin-bottom: 20px;
+            }
+            @include media(sm) {
+              margin-bottom: 56px;
+            }
             @include media(md) {
-              margin-bottom: 24px;
+              margin-bottom: 56px;
             }
             @include media(lg) {
               margin-bottom: 40px;
@@ -298,9 +310,11 @@ $breakpoints: (
         }
       }
       .project_img {
-        width: 90%;
         margin-top: 10%;
         overflow: hidden;
+        @include media(xs) {
+          width: 80%;
+        }
         @include media(md) {
           margin-right: 5%;
           width: 60%;
@@ -327,12 +341,12 @@ $breakpoints: (
       justify-content: space-between;
       align-items: center;
       margin-bottom: 80px;
-      @include media(lg) {
-        display: flex;
-        flex-direction:row;
+      @include media(md) {
         padding: 5% 0;
       }
       @include media(lg) {
+        display: flex;
+        flex-direction:row;
         padding: 5% 0;
       }
       .project_bg2 {
@@ -346,8 +360,10 @@ $breakpoints: (
         height: 100%;
       }
       .project_desc {
-        width: 80%;
-        margin: 0 auto;
+        @include media(xs) {
+          width: 80%;
+          margin: 0 auto;
+        }
         @include media(lg) {
           padding: 5%;
           order: 2;// *
@@ -362,11 +378,11 @@ $breakpoints: (
               margin-bottom: 20px;
             }
             @include media(sm) {
-              font-size: 2.8rem;
+              font-size: 3.2rem;
               margin-bottom: 20px;
             }
             @include media(md) {
-              font-size: 3rem;
+              font-size: 4rem;
             }
             @include media(lg) {
               font-size: 4rem;
@@ -385,12 +401,13 @@ $breakpoints: (
         }
         .projects_summary {
           .summary {
-            margin-bottom: 20px;
             @include media(xs) {
               font-size: 1.6rem;
+              margin-bottom: 20px;
             }
             @include media(sm) {
               font-size: 1.8rem;
+              margin-bottom: 40px;
             }
             @include media(lg) {
               font-size: 2.4rem;
@@ -398,9 +415,14 @@ $breakpoints: (
             }
           }
           ul.technology_useds {
-            margin-bottom: 20px;
+            @include media(xs) {
+              margin-bottom: 20px;
+            }
+            @include media(sm) {
+              margin-bottom: 56px;
+            }
             @include media(md) {
-              margin-bottom: 24px;
+              margin-bottom: 56px;
             }
             @include media(lg) {
               margin-bottom: 40px;
@@ -465,9 +487,11 @@ $breakpoints: (
         }
       }
       .project_img {
-        width: 90%;
         margin-top: 10%;
         overflow: hidden;
+        @include media(xs) {
+          width: 80%;
+        }
         @include media(md) {
           margin-left: 5%;
           margin-right: 0;
@@ -492,29 +516,50 @@ $breakpoints: (
       a {
         position: relative;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         margin: 0 auto;
-        max-width: 340px;
         padding: 10px 25px;
         color: white;
         transition: 0.3s ease-in-out;
         font-weight: 700;
-        font-size: 2.4rem;
+        @include media(xs) {
+          font-size: 1.8rem;
+          max-width: 90%;
+        }
+        @include media(sm) {
+          font-size: 2.4rem;
+          max-width: 80%;
+        }
+        @include media(md) {
+          max-width: 50%;
+        }
+        @include media(lg) {
+          max-width: 30%;
+        }
         background: #F27F3D;
         border-radius: 50px;
         border: 0.2rem solid #032059;
         box-shadow: 0.3rem 0.3rem 0px 0.2rem #032059;
         img {
-          width: 8%;
+          @include media(xs) {
+            width: 5%;
+            margin-left: 5px;
+          }
+          @include media(sm) {
+            width: 4%;
+            margin-left: 8px;
+          }
           @include media(md) {
-            width: 7%;
+            width: 6%;
+            margin-left: 10px;
           }
           @include media(lg) {
-            width: 7%;
+            width: 5%;
+            margin-left: 12px;
           }
           animation: slideBlink 1.2s linear infinite;
-          transition: ease-in-out;
+          transition: ease;
         }
       }
       a:hover {
@@ -526,11 +571,11 @@ $breakpoints: (
       @keyframes slideBlink {
         from {
           // opacity: 0;
-          transform: translateX(3);
+          transform: translateX(8);
         }
         to {
           // opacity: 1;
-          transform: translateX(20px);
+          transform: translateX(16px);
         }
       }
     }
@@ -542,16 +587,41 @@ $breakpoints: (
     box-sizing: content-box;
     padding-top: 40px;
     margin-bottom: 100px;
-    p {
+    h2.skill_title {
+      text-align: center;
+      font-weight: 700;
+      @include media(xs) {
+        font-size: 3.2rem;
+        margin-bottom: 24px;
+      }
+      @include media(sm) {
+        font-size: 4.8rem;
+      }
+      @include media(md) {
+        font-size: 4.8rem;
+      }
+      @include media(lg) {
+        font-size: 5.6rem;
+        margin-bottom: 40px;
+      }
+    }
+    p.skill_desc {
+      text-align: center;
       @include media(xs) {
         font-size: 1.6rem;
+        margin-bottom: 40px;
       }
       @include media(sm) {
         font-size: 1.8rem;
+        margin-bottom: 40px;
+      }
+      @include media(md) {
+        font-size: 1.8rem;
+        margin-bottom: 56px;
       }
       @include media(lg) {
         font-size: 2.4rem;
-        margin-bottom: 40px;
+        margin-bottom: 56px;
       }
     }
     .skill_container {
@@ -561,16 +631,12 @@ $breakpoints: (
       .skill_card {
         padding: 10px;
         margin: 8px;
-        // background-color: #FBEBC3;
         background-color: #EBE5DD;
         border-radius: 5px;
-        // width: 110px;
-        // height: 110px;
         display: flex;
         flex-direction: column;
         justify-content:space-between;
         align-items: center;
-        // box-shadow: 0px 0px 10px 3px rgba(79,79,79,0.3);
         box-shadow: 0px 0px 8px 2px rgba(186,186,186,0.18);
         i {
           color: #032059;
@@ -604,14 +670,14 @@ $breakpoints: (
           margin-bottom: 20px;
         }
         @include media(sm) {
-          font-size: 5.6rem;
+          font-size: 4.8rem;
           margin-bottom: 20px;
         }
         @include media(md) {
-          font-size: 5.4rem;
+          font-size: 4.8rem;
         }
         @include media(lg) {
-          font-size: 6.3rem;
+          font-size: 6.4rem;
         }
         letter-spacing: 0.04em;
       }
@@ -637,92 +703,54 @@ $breakpoints: (
         margin-bottom: 72px;
       }
     }
-    // .contact_btn_wrapper {
-    //   a {
-    //     background: #F27F3D;
-    //     border-radius: 3px;
-    //     display: flex;
-    //     justify-content: space-evenly;
-    //     align-items: center;
-    //     margin: 0 auto;
-
-    //     @include media(xs) {
-    //       width: 90%;
-    //       padding: 10px 32px;
-    //       font-size: 2rem;
-    //     }
-    //     @include media(sm) {
-    //       width: 60%;
-    //       font-size: 2.4rem;
-    //     }
-    //     @include media(md) {
-    //       width: 60%;
-    //       font-size: 3.2rem;
-    //     }
-    //     @include media(lg) {
-    //       width: 38%;
-    //       font-size: 3.2rem;
-    //       padding: 10px 24px;
-
-    //     }
-    //     color: white;
-    //     transition: 0.3s ease-in-out;
-    //     font-weight: 500;
-    //     img {
-    //       width: 8%;
-    //       @include media(md) {
-    //         width: 7%;
-    //       }
-    //       @include media(lg) {
-    //         width: 5%;
-    //       }
-    //       animation: slideBlink 1.2s linear infinite;
-    //       transition: ease-in-out;
-    //     }
-    //   }
-    //   a:hover {
-    //     background: #032059;
-    //     letter-spacing: 0.1em;
-    //   }
-    //   @keyframes slideBlink {
-    //     from {
-    //       // opacity: 0;
-    //       transform: translateX(3);
-    //     }
-    //     to {
-    //       // opacity: 1;
-    //       transform: translateX(20px);
-    //     }
-    //   }
-
-    // }
     .contact_btn_wrapper {
       a {
         position: relative;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         margin: 0 auto;
-        max-width: 340px;
         padding: 10px 25px;
         color: white;
         transition: 0.3s ease-in-out;
         font-weight: 700;
-        font-size: 2.4rem;
+        @include media(xs) {
+          font-size: 1.8rem;
+          max-width: 90%;
+        }
+        @include media(sm) {
+          font-size: 2.4rem;
+          max-width: 80%;
+        }
+        @include media(md) {
+          max-width: 50%;
+        }
+        @include media(lg) {
+          max-width: 30%;
+        }
         background: #F27F3D;
         border-radius: 50px;
         border: 0.2rem solid #032059;
         box-shadow: 0.3rem 0.3rem 0px 0.2rem #032059;
         img {
-          width: 8%;
+          @include media(xs) {
+            width: 5%;
+            margin-left: 5px;
+          }
+          @include media(sm) {
+            width: 4%;
+            margin-left: 8px;
+          }
           @include media(md) {
-            width: 7%;
+            width: 6%;
+            margin-left: 10px;
           }
           @include media(lg) {
-            width: 7%;
+            width: 5%;
+            margin-left: 12px;
           }
           animation: slideBlink 1.2s linear infinite;
-          transition: ease-in-out;
+          transition: ease;
         }
       }
       a:hover {
@@ -734,11 +762,11 @@ $breakpoints: (
       @keyframes slideBlink {
         from {
           // opacity: 0;
-          transform: translateX(3);
+          transform: translateX(8);
         }
         to {
           // opacity: 1;
-          transform: translateX(20px);
+          transform: translateX(16px);
         }
       }
     }

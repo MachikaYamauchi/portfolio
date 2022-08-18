@@ -174,22 +174,6 @@ export interface Project {
         }
       }
     },
-    DetailsPageHero: {
-      data: {
-        attributes: {
-          url:string;
-        }
-      }
-    },
-    DetailsPageImages: {
-      data: [
-        {
-          attributes: {
-            url:string;
-          }
-        }
-      ]
-    }
     technology_useds: {
       data: [
         {

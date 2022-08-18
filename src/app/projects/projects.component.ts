@@ -12,7 +12,7 @@ import { AboutMe, Project, ProjectsByCategory } from '../interfaces/interface';
 export class ProjectsComponent implements OnInit {
   aboutMe:AboutMe;
   projects:ProjectsByCategory;
-  loading = false;
+  loading = true;
   showElement = false;
 
   server = environment.server;
@@ -20,7 +20,7 @@ export class ProjectsComponent implements OnInit {
   constructor(private cs:CommonService) { }
 
   ngOnInit(): void {
-    this.loading = true;
+    // this.loading = true;
     this.cs.getAboutMe().subscribe( aboutMe => {
       this.aboutMe = aboutMe;
     })

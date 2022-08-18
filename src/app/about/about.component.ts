@@ -12,6 +12,9 @@ export class AboutComponent implements OnInit {
   aboutMe:AboutMe;
   aboutMeCards:AboutMeCard[] = [];
   testimonials:Testimonial[] =[];
+  loading = true;
+  showElement = false;
+
 
   constructor(private cs:CommonService) { }
 
@@ -21,6 +24,8 @@ export class AboutComponent implements OnInit {
     })
 
     this.cs.getAboutMeCards().subscribe(cards => {
+      this.loading = false;
+      this.showElement = true;
       this.aboutMeCards = cards.data;
     })
 

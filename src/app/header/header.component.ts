@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AboutMe } from '../interfaces/interface';
-import { CommonService } from '../services/common.service';
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 
 @Component({
   selector: 'portfolio-header',
@@ -11,28 +7,12 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 })
 export class HeaderComponent implements OnInit {
 
-  aboutMe:AboutMe;
 
-  constructor(private cs:CommonService) {
-    gsap.registerPlugin(ScrollTrigger);
+  constructor() {
   }
 
-  rotateLogo() {
-    gsap.to('.logo', {
-      rotation:360,
-      scrollTrigger: {
-        trigger: ".logo",
-        start: 'top top',
-        end: 'top 300px',
-        scrub: true,
-      }
-    })
-  }
 
   ngOnInit(): void {
-    this.cs.getAboutMe().subscribe( aboutMe => {
-      this.aboutMe = aboutMe;
-    })
 
   }
 

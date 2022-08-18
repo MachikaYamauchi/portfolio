@@ -18,6 +18,8 @@ export class HomeComponent implements OnInit {
   project1:Project;
   project2:Project;
   project3:Project;
+  loading = true;
+  showElement = false;
 
   server = environment.server;
 
@@ -104,7 +106,7 @@ export class HomeComponent implements OnInit {
 
   // Fade In from Bottom
   fadein() {
-    const fadeUps = document.querySelectorAll('.project_desc, .project_img, .projectsPageLink_btn, .skills, .contactMessage, .contact_btn_wrapper');
+    const fadeUps = document.querySelectorAll('.project_desc, .project_img, .projectsPageLink_btn, .skill_title, .skill_desc, .skill_container, .contactMessage, .contact_btn_wrapper');
     fadeUps.forEach((fadeUp, index) => {
       gsap.fromTo(fadeUp, {
         autoAlpha: 0,
@@ -115,7 +117,7 @@ export class HomeComponent implements OnInit {
         y: 0,
         scrollTrigger: {
           trigger: fadeUp,
-          start: 'top center+=100',
+          start: 'top center+=200',
           end: 'top top',
           // toggleActions: "play pause resume reverse",
         }
@@ -123,7 +125,7 @@ export class HomeComponent implements OnInit {
       ScrollTrigger.create({
         trigger: fadeUp,
         id: 'index+1',
-        start: 'top center+=100',
+        start: 'top center+=200',
         end: 'top top',
         once: true,
         // toggleActions: "play pause resume reverse",
@@ -202,12 +204,12 @@ export class HomeComponent implements OnInit {
         {
           opacity:1,
           y: 0,
-          duration: 0.7,
+          duration: 0.9,
           delay: i * 0.03,
           scrollTrigger: {
             trigger: '.text_up',
-            start: 'top center+=300',
-            end: 'top center+=300',
+            start: 'top center+100',
+            end: 'top center+=100',
             once: true,
           }
         },
@@ -230,7 +232,8 @@ export class HomeComponent implements OnInit {
       this.aboutMe = aboutMe;
     })
     this.cs.getProjects().subscribe(projects => {
-      console.log(projects)
+      this.loading = false;
+      this.showElement = true;
       this.project1 = projects.data[0];
       this.project2 = projects.data[5];
       this.project3 = projects.data[1];

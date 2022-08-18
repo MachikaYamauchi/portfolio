@@ -11,28 +11,26 @@ $breakpoints: (
   }
 }
 
-.projectDetail_page {
-
+section.projectDetail_page {
   .hero {
+    background-color: #EFE8D6;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
     @include media(xs) {
-      padding-top: 170px;
-      background-color: #EFE8D6;
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
-      min-height: 450px;
-      margin-bottom: 40px;
+      padding: 170px 0 80px 0;
+      min-height: 400px;
+      margin-bottom: 56px;
     }
-    @include media(sm) {
-      padding-top: 130px;
+    @include media(md) {
       width: 100%;
       background:linear-gradient(125deg,#faf8f2 0%,#faf8f2 60%,#EFE8D6 60%,#EFE8D6 100%);
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-evenly;
-      min-height: 420px;
+      justify-content: center;
+      height: 300px;
     }
     @include media(lg) {
       padding-top: 150px;
@@ -40,12 +38,19 @@ $breakpoints: (
     }
     .heroContent_wrapper {
       @include media(xs) {
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
       }
       @include media(sm) {
-        width: 45%;
-        padding-left: 5%;
+        width: 80%;
+        margin: 0 auto;
+      }
+      @include media(md) {
+        width: 50%;
+        padding-left: 10%;
+      }
+      @include media(lg) {
+        padding-left: 10%; // To adjust page grid
       }
       h1.project_title {
         font-weight: 700;
@@ -55,91 +60,105 @@ $breakpoints: (
           margin-bottom: 40px;
         }
         @include media(sm) {
-          font-size: 2.8rem;
+          font-size: 4rem;
         }
         @include media(md) {
           font-size: 3.2rem;
+          margin-bottom: 24px;
         }
         @include media(lg) {
           font-size: 4.8rem;
+          margin-bottom: 48px;
         }
       }
       .link_wrapper {
-        display: flex;
-        @include media(xs) {
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 40px;
-        }
-        @include media(sm) {
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 24px;
+        @include media(md) {
+          display: flex;
         }
         a {
           display: block;
           color: white;
           text-align: center;
-          font-size: 1.8rem;
-          border-radius: 10px;
+          border-radius: 50px;
           @include media(xs) {
-            margin: 8px;
-            padding: 8px 0;
-            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
           }
-          @include media(sm) {
-            padding: 8px;
-            margin: 0 16px 0 0;
+          @include media(md) {
+            padding: 4px;
+            font-size: 1.6rem;
           }
           @include media(lg) {
+            padding: 8px;
             font-size: 2rem;
           }
         }
-        a.viewSite {
+        .viewSite {
           background-color: #F27F3D;
-          // width: 50%;
+          width: 100%;
+          @include media(md) {
+            width: 50%;
+            margin-right: 20px;
+          }
+          i {
+            font-size: 2.4rem;
+            padding-left: 10px;
+            @include media(md) {
+              font-size: 1.8rem;
+            }
+            @include media(lg) {
+              font-size: 2.4rem;
+            }
+          }
           &:hover {
             background-color: #f6a374;
           }
         }
-        a.github {
+        .github_casestudy {
           background-color: #032059;
+          width: 100%;
+          @include media(md) {
+            width: 50%;
+          }
           i {
-            @include media(xs) {
-              font-size: 3rem;
-              padding-left: 16px;
+            font-size: 2.4rem;
+            padding-left: 10px;
+            @include media(md) {
+              font-size: 1.8rem;
             }
-            @include media(sm) {
-              font-size: 2.5rem;
-              // padding-left: 16px;
+            @include media(lg) {
+              font-size: 2.4rem;
             }
           }
           &:hover {
-            background-color: #063ba5;
+            background-color: #355698;
           }
         }
       }
     }
     .heroImage_wrapper {
-
       @include media(xs) {
         display: flex;
         justify-content: center;
-        margin-bottom: 24px;
+        margin-bottom: 56px;
       }
       @include media(sm) {
-        width: 55%;
-        // display: flex;
-        // justify-content: flex-end;
+        margin-bottom: 56px;
+      }
+      @include media(md) {
+        width: 50%;
+        padding: 5% 5% 0 0; // To adjust page grid and height of heroContent_wrapper
+      }
+      @include media(lg) {
+        padding-right: 5%; // To adjust page grid
       }
       img {
         display: block;
         border-radius: 10px;
         box-shadow: 0 0 20px 0 rgb(96 108 123 / 30%);
         @include media(xs) {
-          width: 90%;
+          width: 80%;
         }
         @include media(sm) {
           width: 80%;
@@ -150,14 +169,31 @@ $breakpoints: (
 
   .overview {
     @include media(xs) {
-      width: 90%;
+      width: 80%;
       margin: 0 auto;
+      margin-bottom: 56px;
+    }
+    @include media(sm) {
+      margin-bottom: 56px;
+    }
+    @include media(md) {
+      margin-bottom: 56px;
+    }
+    @include media(lg) {
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 56px;
+    }
+    .container {
+      margin: 0;
+      padding: 0;
     }
     h2.title_overview {
       font-weight: 700;
       letter-spacing: 0.3rem;
+      color: #F27F3D;
       @include media(xs) {
-        font-size: 2.4rem;
+        font-size: 2.8rem;
         margin-bottom: 24px;
       }
       @include media(md) {
@@ -171,53 +207,68 @@ $breakpoints: (
       @include media(xs) {
         margin-bottom: 40px;
       }
-
-      h3.title {
-        font-weight: 800;
-        letter-spacing: 0.3rem;
-
+      .item {
         @include media(xs) {
-          padding-right: 8px;
+          margin-bottom: 24px;
         }
-      }
-      ul.technology_useds {
-        display: flex;
-        flex-wrap: wrap;
-        padding-left: 0;
-        li {
-          list-style-type: none;
+        @include media(sm) {
+          margin-bottom: 10px;
+        }
+
+        h3.title {
+          font-weight: 800;
+          letter-spacing: 0.3rem;
+          @include media(xs) {
+            font-size: 2rem;
+            padding-right: 8px;
+          }
+        }
+        ul.technology_useds {
+          display: flex;
+          flex-wrap: wrap;
+          padding-left: 0;
+          li {
+            list-style-type: none;
+          }
         }
       }
     }
     .right_panel {
-      .overview {
+      .overview_text {
         margin-bottom: 40px;
       }
-    }
-
-  }
-  .images {
-    padding: 10%;
-    .bg_image {
-      background-color: #ebebeb;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 24px;
-      padding: 10%;
-      img {
-        display: block;
-        width: 80%;
-        box-shadow: 0px 0px 8px 2px rgba(186,186,186,0.18);
+      @include media(lg) {
+        padding-left: 56px;
+        margin-bottom: 72px;
       }
     }
 
   }
+  // .images {
+  //   padding: 10%;
+  //   .bg_image {
+  //     background-color: #ebebeb;
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     align-items: center;
+  //     margin-bottom: 24px;
+  //     padding: 10%;
+  //     img {
+  //       display: block;
+  //       width: 80%;
+  //       box-shadow: 0px 0px 8px 2px rgba(186,186,186,0.18);
+  //     }
+  //   }
+
+  // }
 
   .btn_projects_wrapper {
     @include media(xs) {
       margin-bottom: 30%;
+    }
+    @include media(sm) {
+      margin-bottom: 20%;
     }
     @include media(md) {
       margin-bottom: 20%;

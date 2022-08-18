@@ -13,7 +13,7 @@ GET https://cms.machikayamauchi.me/api/projects-categories?populate=deep,6
 GET https://cms.machikayamauchi.me/api/projects?populate=deep,3
 
 ###
-GET https://cms.machikayamauchi.me/api/projects/1?populate=deep,3
+GET https://cms.machikayamauchi.me/api/projects/2?populate=deep,3
 
 ###
 GET https://cms.machikayamauchi.me/api/skills?populate=deep,3
