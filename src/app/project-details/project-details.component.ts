@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonService } from '../services/common.service';
 import { environment } from 'src/environments/environment.prod';
-import { AboutMe, Project } from '../interfaces/interface';
+import { Project } from '../interfaces/interface';
 
 @Component({
   selector: 'app-project-details',
@@ -10,12 +10,13 @@ import { AboutMe, Project } from '../interfaces/interface';
   styleUrls: ['./project-details.component.scss']
 })
 export class ProjectDetailsComponent implements OnInit {
-  aboutMe:AboutMe;
   project:Project;
   projectTitle:string = "";
   heroImage:string = "";
   projectDescription:string = "";
   technologyUsed:any[] =[];
+  loading = true;
+  showElement = false;
   server = environment.server;
 
   isGithub:boolean = false;
@@ -26,6 +27,8 @@ export class ProjectDetailsComponent implements OnInit {
   ngOnInit(): void {
     let id:any = this.route.snapshot.paramMap.get("id");
     this.cs.getProjectByID(id).subscribe(res => {
+      this.loading = false;
+      this.showElement = true;
       this.project = res.data;
       console.log(this.technologyUsed);
       if(res.data.attributes.GithubLink == null) {
@@ -34,10 +37,6 @@ export class ProjectDetailsComponent implements OnInit {
       if(res.data.attributes.WebsiteLink === "") {
         this.isWebDevRouterLink = true;
       }
-    })
-
-    this.cs.getAboutMe().subscribe( aboutMe => {
-      this.aboutMe = aboutMe;
     })
   }
 

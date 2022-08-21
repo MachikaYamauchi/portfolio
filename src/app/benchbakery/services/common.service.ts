@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Product, Add, Delete, Login, ToggleDisplay, UpdateProduct, getProductByID } from '../interfaces/benchbakeryInterface';
+import { Product, Add, Delete, Login, ToggleDisplay, UpdateProduct} from '../interfaces/benchbakeryInterface';
 import { environment } from 'src/environments/environment';
 
 
@@ -43,7 +43,7 @@ export class CommonService {
     return this.http.get<Product[]>(this.displayProductURL);
   }
 
-  add(image1:string, image2:string, image3:string, name:string, rating:number, price:string, stock:number, alt:string, description:string, display:string) {
+  add(image1:string, image2:string, image3:string, name:string, rating:number, price:string, stock:number,  description:string, display:string) {
     let addBody = {
       image1:image1,
       image2:image2,
@@ -52,7 +52,6 @@ export class CommonService {
       rating:rating,
       price:price,
       stock:stock,
-      alt:alt,
       description:description,
       display:display
     }
@@ -60,10 +59,10 @@ export class CommonService {
   }
 
   getProductByID(id:number){
-    return this.http.get<getProductByID>(this.productsURL + "/" + id);
+    return this.http.get<Product>(this.productsURL + "/" + id);
   }
 
-  updateProduct(productID:any, image1:string, image2:string, image3:string, name:string, rating:number, price:string, stock:number, alt:string, description:string, display:string){
+  updateProduct(productID:any, image1:string, image2:string, image3:string, name:string, rating:number, price:string, stock:number, description:string, display:string){
     let updateBody = {
       productID:productID,
       image1:image1,
@@ -73,7 +72,6 @@ export class CommonService {
       rating:rating,
       price:price,
       stock:stock,
-      alt:alt,
       description:description,
       display:display
     }

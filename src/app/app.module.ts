@@ -22,6 +22,9 @@ import { StockComponent } from './benchbakery/stock/stock.component';
 import { UpdateComponent } from './benchbakery/update/update.component';
 import { PlusvaultComponent } from './plusvault/plusvault.component';
 import { BirdbooksComponent } from './birdbooks/birdbooks.component';
+import { ProductDetailsComponent } from './benchbakery/product-details/product-details.component';
+import {HeaderBenchBakeryComponent} from './benchbakery/header/header.component';
+import {FooterBenchBakeryComponent} from './benchbakery/footer/footer.component';
 
 
 @NgModule({
@@ -41,7 +44,10 @@ import { BirdbooksComponent } from './birdbooks/birdbooks.component';
     StockComponent,
     UpdateComponent,
     PlusvaultComponent,
-    BirdbooksComponent
+    BirdbooksComponent,
+    ProductDetailsComponent,
+    HeaderBenchBakeryComponent,
+    FooterBenchBakeryComponent
 
 
   ],

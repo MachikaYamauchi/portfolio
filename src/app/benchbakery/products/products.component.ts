@@ -13,6 +13,7 @@ export class ProductsComponent implements OnInit {
   server = environment.bakeryserver;
 
   productsJSON:Product[] =[];
+  stars:number[] = [];
   display:any = false;
   displayProduct = "block";
 

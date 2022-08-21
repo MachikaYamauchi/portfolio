@@ -1,21 +1,35 @@
 
 <div class="hero_home">
-  <img class="hero_img_home" [src]="aboutMe.data.attributes.HomeHeroImage.data.attributes.url" alt="Machika Yamauchi web developer portfolio homepage image">
+  <img class="hero_img_home" src="../../assets/home_hero.png" alt="Machika Yamauchi web developer portfolio homepage image">
   <div class="hero_content">
     <div class="hero_mainContent">
       <div class="name_wrapper">
-        <h1 class="myName">{{aboutMe.data.attributes.Name}}</h1>
-        <h1 class="job_title"><span>F</span>ront-End <span>D</span>eveloper</h1>
+        <h1 class="myName">
+          Hello,I'm...<br>
+          Machika Yamauchi.<br>
+        </h1>
+        <h1 class="job_title"><span>F</span>ront-end <span>D</span>eveloper</h1>
+      </div>
+      <!-- <div class="link_wrapper">
+        <a class="viewSite" [routerLink]="[ '/projects', project1.id, project1.attributes.Slug]">View my projects</a>
+      </div> -->
+      <div class="link_wrapper">
+        <div class="projectsSectionLink_btn">
+          <a href="#projects_link">My Projects
+            <img class="arrow_btn" src="../../assets/arrow_white_right.svg" alt="Machika Yamauchi web developer portfolio arrow icon">
+          </a>
+        </div>
       </div>
     </div>
-    <div class="scroll_bar_wrapper">
+
+    <!-- <div class="scroll_bar_wrapper">
       <div class="bar"></div>
-    </div>
+    </div> -->
   </div>
   <portfolio-header></portfolio-header>
 </div>
 
-<div class="title">
+<div class="title" id="projects_link">
   <h2 class="title_clip">Projects</h2>
 </div>
 
@@ -38,7 +52,7 @@
         </div>
       </div>
       <p class="project_img" data-scroll>
-        <img [src]="project1.attributes.ProjectsHero.data.attributes.url" alt="E-commerce Crud App Machika Yamauchi web developer portfolio projects">
+        <img [src]="project1.attributes.ProjectsHero.data.attributes.url" alt="E-commerce Crud App Machika Yamauchi web developer portfolio projects image">
       </p>
   </div>
 
@@ -60,7 +74,7 @@
       </div>
     </div>
     <p class="project_img" data-scroll>
-      <img [src]="project2.attributes.ProjectsHero.data.attributes.url" alt="Sprites & Selkies Daycare Website Machika Yamauchi web developer portfolio projects">
+      <img [src]="project2.attributes.ProjectsHero.data.attributes.url" alt="Sprites & Selkies Daycare Website Machika Yamauchi web developer portfolio projects image">
     </p>
   </div>
 
@@ -82,12 +96,12 @@
       </div>
     </div>
     <p class="project_img" data-scroll>
-      <img [src]="project3.attributes.ProjectsHero.data.attributes.url" alt="UX/UI designer portfolio Machika Yamauchi web developer portfolio projects">
+      <img [src]="project3.attributes.ProjectsHero.data.attributes.url" alt="UX/UI designer portfolio Machika Yamauchi web developer portfolio projects image">
     </p>
   </div>
   <div class="projectsPageLink_btn">
     <a routerLink="/projects">View All Projects
-      <img class="arrow_btn" [src]="aboutMe.data.attributes.Arrow_White_Right.data.attributes.url" alt="">
+      <img class="arrow_btn" src="../../assets/arrow_white_right.svg" alt="Machika Yamauchi web developer portfolio arrow icon">
     </a>
   </div>
 </section>
@@ -200,7 +214,7 @@
   </div>
   <div class="contact_btn_wrapper">
     <a routerLink="/contact">Let's Talk!
-      <img class="arrow_btn" [src]="aboutMe.data.attributes.Arrow_White_Right.data.attributes.url" alt="">
+      <img class="arrow_btn" src="../../assets/arrow_white_right.svg" alt="Machika Yamauchi web developer portfolio arrow icon">
     </a>
   </div>
 </section>

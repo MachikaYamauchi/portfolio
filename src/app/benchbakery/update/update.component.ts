@@ -25,7 +25,6 @@ export class UpdateComponent implements OnInit {
   rating:number = 0;
   price:string = "";
   stock:number = 0;
-  alt:string = "";
   description:string = "";
   display:any = false;
 
@@ -76,7 +75,7 @@ export class UpdateComponent implements OnInit {
 
   updateRecommend() {
     let id:any = this.route.snapshot.paramMap.get("id");
-    this.cs.updateProduct(id, this.filename1, this.filename2, this.filename3, this.name, this.rating, this.price, this.stock, this.alt,this.description, this.display).subscribe(updateData => {
+    this.cs.updateProduct(id, this.filename1, this.filename2, this.filename3, this.name, this.rating, this.price, this.stock, this.description, this.display).subscribe(updateData => {
       console.log(updateData);
       this.displayMessage = "block";
       this.updateStatus = updateData.update;
@@ -103,14 +102,13 @@ export class UpdateComponent implements OnInit {
       // this.image1 = productData.data[0].image1;
       // this.image2 = productData.data[0].image2;
       // this.image3 = productData.data[0].image3;
-      this.name = productData.data[0].name;
-      this.rating = productData.data[0].rating;
-      this.price = productData.data[0].price;
-      this.stock = productData.data[0].stock;
-      this.alt = productData.data[0].alt;
-      this.description = productData.data[0].description;
-      this.display = productData.data[0].display;
-      if(productData.data[0].display === "1") {
+      this.name = productData.name;
+      this.rating = productData.rating;
+      this.price = productData.price;
+      this.stock = productData.stock;
+      this.description = productData.description;
+      this.display = productData.display;
+      if(productData.display === "1") {
         this.display = true;
       }
       else {

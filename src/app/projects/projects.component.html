@@ -10,21 +10,14 @@
 </div>
 
 <portfolio-header *ngIf="showElement"></portfolio-header>
-<!-- <div class="d-flex justify-content-center align-items-center loadingScreeen" *ngIf="loading">
-  <div class="spinner-border" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div>
-  <div>Loading pages...</div>
-</div> -->
-
 <section class="projects_page">
-  <h1 class="pageTitle" *ngIf="showElement"><img [src]="aboutMe.data.attributes.Arrow_Orange_Right.data.attributes.url" alt="">Projects
+  <h1 class="pageTitle" *ngIf="showElement"><img src="../../assets/arrow_orange_right.svg" alt="Machika Yamauchi portfolio web developer arrow icon">Projects
   </h1>
   <div class="projects_card">
     <div class="container" *ngFor="let project of projects.data">
       <h2 class="projects_category">
         {{project.attributes.CategoryName}}
-        <img [src]="aboutMe.data.attributes.Arrow_Navy_Bottom.data.attributes.url" alt="">
+        <img src="../../assets/arrow_navy_bottom.svg" alt="Machika Yamauchi portfolio web developer arrow icon">
       </h2>
       <section class="category_container">
         <div class="row">
@@ -32,7 +25,7 @@
             <div class="project_card_container">
               <a [routerLink]="[ '/projects', item.id, item.attributes.Slug]">
                 <div class="projectImg_wrapper">
-                  <img [src]="item.attributes.ProjectsHero.data.attributes.url">
+                  <img [src]="item.attributes.ProjectsHero.data.attributes.url" alt="Machika Yamauchi portfolio web developer projects image">
                 </div>
                 <div class="project_desc">
                   <h3 class="project_title">{{item.attributes.Title}}</h3>
@@ -41,7 +34,7 @@
                     <li *ngFor="let tech of item.attributes.technology_useds.data">{{tech.attributes.TechnologyName}}</li>
                   </ul>
                   <div class="arrowIcon_wrapper">
-                    <img [src]="aboutMe.data.attributes.Arrow_Orange_Right.data.attributes.url" alt="">
+                    <img src="../../assets/arrow_orange_right.svg" alt="Machika Yamauchi portfolio web developer arrow icon">
                   </div>
                 </div>
               </a>
@@ -53,7 +46,7 @@
   </div>
   <div class="btn_home_wrapper" *ngIf="showElement">
     <a routerLink="/">Back to Home
-      <img class="arrow_btn" [src]="aboutMe.data.attributes.Arrow_White_Right.data.attributes.url" alt="">
+      <img class="arrow_btn" src="../../assets/arrow_white_right.svg" alt="Machika Yamauchi portfolio web developer arrow icon">
     </a>
   </div>
 </section>

@@ -32,9 +32,6 @@ export class ContactComponent implements OnInit {
     this.cs.postLead(newlead).subscribe(res => {
       console.log(res)
       this.formMessageHidden = false;
-      // this.name = "";
-      // this.email = "";
-      // this.message = "";
       form.resetForm();
     })
   }

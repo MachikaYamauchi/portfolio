@@ -1,5 +1,4 @@
 
-
 $breakpoints: (
   'xs': 'screen and (min-width: 1px)',
   'sm': 'screen and (min-width: 576px)',
@@ -23,7 +22,7 @@ $breakpoints: (
   width: 100%;
   height: 100vh;
   margin-bottom: 80px;
-  .hero_img_home {
+  img.hero_img_home {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -31,31 +30,47 @@ $breakpoints: (
     top: 0;
     left: 0;
     z-index: -1;
+    opacity: 0.8;
   }
   .hero_content {
-    position: absolute;
-    top: 5%;
-    margin: 0 auto;
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
     .hero_mainContent {
-      @include media(lg) {
-        margin-top: 8%;
-      }
+      width: 80%;
+      margin: 0 auto;
       .name_wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         h1 {
-          margin: 16px 0;
-          font-size: 2.4rem;
-          font-weight: 700;
-          letter-spacing: 0.2rem;
-          word-break : break-all;
+          letter-spacing: 0.3rem;
+        }
+        .myName {
+          font-weight: 600;
+          @include media(xs) {
+            font-size: 4.8rem;
+            margin-bottom: 14%;
+          }
+          @include media(sm) {
+            font-size: 6.4rem;
+            margin-bottom: 10%;
+          }
+          @include media(md) {
+            font-size: 6.4rem;
+            margin-bottom: 8%;
+          }
+          @include media(lg) {
+            font-size: 8rem;
+            margin-bottom: 3%;
+          }
+        }
+        .job_title {
+          span {
+            color: #F27F3D;
+          }
+          @include media(xs) {
+            font-size: 3.2rem;
+          }
           @include media(sm) {
             font-size: 4rem;
           }
@@ -63,55 +78,178 @@ $breakpoints: (
             font-size: 4rem;
           }
           @include media(lg) {
-            font-size: 5.6rem;
-          }
-        }
-        .job_title {
-          span {
-            color: #F27F3D;
+            font-size: 4rem;
           }
         }
       }
-    }
-    .scroll_bar_wrapper {
-      display: flex;
-      justify-content: center;
-      .bar {
-        background-color: rgb(231, 231, 231, 0);
-        height: 150px;
+      // .link_wrapper {
+      //   @include media(md) {
+      //     display: flex;
+      //   }
+      //   @include media(lg) {
+      //     transform: translateY(80px);
+      //   }
+      //   a {
+      //     display: block;
+      //     padding: 10px;
+      //     color: white;
+      //     text-align: center;
+      //     border-radius: 50px;
+      //     margin: 0 16px 20px 0px;
+      //     font-size: 1.8rem;
+      //     @include media(md) {
+      //       padding: 8px;
+      //     }
+      //   }
+      //   .viewSite {
+      //     background-color: #F27F3D;
+      //     width: 100%;
+      //     @include media(lg) {
+      //       width: 32%;
+      //     }
+      //     &:hover {
+      //       background-color: #f6a374;
+      //     }
+      //   }
+      //   .github {
+      //     background-color: #032059;
+      //     width: 100%;
+      //     @include media(lg) {
+      //       width: 32%;
+      //     }
+      //     i {
+      //       font-size: 2.8rem;
+      //       padding-left: 16px;
+      //     }
+      //     &:hover {
+      //       background-color: #355698;
+      //     }
+      //   }
+      // }
+      .link_wrapper {
+        display: flex;
+        justify-content: flex-start;
         @include media(xs) {
-          height: 80px;
+          transform: translateY(40px); // To set the margin from fome name_wrapper
         }
-        @include media(sm) {
-          height: 120px;
+        @include media(xs) {
+          transform: translateY(64px); // To set the margin from fome name_wrapper
         }
         @include media(md) {
-          height: 150px;
+          transform: translateY(56px); // To set the margin from fome name_wrapper
         }
-        overflow: hidden
+        @include media(lg) {
+          transform: translateY(80px); // To set the margin from fome name_wrapper
+        }
+        .projectsSectionLink_btn {
+          a {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // margin: 0 auto;
+            padding: 10px 25px;
+            color: white;
+            transition: 0.3s ease-in-out;
+            font-weight: 700;
+            @include media(xs) {
+              font-size: 1.8rem;
+              max-width: 85%;
+            }
+            @include media(sm) {
+              font-size: 2.4rem;
+              max-width: 60%;
+            }
+            @include media(md) {
+              max-width: 60%;
+            }
+            @include media(lg) {
+              max-width: 60%;
+            }
+            background: #F27F3D;
+            border-radius: 50px;
+            border: 0.2rem solid #032059;
+            box-shadow: 0.3rem 0.3rem 0px 0.2rem #032059;
+            img {
+              @include media(xs) {
+                width: 6%;
+                margin-left: 5px;
+              }
+              @include media(sm) {
+                width: 6%;
+                margin-left: 8px;
+              }
+              @include media(md) {
+                width: 6%;
+                margin-left: 10px;
+              }
+              @include media(lg) {
+                width: 7%;
+                margin-left: 12px;
+              }
+              animation: slideBlink 1.2s linear infinite;
+              transition: ease;
+            }
+          }
+          a:hover {
+            transform: translate3d(0.2rem, 0.2rem, 0);
+            box-shadow: none;
+            opacity: 1;
+            transition: all 0.2s;
+          }
+          @keyframes slideBlink {
+            from {
+              // opacity: 0;
+              transform: translateX(8);
+            }
+            to {
+              // opacity: 1;
+              transform: translateX(16px);
+            }
+          }
+        }
       }
-      .bar:after {
-        content:"";
-        display: block;
-        width: 1px;
-        border-left:2px #F27F3D solid;
-        animation:scroll 2s ease 0s infinite normal;
-        margin: 0 auto 0;
-      }
-      @keyframes scroll {
-        0% {
-          height: 0;
-        }
-        50% {
-          height: 150px;
-          margin-top: 0;
-        }
-        100% {
-          margin-top: 150px;
-          height: 150px;
-        }
-      }
+
     }
+    // .scroll_bar_wrapper {
+    //   display: flex;
+    //   justify-content: center;
+    //   .bar {
+    //     background-color: rgb(231, 231, 231, 0);
+    //     height: 150px;
+    //     @include media(xs) {
+    //       height: 80px;
+    //     }
+    //     @include media(sm) {
+    //       height: 120px;
+    //     }
+    //     @include media(md) {
+    //       height: 150px;
+    //     }
+    //     overflow: hidden
+    //   }
+    //   .bar:after {
+    //     content:"";
+    //     display: block;
+    //     width: 1px;
+    //     border-left:2px #F27F3D solid;
+    //     animation:scroll 2s ease 0s infinite normal;
+    //     margin: 0 auto 0;
+    //   }
+    //   @keyframes scroll {
+    //     0% {
+    //       height: 0;
+    //     }
+    //     50% {
+    //       height: 150px;
+    //       margin-top: 0;
+    //     }
+    //     100% {
+    //       margin-top: 150px;
+    //       height: 150px;
+    //     }
+    //   }
+    // }
   }
 }
 
@@ -119,6 +257,7 @@ $breakpoints: (
   .title {
     display: table;
     position: relative;
+    padding-top: 140px;
     @include media(xs) {
       margin-bottom: 40px;
       margin-left: 10%;

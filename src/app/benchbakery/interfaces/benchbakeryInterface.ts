@@ -25,30 +25,29 @@ export interface Product {
   rating:number;
   price:string;
   stock:number;
-  alt:string;
   description:string
   display:any
 }
 
-export interface getProductByID {
-  getOneProduct: boolean;
-  message: string;
-  data: [
-    {
-      id:number;
-      image1: string;
-      image2: string;
-      image3: string;
-      name: string;
-      rating: number;
-      price: string;
-      stock: number;
-      alt: string;
-      description:string;
-      display:any;
-    }
-  ]
-}
+// export interface getProductByID {
+//   getOneProduct: boolean;
+//   message: string;
+//   data: [
+//     {
+//       id:number;
+//       image1: string;
+//       image2: string;
+//       image3: string;
+//       name: string;
+//       rating: number;
+//       price: string;
+//       stock: number;
+//       alt: string;
+//       description:string;
+//       display:any;
+//     }
+//   ]
+// }
 
 export interface Add {
   add:boolean;

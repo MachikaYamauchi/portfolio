@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from './../services/common.service';
 import { Router } from '@angular/router';
+// import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -12,6 +13,7 @@ export class LoginComponent implements OnInit {
   username:string = "";
   password:string = "";
   loginStatus:boolean = true;
+  formInvalid = true;
 
   constructor(private cs:CommonService, private router:Router) { }
 
@@ -22,9 +24,15 @@ export class LoginComponent implements OnInit {
       if(loginData.login) {
         console.log(loginData.data[0].id);
         localStorage.setItem("userID", JSON.stringify(loginData.data[0].id))
-        this.router.navigate(['/admin']);
+        this.router.navigate(['benchbakery/admin']);
       }
     })
+  }
+
+  resolved(event:any) {
+    if(event) {
+      this.formInvalid = false;
+    }
   }
 
   ngOnInit(): void {

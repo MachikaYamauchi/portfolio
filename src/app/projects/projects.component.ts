@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../services/common.service';
 import { environment } from 'src/environments/environment.prod';
-import { AboutMe, Project, ProjectsByCategory } from '../interfaces/interface';
+import { ProjectsByCategory } from '../interfaces/interface';
 
 
 @Component({
@@ -10,7 +10,6 @@ import { AboutMe, Project, ProjectsByCategory } from '../interfaces/interface';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  aboutMe:AboutMe;
   projects:ProjectsByCategory;
   loading = true;
   showElement = false;
@@ -21,10 +20,6 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     // this.loading = true;
-    this.cs.getAboutMe().subscribe( aboutMe => {
-      this.aboutMe = aboutMe;
-    })
-
     this.cs.getProjectsByCategory().subscribe(res => {
       this.loading = false;
       this.showElement = true;

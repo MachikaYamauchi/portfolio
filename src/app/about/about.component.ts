@@ -20,12 +20,12 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.cs.getAboutMe().subscribe( aboutMe => {
+      this.loading = false;
+      this.showElement = true;
       this.aboutMe = aboutMe;
     })
 
     this.cs.getAboutMeCards().subscribe(cards => {
-      this.loading = false;
-      this.showElement = true;
       this.aboutMeCards = cards.data;
     })
 

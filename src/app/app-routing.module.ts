@@ -11,6 +11,8 @@ import { LoginComponent } from './benchbakery/login/login.component';
 import { UpdateComponent } from './benchbakery/update/update.component';
 import { PlusvaultComponent } from './plusvault/plusvault.component';
 import { BirdbooksComponent } from './birdbooks/birdbooks.component';
+import { AboutBenchBakeryComponent } from './benchbakery/about/about.component';
+import { ProductDetailsComponent } from './benchbakery/product-details/product-details.component';
 
 const routes: Routes = [
   {path:"", component:HomeComponent},
@@ -19,6 +21,8 @@ const routes: Routes = [
   {path:"about", component:AboutComponent},
   {path:"contact", component:ContactComponent},
   {path:"benchbakery/home", component:HomeBenchBakeryComponent},
+  {path:"benchbakery/products/:id", component:ProductDetailsComponent},
+  {path:"benchbakery/about", component:AboutBenchBakeryComponent},
   {path:"benchbakery/admin", component:AdminComponent},
   {path:"benchbakery/login", component:LoginComponent},
   {path:"benchbakery/update/:id", component:UpdateComponent},

@@ -16,12 +16,22 @@
               <li class="nav-item">
                 <a class="nav-link" routerLink="/about"><img src="../../assets/arrow_orange_45deg.svg" alt="">About</a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="../../assets/resume.pdf" target="_blank"><img src="../../assets/arrow_orange_45deg.svg" alt="">Resume</a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link" routerLink="/contact"><img src="../../assets/arrow_orange_45deg.svg" alt="">Contact</a>
               </li>
+              <!-- <li class="nav-item border">
+                <span></span>
+              </li> -->
+              <li class="nav-item social">
+                <a [href]="aboutMe.data.attributes.LinkedInLink" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a [href]="aboutMe.data.attributes.GithubLink" target="_blank"><i class="fa-brands fa-github"></i></a>
+              </li>
+              <!-- <li class="nav-item">
+                <a [href]="aboutMe.data.attributes.GithubLink"><i class="fa-brands fa-github"></i></a>
+              </li> -->
           </ul>
         </div>
     </div>

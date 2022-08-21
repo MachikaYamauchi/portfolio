@@ -102,6 +102,10 @@
   font-size: .75rem;
 }
 
+.sidebar .nav-link.disabled {
+  color: #949494;
+}
+
 /*
  * Navbar
  */
@@ -112,6 +116,11 @@
   background-color: rgba(0, 0, 0, .25);
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
 }
+
+.brand_name {
+  font-size: 24px;
+}
+
 
 .navbar .navbar-toggler {
   top: .25rem;
@@ -132,50 +141,71 @@
   border-color: transparent;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
 }
-
-
-
-
-
-
-
-img {
-  width: 50%;
+.signOut {
+  cursor: pointer;
 }
 
-h1 {
-  margin: 56px 0;
-  padding-left: 24px;
+
+
+main {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: #503629;
+  background-color: #f9f9f9;
+  margin-bottom: 100px;
+  img {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin: 32px 0;
+    font-weight: 700;
+  }
+
+  table {
+    color: #503629;
+    tbody tr:hover{
+      background-color: rgb(243, 245, 255);
+    }
+
+    th td {
+      border: 1px solid gray;
+    }
+
+    tbody td {
+      font-size: 16px;
+    }
+
+    .btn {
+      display: block;
+      margin-bottom: 8px;
+    }
+  }
+
+
+  .addProduct {
+    width: 60%;
+    padding: 40px 0;
+    h3.title {
+      font-size: 40px;
+      margin-bottom: 32px;
+      font-weight: 700;
+    }
+    #formFile, .form-control {
+      font-size: 16px;
+    }
+    .btn {
+      font-size: 24px;
+    }
+    .success {
+      color: green;
+      font-size: 24px;
+    }
+
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+  }
 }
 
-tbody tr:hover{
-  background-color: rgb(243, 245, 255);
-}
-
-.btn {
-  display: block;
-  margin-bottom: 8px;
-}
-
-.add {
-  width: 500px;
-  padding: 40px 0;
-}
-
-.success {
-  color: green;
-  font-size: 24px;
-}
-
-.error {
-  color: red;
-}
-
-.btn {
-  margin-right: 16px;
-  margin-top: 40px;
-}
-
-input {
-  height: 24px;
-}

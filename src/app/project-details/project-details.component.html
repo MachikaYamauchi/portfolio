@@ -1,5 +1,16 @@
-<portfolio-header></portfolio-header>
-<section class="projectDetail_page">
+<div class="loadingScreen" *ngIf="loading">
+  <div class="flower-spinner">
+    <div class="dots-container">
+      <div class="bigger-dot">
+        <div class="smaller-dot"></div>
+      </div>
+    </div>
+  </div>
+  <div>Page Loading...</div>
+</div>
+
+<portfolio-header *ngIf="showElement"></portfolio-header>
+<section class="projectDetail_page" *ngIf="showElement">
   <div class="hero">
     <div class="heroContent_wrapper">
       <h1 class="project_title">{{project.attributes.Title}}</h1>
@@ -29,7 +40,7 @@
       </div>
     </div>
     <div class="heroImage_wrapper">
-      <img [src]="project.attributes.ProjectsHero.data.attributes.url" alt="">
+      <img [src]="project.attributes.ProjectsHero.data.attributes.url" alt="Machika Yamauchi portfolio web developer project image">
     </div>
   </div>
   <div class="overview">
@@ -76,17 +87,12 @@
       </div>
     </div>
   </div>
-  <!-- <div class="images">
-    <div class="bg_image" *ngFor="let image of project.attributes.DetailsPageImages.data">
-      <img [src]="image.attributes.url" alt="">
-    </div>
-  </div> -->
   <div class="btn_projects_wrapper">
     <a routerLink="/projects">View All projects
-      <img class="arrow_btn" [src]="aboutMe.data.attributes.Arrow_White_Right.data.attributes.url" alt="">
+      <img class="arrow_btn" src="../../assets/arrow_white_right.svg" alt="Machika Yamauchi portfolio web developer arrow icon">
     </a>
   </div>
 </section>
-<portfolio-footer></portfolio-footer>
+<portfolio-footer *ngIf="showElement"></portfolio-footer>
 
 

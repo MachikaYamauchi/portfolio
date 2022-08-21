@@ -9,10 +9,10 @@
   <div>Page Loading...</div>
 </div>
 
-<portfolio-header *ngIf="showElement"></portfolio-header>
-<section class="about_page">
-  <h1 class="pageTitle" *ngIf="showElement">
-    <span><img [src]="aboutMe.data.attributes.Arrow_Orange_Right.data.attributes.url" alt="">About me</span>
+<portfolio-header></portfolio-header>
+<section class="about_page" *ngIf="showElement">
+  <h1 class="pageTitle">
+    <span><img src="../../assets/arrow_orange_right.svg" alt="Machika Yamauchi portfolio web developer arrow icon">About me</span>
   </h1>
   <div class="about_me">
     <div class="container">
@@ -20,7 +20,7 @@
         <div class="col-lg-6">
           <div class="left_panel">
             <div class="image_wrapper">
-              <img [src]="aboutMe.data.attributes.HeadShot.data.attributes.url" alt="Machika Yamauchi Portfolio headshot">
+              <img src="../../assets/myHeadShot(light_size).jpg" alt="Machika Yamauchi portfolio web developer headshot">
             </div>
             <div class="bio_content">
               <h3 class="subtitle">{{aboutMe.data.attributes.BioSubtitle}}</h3>
@@ -34,7 +34,7 @@
               <div class="col-sm-6" *ngFor="let aboutMeCard of aboutMeCards">
                 <div class="card_container">
                   <div class="icon_wrapper">
-                    <img [src]="aboutMeCard.attributes.Icon.data.attributes.url" alt="Machika Yamauchi Portfolio myself icon">
+                    <img [src]="aboutMeCard.attributes.Icon.data.attributes.url" alt="Machika Yamauchi portfolio web developer myself icon">
                   </div>
                   <div class="card_text">
                     <h4 class="card_title">{{aboutMeCard.attributes.Title}}</h4>
@@ -47,7 +47,7 @@
         </div>
       </div>
     </div>
-    <div class="resume_btn" *ngIf="showElement">
+    <div class="resume_btn">
       <a href="../../assets/resume.pdf" target="_blank">See My Resume
         <i class="fa-solid fa-file-arrow-down"></i>
       </a>
@@ -57,7 +57,7 @@
   <div class="testimonial">
     <h2 class="section_title">
       What my instructors say about me
-      <img [src]="aboutMe.data.attributes.Arrow_Navy_Bottom.data.attributes.url" alt="Machika Yamauchi portfolio arrow icon">
+      <img src="../../assets/arrow_navy_bottom.svg" alt="Machika Yamauchi portfolio web developer arrow icon">
     </h2>
     <div class="container">
       <div class="row">
@@ -68,7 +68,7 @@
               <p class="content" [innerHTML]="testimonial.attributes.Testimonial"></p>
             </div>
             <div class="cite">
-              <img [src]="testimonial.attributes.Image.data.attributes.url" alt="">
+              <img [src]="testimonial.attributes.Image.data.attributes.url" alt="Machikka Yamauchi portfolio VanArts instructor headshot">
               <div class="name_container">
                 <div class="school_name">VanArts Instructor</div>
                 <div>
@@ -87,7 +87,7 @@
   <div class="favorite_points">
     <h2 class="section_title">
       What I like for development
-      <img [src]="aboutMe.data.attributes.Arrow_Navy_Bottom.data.attributes.url" alt="">
+      <img src="../../assets/arrow_navy_bottom.svg" alt="Machika Yamauchi portfolio web developer arrow icon">
     </h2>
     <div class="points_wrapper">
       <div class="backshot_image">
@@ -124,7 +124,7 @@
     </div>
     <div class="contact_btn_wrapper">
       <a href="#">Lets's Talk!
-        <img class="arrow_btn" [src]="aboutMe.data.attributes.Arrow_White_Right.data.attributes.url" alt="">
+        <img class="arrow_btn" src="../../assets/arrow_white_right.svg" alt="Machika Yamauchi portfolio web developer arrow icon">
       </a>
     </div>
   </div>
