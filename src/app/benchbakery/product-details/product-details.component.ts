@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 import { Product } from '../interfaces/benchbakeryInterface';
 import { CommonService } from './../services/common.service';
 
@@ -17,11 +17,14 @@ export class ProductDetailsComponent implements OnInit {
 
   constructor(private cs:CommonService, private route:ActivatedRoute) { }
 
-  incQty(id:number) {
-  }
-
-  decQty(id:number) {
-  }
+  // isLessStock(stockNumber:number) {
+  //   if(stockNumber < 10) {
+  //     return true;
+  //   }
+  //   else {
+  //     return false;
+  //   }
+  // }
 
   ngOnInit(): void {
     let id:any = this.route.snapshot.paramMap.get("id");

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 import { Product } from '../interfaces/benchbakeryInterface';
 import { CommonService } from './../services/common.service';
 
@@ -17,14 +17,7 @@ export class ProductsComponent implements OnInit {
   display:any = false;
   displayProduct = "block";
 
-  isLessStock(stockNumber:number) {
-    if(stockNumber < 10) {
-      return true;
-    }
-    else {
-      return false;
-    }
-  }
+
 
   constructor(private cs:CommonService) { }
 
