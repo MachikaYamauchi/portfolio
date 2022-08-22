@@ -15,6 +15,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
 
 import { HomeBenchBakeryComponent } from './benchbakery/home/home.component';
+import { AboutBenchBakeryComponent } from './benchbakery/about/about.component';
 import { AdminComponent } from './benchbakery/admin/admin.component';
 import { LoginComponent } from './benchbakery/login/login.component';
 import { ProductsComponent } from './benchbakery/products/products.component';
@@ -38,6 +39,7 @@ import {FooterBenchBakeryComponent} from './benchbakery/footer/footer.component'
     AboutComponent,
     ContactComponent,
     HomeBenchBakeryComponent,
+    AboutBenchBakeryComponent,
     AdminComponent,
     LoginComponent,
     ProductsComponent,

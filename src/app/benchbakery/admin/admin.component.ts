@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonService } from './../services/common.service';
 import { Router } from '@angular/router';
 import { Product } from './../interfaces/benchbakeryInterface';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 // import { environment } from 'src/environments/environment';
 
 @Component({

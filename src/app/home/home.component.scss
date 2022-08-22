@@ -82,50 +82,6 @@ $breakpoints: (
           }
         }
       }
-      // .link_wrapper {
-      //   @include media(md) {
-      //     display: flex;
-      //   }
-      //   @include media(lg) {
-      //     transform: translateY(80px);
-      //   }
-      //   a {
-      //     display: block;
-      //     padding: 10px;
-      //     color: white;
-      //     text-align: center;
-      //     border-radius: 50px;
-      //     margin: 0 16px 20px 0px;
-      //     font-size: 1.8rem;
-      //     @include media(md) {
-      //       padding: 8px;
-      //     }
-      //   }
-      //   .viewSite {
-      //     background-color: #F27F3D;
-      //     width: 100%;
-      //     @include media(lg) {
-      //       width: 32%;
-      //     }
-      //     &:hover {
-      //       background-color: #f6a374;
-      //     }
-      //   }
-      //   .github {
-      //     background-color: #032059;
-      //     width: 100%;
-      //     @include media(lg) {
-      //       width: 32%;
-      //     }
-      //     i {
-      //       font-size: 2.8rem;
-      //       padding-left: 16px;
-      //     }
-      //     &:hover {
-      //       background-color: #355698;
-      //     }
-      //   }
-      // }
       .link_wrapper {
         display: flex;
         justify-content: flex-start;
@@ -211,45 +167,6 @@ $breakpoints: (
       }
 
     }
-    // .scroll_bar_wrapper {
-    //   display: flex;
-    //   justify-content: center;
-    //   .bar {
-    //     background-color: rgb(231, 231, 231, 0);
-    //     height: 150px;
-    //     @include media(xs) {
-    //       height: 80px;
-    //     }
-    //     @include media(sm) {
-    //       height: 120px;
-    //     }
-    //     @include media(md) {
-    //       height: 150px;
-    //     }
-    //     overflow: hidden
-    //   }
-    //   .bar:after {
-    //     content:"";
-    //     display: block;
-    //     width: 1px;
-    //     border-left:2px #F27F3D solid;
-    //     animation:scroll 2s ease 0s infinite normal;
-    //     margin: 0 auto 0;
-    //   }
-    //   @keyframes scroll {
-    //     0% {
-    //       height: 0;
-    //     }
-    //     50% {
-    //       height: 150px;
-    //       margin-top: 0;
-    //     }
-    //     100% {
-    //       margin-top: 150px;
-    //       height: 150px;
-    //     }
-    //   }
-    // }
   }
 }
 
@@ -454,7 +371,12 @@ $breakpoints: (
         @include media(xs) {
           width: 80%;
         }
-        @include media(md) {
+        // @include media(md) {
+        //   margin-right: 5%;
+        //   width: 60%;
+        // }
+        @include media(lg) {
+          // margin-left: 5%;
           margin-right: 5%;
           width: 60%;
         }
@@ -631,7 +553,7 @@ $breakpoints: (
         @include media(xs) {
           width: 80%;
         }
-        @include media(md) {
+        @include media(lg) {
           margin-left: 5%;
           margin-right: 0;
           width: 60%;

@@ -44,7 +44,7 @@ $breakpoints: (
       @include media(xs) {
         margin-bottom: 24px
       }
-      @include media(xs) {
+      @include media(sm) {
         font-size: 24px;
       }
       @include media(md) {
@@ -69,7 +69,6 @@ $breakpoints: (
       }
       @include media(lg) {
         font-size: 5.6rem;
-        letter-spacing: 0.4rem
       }
     }
     .btn_wrapper {

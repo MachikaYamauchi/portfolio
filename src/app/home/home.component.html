@@ -10,9 +10,6 @@
         </h1>
         <h1 class="job_title"><span>F</span>ront-end <span>D</span>eveloper</h1>
       </div>
-      <!-- <div class="link_wrapper">
-        <a class="viewSite" [routerLink]="[ '/projects', project1.id, project1.attributes.Slug]">View my projects</a>
-      </div> -->
       <div class="link_wrapper">
         <div class="projectsSectionLink_btn">
           <a href="#projects_link">My Projects
@@ -21,10 +18,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="scroll_bar_wrapper">
-      <div class="bar"></div>
-    </div> -->
   </div>
   <portfolio-header></portfolio-header>
 </div>
@@ -99,7 +92,7 @@
       <img [src]="project3.attributes.ProjectsHero.data.attributes.url" alt="UX/UI designer portfolio Machika Yamauchi web developer portfolio projects image">
     </p>
   </div>
-  <div class="projectsPageLink_btn">
+  <div class="projectsPageLink_btn" data-scroll>
     <a routerLink="/projects">View All Projects
       <img class="arrow_btn" src="../../assets/arrow_white_right.svg" alt="Machika Yamauchi web developer portfolio arrow icon">
     </a>
@@ -107,11 +100,11 @@
 </section>
 
 <section class="skills">
-  <h2 class="skill_title">Skills</h2>
-  <p class="skill_desc">
+  <h2 class="skill_title" data-scroll>Skills</h2>
+  <p class="skill_desc" data-scroll>
     I have learned web development and web design skills to become a front-end developer.<br>I list all the skills that I have learned until now.
   </p>
-  <div class="skill_container">
+  <div class="skill_container" data-scroll>
     <div class="skill_card">
       <i class="devicon-angularjs-plain"></i>
       <p>Angular</p>
@@ -209,10 +202,11 @@
     <span class="text_up_js">c</span>
     <span class="text_up_js">t</span>
   </div>
-  <div class="contactMessage">
+  <!-- <h2 class="contact_title" data-scroll>Contact</h2> -->
+  <div class="contactMessage" data-scroll>
     <p>Please Feel Free to Contact Me!</p>
   </div>
-  <div class="contact_btn_wrapper">
+  <div class="contact_btn_wrapper" data-scroll>
     <a routerLink="/contact">Let's Talk!
       <img class="arrow_btn" src="../../assets/arrow_white_right.svg" alt="Machika Yamauchi web developer portfolio arrow icon">
     </a>

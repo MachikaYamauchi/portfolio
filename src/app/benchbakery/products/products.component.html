@@ -2,27 +2,6 @@
   <div class="row">
     <div class="col-lg-3 col-md-6 products_wrapper" *ngFor="let products of productsJSON">
       <a [routerLink]="[ '/benchbakery/products', products.id]">
-        <!-- <div [id]="'carouselExampleControlsNoTouching_' + products.id" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-          <div class="carousel-inner">
-            <div class="carousel-item active productImageWrapper">
-              <img [src]="server + '/' + products.image1" class="d-block w-100" [alt]="products.alt">
-            </div>
-            <div class="carousel-item productImageWrapper">
-              <img [src]="server + '/' + products.image2" class="d-block w-100" [alt]="products.alt">
-            </div>
-            <div class="carousel-item productImageWrapper">
-              <img [src]="server + '/' + products.image3" class="d-block w-100" [alt]="products.alt">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselExampleControlsNoTouching_'+ products.id" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carouselExampleControlsNoTouching_'+ products.id" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div> -->
         <div class="product_img">
           <img [src]="server + '/' + products.image1" alt="Bench Bakery product">
         </div>
