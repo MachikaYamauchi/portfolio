@@ -30,7 +30,7 @@ export class CommonService {
 
 
   getProjectsByCategory() {
-    return this.http.get<ProjectsByCategory>(this.url + "/api/projects-categories?populate=deep,6")
+    return this.http.get<ProjectsByCategory>(this.url + "/api/projects-categories?populate=deep,3")
   }
 
   getProjects() {
@@ -38,7 +38,7 @@ export class CommonService {
   }
 
   getProjectByID(id:number) {
-    return this.http.get<{data:Project}>(this.url + "/api/projects/" + id + "?populate=deep,5")
+    return this.http.get<{data:Project}>(this.url + "/api/projects/" + id + "?populate=deep,3")
   }
 
   postLead(data:any) {

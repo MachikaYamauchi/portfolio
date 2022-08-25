@@ -193,38 +193,28 @@ export class HomeComponent implements OnInit {
     )
   }
 
-  textUp() {
-    const text_ups = document.querySelectorAll('.text_up_js');
+  // textUp() {
+  //   const text_ups = document.querySelectorAll('.text_up_js');
 
-    text_ups.forEach((text_up, i) => {
-        gsap.fromTo(text_up, {
-          opacity:0.1,
-          y: '110%',
-        },
-        {
-          opacity:1,
-          y: 0,
-          duration: 0.9,
-          delay: i * 0.03,
-          scrollTrigger: {
-            trigger: '.text_up',
-            start: 'top center+100',
-            end: 'top center+=100',
-            once: true,
-          }
-        },
-        )
-    });
-  }
-
-  // ngAfterViewInit(): void {
-
-  //   this.slideTitle();
-  //   this.slideText();
-  //   this.slideBackgroundLeft();
-  //   this.slideBackgroundRight();
-  //   this.fadeinProjectSummary();
-  //   this.fadeinImage();
+  //   text_ups.forEach((text_up, i) => {
+  //       gsap.fromTo(text_up, {
+  //         opacity:0.1,
+  //         y: '110%',
+  //       },
+  //       {
+  //         opacity:1,
+  //         y: 0,
+  //         duration: 0.9,
+  //         delay: i * 0.03,
+  //         scrollTrigger: {
+  //           trigger: '.text_up',
+  //           start: 'top center+100',
+  //           end: 'top center+=100',
+  //           once: true,
+  //         }
+  //       },
+  //       )
+  //   });
   // }
 
   ngOnInit(): void {
@@ -247,7 +237,7 @@ export class HomeComponent implements OnInit {
     this.slideBackgroundLeft();
     this.slideBackgroundRight();
     this.fadein();
-    this.textUp();
+    // this.textUp();
   }
 
 }

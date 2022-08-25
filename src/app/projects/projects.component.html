@@ -9,15 +9,15 @@
   <div>Page Loading...</div>
 </div>
 
-<portfolio-header *ngIf="showElement"></portfolio-header>
-<section class="projects_page">
-  <h1 class="pageTitle" *ngIf="showElement"><img src="../../assets/arrow_orange_right.svg" alt="Machika Yamauchi portfolio web developer arrow icon">Projects
+<portfolio-header></portfolio-header>
+<section class="projects_page" *ngIf="showElement">
+  <h1 class="pageTitle" *ngIf="showElement"><img src="../../assets/arrow_orange_right.svg" alt="Machika Yamauchi portfolio web developer arrow icon" *ngIf="showElement">Projects
   </h1>
   <div class="projects_card">
     <div class="container" *ngFor="let project of projects.data">
       <h2 class="projects_category">
         {{project.attributes.CategoryName}}
-        <img src="../../assets/arrow_navy_bottom.svg" alt="Machika Yamauchi portfolio web developer arrow icon">
+        <img src="../../assets/arrow_navy_bottom.svg" alt="Machika Yamauchi portfolio web developer arrow icon" *ngIf="showElement">
       </h2>
       <section class="category_container">
         <div class="row">
@@ -44,7 +44,7 @@
       </section>
     </div>
   </div>
-  <div class="afterEffects">
+  <!-- <div class="afterEffects">
     <h2 class="projects_category">
       After Effects
       <img src="../../assets/arrow_navy_bottom.svg" alt="Machika Yamauchi portfolio web developer arrow icon">
@@ -53,11 +53,10 @@
       <iframe src="https://www.youtube.com/embed/RZmZgntL9DY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
       </iframe>
     </div>
-    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/RZmZgntL9DY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-  </div>
+  </div> -->
 
   <div class="btn_home_wrapper" *ngIf="showElement">
-    <a routerLink="/">Back to Home
+    <a routerLink="/" *ngIf="showElement">Back to Home
       <img class="arrow_btn" src="../../assets/arrow_white_right.svg" alt="Machika Yamauchi portfolio web developer arrow icon">
     </a>
   </div>
