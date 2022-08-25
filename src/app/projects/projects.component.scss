@@ -241,13 +241,22 @@ $breakpoints: (
           border-radius: 10px;
           box-shadow: 0 0 10px 0 rgb(96 108 123 / 20%);
           margin-bottom: 24px;
+          @include media(sm) {
+            height: 600px;
+            overflow: hidden;
+          }
           @include media(md) {
-            height: 780px;
+            height: 620px;
+            overflow: hidden;
+          }
+          @include media(lg) {
+            height: 650px;
             overflow: hidden;
           }
           a {
             display: inline-block;
             color: #032059;
+            height: 100%;
             .projectImg_wrapper {
               overflow: hidden;
               @include media(xs) {
@@ -330,21 +339,21 @@ $breakpoints: (
                   }
                 }
               }
-              .arrowIcon_wrapper {
-                position: relative;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                border: 2px solid #032059;
-                img {
-                  display: block;
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  width: 40%;
-                }
-              }
+              // .arrowIcon_wrapper {
+              //   position: relative;
+              //   width: 50px;
+              //   height: 50px;
+              //   border-radius: 50%;
+              //   border: 2px solid #032059;
+              //   img {
+              //     display: block;
+              //     position: absolute;
+              //     top: 50%;
+              //     left: 50%;
+              //     transform: translate(-50%, -50%);
+              //     width: 40%;
+              //   }
+              // }
             }
           }
         }
@@ -352,73 +361,73 @@ $breakpoints: (
     }
   }
 
-  .afterEffects {
-    @include media(xs) {
-      margin-bottom: 56px;
-    }
-    @include media(sm) {
-      width: 90%;
-      margin: 0 auto;
-      margin-bottom: 56px;
-    }
-    @include media(md) {
-      width: 100%;
-      margin: 0 auto;
-      margin-bottom: 72px;
-    }
-    @include media(lg) {
-      width: 50%;
-      margin: 0;
-      padding-bottom: 80px;
-    }
-    h2.projects_category {
-      letter-spacing: 0.2rem;
-      font-weight: 700;
-      @include media(xs) {
-        font-size: 2.4rem;
-        margin-bottom: 5%;
-      }
-      @include media(sm) {
-        font-size: 2.8rem;
-        margin-bottom: 4%;
-      }
-      @include media(md) {
-        font-size: 3.2rem;
-        margin-bottom: 4%;
-      }
-      @include media(lg) {
-        font-size: 4rem;
-        margin-bottom: 5%;
-      }
-      img {
-        width: 8%;
-        margin-right: 8px;
-        @include media(sm) {
-          width: 5%;
-        }
-        @include media(md) {
-          width: 4%;
-          margin-right: 20px;
-        }
-        @include media(lg) {
-          width: 4%;
-        }
-      }
-    }
-    .youtube_container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
+  // .afterEffects {
+  //   @include media(xs) {
+  //     margin-bottom: 56px;
+  //   }
+  //   @include media(sm) {
+  //     width: 90%;
+  //     margin: 0 auto;
+  //     margin-bottom: 56px;
+  //   }
+  //   @include media(md) {
+  //     width: 100%;
+  //     margin: 0 auto;
+  //     margin-bottom: 72px;
+  //   }
+  //   @include media(lg) {
+  //     width: 50%;
+  //     margin: 0;
+  //     padding-bottom: 80px;
+  //   }
+  //   h2.projects_category {
+  //     letter-spacing: 0.2rem;
+  //     font-weight: 700;
+  //     @include media(xs) {
+  //       font-size: 2.4rem;
+  //       margin-bottom: 5%;
+  //     }
+  //     @include media(sm) {
+  //       font-size: 2.8rem;
+  //       margin-bottom: 4%;
+  //     }
+  //     @include media(md) {
+  //       font-size: 3.2rem;
+  //       margin-bottom: 4%;
+  //     }
+  //     @include media(lg) {
+  //       font-size: 4rem;
+  //       margin-bottom: 5%;
+  //     }
+  //     img {
+  //       width: 8%;
+  //       margin-right: 8px;
+  //       @include media(sm) {
+  //         width: 5%;
+  //       }
+  //       @include media(md) {
+  //         width: 4%;
+  //         margin-right: 20px;
+  //       }
+  //       @include media(lg) {
+  //         width: 4%;
+  //       }
+  //     }
+  //   }
+  //   .youtube_container {
+  //     position: relative;
+  //     padding-bottom: 56.25%;
+  //     height: 0;
+  //     overflow: hidden;
+  //     iframe {
+  //       position: absolute;
+  //       top: 0;
+  //       left: 0;
+  //       width: 100%;
+  //       height: 100%;
+  //     }
+  //   }
+  // }
 
   .btn_home_wrapper {
     @include media(xs) {

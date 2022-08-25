@@ -33,9 +33,9 @@
                   <ul class="technology_used">
                     <li *ngFor="let tech of item.attributes.technology_useds.data">{{tech.attributes.TechnologyName}}</li>
                   </ul>
-                  <div class="arrowIcon_wrapper">
+                  <!-- <div class="arrowIcon_wrapper">
                     <img src="../../assets/arrow_orange_right.svg" alt="Machika Yamauchi portfolio web developer arrow icon">
-                  </div>
+                  </div> -->
                 </div>
               </a>
             </div>
@@ -44,16 +44,6 @@
       </section>
     </div>
   </div>
-  <!-- <div class="afterEffects">
-    <h2 class="projects_category">
-      After Effects
-      <img src="../../assets/arrow_navy_bottom.svg" alt="Machika Yamauchi portfolio web developer arrow icon">
-    </h2>
-    <div class="youtube_container">
-      <iframe src="https://www.youtube.com/embed/RZmZgntL9DY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-      </iframe>
-    </div>
-  </div> -->
 
   <div class="btn_home_wrapper" *ngIf="showElement">
     <a routerLink="/" *ngIf="showElement">Back to Home
