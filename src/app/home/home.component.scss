@@ -165,7 +165,6 @@ $breakpoints: (
           }
         }
       }
-
     }
   }
 }
@@ -208,35 +207,131 @@ $breakpoints: (
   //   }
   // }
 
-  section.projects {
+section.projects {
     width: 80%;
     margin: 0 auto;
     // @include media(lg) {
     //   padding: 80px 0;
     // }
-    h2 {
-      text-align: center;
-      font-weight: 700;
-      @include media(xs) {
-        font-size: 3.2rem;
-        margin-bottom: 40px;
-      }
-      @include media(sm) {
-        font-size: 4.8rem;
-      }
-      @include media(md) {
-        font-size: 4.8rem;
-      }
-      @include media(lg) {
-        padding-top: 120px;
-        font-size: 5.6rem;
+  h2 {
+    text-align: center;
+    font-weight: 700;
+    @include media(xs) {
+      padding-top: 120px;
+      font-size: 3.2rem;
+      margin-bottom: 40px;
+    }
+    @include media(sm) {
+      padding-top: 120px;
+      font-size: 4.8rem;
+    }
+    @include media(md) {
+      padding-top: 120px;
+      font-size: 4.8rem;
+    }
+    @include media(lg) {
+      padding-top: 120px;
+      font-size: 5.6rem;
+    }
+  }
+  .container {
+    padding: 0;
+  }
+  .project_card {
+    @include media(lg) {
+      margin-bottom: 56px;
+    }
+    .projectImage_wrapper {
+      img {
+        border-radius: 5px;
+        -webkit-box-shadow: 0px 0px 29px -7px rgba(143,143,143,1);
       }
     }
-    .container {
-      padding: 0;
-    }
-    .project_card {
-
+    .projects_summary {
+      .summary {
+        @include media(xs) {
+          font-size: 1.6rem;
+          margin-bottom: 20px;
+        }
+        @include media(sm) {
+          font-size: 1.8rem;
+          margin-bottom: 40px;
+        }
+        @include media(lg) {
+          font-size: 2.4rem;
+          margin-bottom: 16px;
+        }
+      }
+      ul.technology_useds {
+        @include media(xs) {
+          margin-bottom: 20px;
+        }
+        @include media(sm) {
+          margin-bottom: 56px;
+        }
+        @include media(md) {
+          margin-bottom: 56px;
+        }
+        @include media(lg) {
+          margin-bottom: 16px;
+        }
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        li {
+          list-style-type: none;
+          border-radius: 5px;
+          border: 1px solid #032059;
+          background-color: #faf8f6;
+          padding: 5px;
+          margin: 5px 5px 5px 0;
+          @include media(lg) {
+            font-size: 2rem;
+            margin: 10px 10px 10px 0;
+          }
+        }
+      }
+      .link_wrapper {
+        @include media(md) {
+          display: flex;
+        }
+        a {
+          display: block;
+          padding: 10px;
+          color: white;
+          text-align: center;
+          border-radius: 50px;
+          margin: 0 16px 20px 0px;
+          font-size: 1.8rem;
+          @include media(md) {
+            padding: 8px;
+          }
+        }
+        .viewSite {
+          background-color: #F27F3D;
+          width: 100%;
+          @include media(lg) {
+            width: 32%;
+          }
+          &:hover {
+            background-color: #f6a374;
+          }
+        }
+        .github {
+          background-color: #032059;
+          width: 100%;
+          @include media(lg) {
+            width: 32%;
+          }
+          i {
+            font-size: 2.8rem;
+            padding-left: 16px;
+          }
+          &:hover {
+            background-color: #355698;
+          }
+        }
+      }
     }
     // .project_wrapper1, .project_wrapper3 {
     //   position: relative;
@@ -597,263 +692,263 @@ $breakpoints: (
     //     }
     //   }
     // }
-
-    .projectsPageLink_btn {
-      a {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        padding: 10px 25px;
-        color: white;
-        transition: 0.3s ease-in-out;
-        font-weight: 700;
-        @include media(xs) {
-          font-size: 1.8rem;
-          max-width: 90%;
-        }
-        @include media(sm) {
-          font-size: 2.4rem;
-          max-width: 80%;
-        }
-        @include media(md) {
-          max-width: 50%;
-        }
-        @include media(lg) {
-          max-width: 30%;
-        }
-        background: #F27F3D;
-        border-radius: 50px;
-        border: 0.2rem solid #032059;
-        box-shadow: 0.3rem 0.3rem 0px 0.2rem #032059;
-        img {
-          @include media(xs) {
-            width: 5%;
-            margin-left: 5px;
-          }
-          @include media(sm) {
-            width: 4%;
-            margin-left: 8px;
-          }
-          @include media(md) {
-            width: 6%;
-            margin-left: 10px;
-          }
-          @include media(lg) {
-            width: 5%;
-            margin-left: 12px;
-          }
-          animation: slideBlink 1.2s linear infinite;
-          transition: ease;
-        }
-      }
-      a:hover {
-        transform: translate3d(0.2rem, 0.2rem, 0);
-        box-shadow: none;
-        opacity: 1;
-        transition: all 0.2s;
-      }
-      @keyframes slideBlink {
-        from {
-          // opacity: 0;
-          transform: translateX(8);
-        }
-        to {
-          // opacity: 1;
-          transform: translateX(16px);
-        }
-      }
-    }
   }
-
-  .skills {
-    max-width: 80%;
-    margin: 0 auto;
-    box-sizing: content-box;
-    padding-top: 40px;
-    margin-bottom: 100px;
-    h2.skill_title {
-      text-align: center;
+  .projectsPageLink_btn {
+    a {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      padding: 10px 25px;
+      color: white;
+      transition: 0.3s ease-in-out;
       font-weight: 700;
       @include media(xs) {
-        font-size: 3.2rem;
-        margin-bottom: 24px;
+        font-size: 1.8rem;
+        max-width: 90%;
       }
       @include media(sm) {
-        font-size: 4.8rem;
-      }
-      @include media(md) {
-        font-size: 4.8rem;
-      }
-      @include media(lg) {
-        font-size: 5.6rem;
-        margin-bottom: 40px;
-      }
-    }
-    p.skill_desc {
-      text-align: center;
-      @include media(xs) {
-        font-size: 1.6rem;
-        margin-bottom: 40px;
-      }
-      @include media(sm) {
-        font-size: 1.8rem;
-        margin-bottom: 40px;
-      }
-      @include media(md) {
-        font-size: 1.8rem;
-        margin-bottom: 56px;
-      }
-      @include media(lg) {
         font-size: 2.4rem;
-        margin-bottom: 56px;
+        max-width: 80%;
+      }
+      @include media(md) {
+        max-width: 50%;
+      }
+      @include media(lg) {
+        max-width: 30%;
+      }
+      background: #F27F3D;
+      border-radius: 50px;
+      border: 0.2rem solid #032059;
+      box-shadow: 0.3rem 0.3rem 0px 0.2rem #032059;
+      img {
+        @include media(xs) {
+          width: 5%;
+          margin-left: 5px;
+        }
+        @include media(sm) {
+          width: 4%;
+          margin-left: 8px;
+        }
+        @include media(md) {
+          width: 6%;
+          margin-left: 10px;
+        }
+        @include media(lg) {
+          width: 5%;
+          margin-left: 12px;
+        }
+        animation: slideBlink 1.2s linear infinite;
+        transition: ease;
       }
     }
-    .skill_container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(130px, 100%), 1fr));
-      gap: 1rem;
-      .skill_card {
-        padding: 10px;
-        margin: 8px;
-        background-color: #EBE5DD;
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content:space-between;
-        align-items: center;
-        box-shadow: 0px 0px 8px 2px rgba(186,186,186,0.18);
-        i {
-          color: #032059;
-          font-size: 48px;
-        }
-        img {
-          width: 50px;
-        }
-        p {
-          margin-bottom: 0;
-          font-size: 14px;
-          margin-top: 16px;
-        }
+    a:hover {
+      transform: translate3d(0.2rem, 0.2rem, 0);
+      box-shadow: none;
+      opacity: 1;
+      transition: all 0.2s;
+    }
+    @keyframes slideBlink {
+      from {
+        // opacity: 0;
+        transform: translateX(8);
+      }
+      to {
+        // opacity: 1;
+        transform: translateX(16px);
       }
     }
   }
+}
 
-  .contact {
-    margin-bottom: 150px;
-    .text_up {
+.skills {
+  max-width: 80%;
+  margin: 0 auto;
+  box-sizing: content-box;
+  padding-top: 40px;
+  margin-bottom: 100px;
+  h2.skill_title {
+    text-align: center;
+    font-weight: 700;
+    @include media(xs) {
+      font-size: 3.2rem;
+      margin-bottom: 24px;
+    }
+    @include media(sm) {
+      font-size: 4.8rem;
+    }
+    @include media(md) {
+      font-size: 4.8rem;
+    }
+    @include media(lg) {
+      font-size: 5.6rem;
+      margin-bottom: 40px;
+    }
+  }
+  p.skill_desc {
+    text-align: center;
+    @include media(xs) {
+      font-size: 1.6rem;
+      margin-bottom: 40px;
+    }
+    @include media(sm) {
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+    }
+    @include media(md) {
+      font-size: 1.8rem;
+      margin-bottom: 56px;
+    }
+    @include media(lg) {
+      font-size: 2.4rem;
+      margin-bottom: 56px;
+    }
+  }
+  .skill_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(130px, 100%), 1fr));
+    gap: 1rem;
+    .skill_card {
+      padding: 10px;
+      margin: 8px;
+      background-color: #EBE5DD;
+      border-radius: 5px;
       display: flex;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .contact_title {
-      span {
-        display: block;
-        font-weight: 700;
-        @include media(xs) {
-          font-size: 4.8rem;
-          margin-bottom: 20px;
-        }
-        @include media(sm) {
-          font-size: 4.8rem;
-          margin-bottom: 20px;
-        }
-        @include media(md) {
-          font-size: 4.8rem;
-        }
-        @include media(lg) {
-          font-size: 6.4rem;
-        }
-        letter-spacing: 0.04em;
+      flex-direction: column;
+      justify-content:space-between;
+      align-items: center;
+      box-shadow: 0px 0px 8px 2px rgba(186,186,186,0.18);
+      i {
+        color: #032059;
+        font-size: 48px;
       }
-    }
-    .contactMessage {
-      margin: 0 auto 3%;
-      display: flex;
-      justify-content: center;
-      @include media(xs) {
-        font-size: 2.2rem;
-        margin-bottom: 32px;
+      img {
+        width: 50px;
       }
-      @include media(sm) {
-        font-size: 2.2rem;
-        margin-bottom: 32px;
-      }
-      @include media(md) {
-        font-size: 2.4rem;
-        margin-bottom: 56px;
-      }
-      @include media(lg) {
-        font-size: 3.2rem;
-        margin-bottom: 72px;
-      }
-    }
-    .contact_btn_wrapper {
-      a {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        padding: 10px 25px;
-        color: white;
-        transition: 0.3s ease-in-out;
-        font-weight: 700;
-        @include media(xs) {
-          font-size: 1.8rem;
-          max-width: 90%;
-        }
-        @include media(sm) {
-          font-size: 2.4rem;
-          max-width: 80%;
-        }
-        @include media(md) {
-          max-width: 50%;
-        }
-        @include media(lg) {
-          max-width: 30%;
-        }
-        background: #F27F3D;
-        border-radius: 50px;
-        border: 0.2rem solid #032059;
-        box-shadow: 0.3rem 0.3rem 0px 0.2rem #032059;
-        img {
-          @include media(xs) {
-            width: 5%;
-            margin-left: 5px;
-          }
-          @include media(sm) {
-            width: 4%;
-            margin-left: 8px;
-          }
-          @include media(md) {
-            width: 6%;
-            margin-left: 10px;
-          }
-          @include media(lg) {
-            width: 5%;
-            margin-left: 12px;
-          }
-          animation: slideBlink 1.2s linear infinite;
-          transition: ease;
-        }
-      }
-      a:hover {
-        transform: translate3d(0.2rem, 0.2rem, 0);
-        box-shadow: none;
-        opacity: 1;
-        transition: all 0.2s;
-      }
-      @keyframes slideBlink {
-        from {
-          // opacity: 0;
-          transform: translateX(8);
-        }
-        to {
-          // opacity: 1;
-          transform: translateX(16px);
-        }
+      p {
+        margin-bottom: 0;
+        font-size: 14px;
+        margin-top: 16px;
       }
     }
   }
+}
+
+.contact {
+  margin-bottom: 150px;
+  .text_up {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .contact_title {
+    span {
+      display: block;
+      font-weight: 700;
+      @include media(xs) {
+        font-size: 4.8rem;
+        margin-bottom: 20px;
+      }
+      @include media(sm) {
+        font-size: 4.8rem;
+        margin-bottom: 20px;
+      }
+      @include media(md) {
+        font-size: 4.8rem;
+      }
+      @include media(lg) {
+        font-size: 6.4rem;
+      }
+      letter-spacing: 0.04em;
+    }
+  }
+  .contactMessage {
+    margin: 0 auto 3%;
+    display: flex;
+    justify-content: center;
+    @include media(xs) {
+      font-size: 2.2rem;
+      margin-bottom: 32px;
+    }
+    @include media(sm) {
+      font-size: 2.2rem;
+      margin-bottom: 32px;
+    }
+    @include media(md) {
+      font-size: 2.4rem;
+      margin-bottom: 56px;
+    }
+    @include media(lg) {
+      font-size: 3.2rem;
+      margin-bottom: 72px;
+    }
+  }
+  .contact_btn_wrapper {
+    a {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      padding: 10px 25px;
+      color: white;
+      transition: 0.3s ease-in-out;
+      font-weight: 700;
+      @include media(xs) {
+        font-size: 1.8rem;
+        max-width: 90%;
+      }
+      @include media(sm) {
+        font-size: 2.4rem;
+        max-width: 80%;
+      }
+      @include media(md) {
+        max-width: 50%;
+      }
+      @include media(lg) {
+        max-width: 30%;
+      }
+      background: #F27F3D;
+      border-radius: 50px;
+      border: 0.2rem solid #032059;
+      box-shadow: 0.3rem 0.3rem 0px 0.2rem #032059;
+      img {
+        @include media(xs) {
+          width: 5%;
+          margin-left: 5px;
+        }
+        @include media(sm) {
+          width: 4%;
+          margin-left: 8px;
+        }
+        @include media(md) {
+          width: 6%;
+          margin-left: 10px;
+        }
+        @include media(lg) {
+          width: 5%;
+          margin-left: 12px;
+        }
+        animation: slideBlink 1.2s linear infinite;
+        transition: ease;
+      }
+    }
+    a:hover {
+      transform: translate3d(0.2rem, 0.2rem, 0);
+      box-shadow: none;
+      opacity: 1;
+      transition: all 0.2s;
+    }
+    @keyframes slideBlink {
+      from {
+        // opacity: 0;
+        transform: translateX(8);
+      }
+      to {
+        // opacity: 1;
+        transform: translateX(16px);
+      }
+    }
+  }
+}
