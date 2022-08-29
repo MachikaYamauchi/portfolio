@@ -18,11 +18,17 @@ $breakpoints: (
   top: 0;
   z-index: 10000;
   nav {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     .logo {
-      width: 70px;
+
       margin: 8px 0;
+      @include media(xs) {
+        width: 70px;
+      }
+      @include media(sm) {
+        width: 80px;
+      }
       @include media(md) {
         width: 75px;
       }
@@ -30,13 +36,16 @@ $breakpoints: (
         transform: scale(1.1);
       }
     }
-    .container-fluid {
-      width: 90%;
-      margin: 0 auto;
-    }
+    // .container-fluid {
+    //   width: 90%;
+    //   margin: 0 auto;
+    // }
     .navbar-toggler .navbar-toggler-icon {
       font-size: 20px;
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(3, 32, 89, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+      @include media(sm) {
+        font-size: 28px;
+      }
       @include media(md) {
         font-size: 24px;
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(3, 32, 89, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -45,6 +54,7 @@ $breakpoints: (
     .navbar-toggler{
       border-color: rgba(255, 255, 255, 0);
       background-color: rgba(255, 255, 255, 0);
+      padding: 0;
     }
     .navbar-nav {
       display: flex;

@@ -48,7 +48,7 @@ $breakpoints: (
         .myName {
           font-weight: 600;
           @include media(xs) {
-            font-size: 4.8rem;
+            font-size: 4rem;
             margin-bottom: 14%;
           }
           @include media(sm) {
@@ -110,7 +110,7 @@ $breakpoints: (
             font-weight: 700;
             @include media(xs) {
               font-size: 1.8rem;
-              max-width: 85%;
+              max-width: 100%;
             }
             @include media(sm) {
               font-size: 2.4rem;
@@ -171,24 +171,55 @@ $breakpoints: (
 }
 
   // Title "Projects"
-  .title {
-    display: table;
-    position: relative;
-    padding-top: 140px;
-    @include media(xs) {
-      margin-bottom: 40px;
-      margin-left: 10%;
-    }
-    @include media(lg) {
-      margin-left: 5%;
-    }
-    &_clip {
-      position: relative;
-      display: inline-block;
-      font-weight: 700;
+  // .title {
+  //   display: table;
+  //   position: relative;
+  //   padding-top: 140px;
+  //   @include media(xs) {
+  //     margin-bottom: 40px;
+  //     margin-left: 10%;
+  //   }
+  //   @include media(lg) {
+  //     margin-left: 5%;
+  //   }
+  //   &_clip {
+  //     position: relative;
+  //     display: inline-block;
+  //     font-weight: 700;
 
+  //     @include media(xs) {
+  //       font-size: 3.2rem;
+  //     }
+  //     @include media(sm) {
+  //       font-size: 4.8rem;
+  //     }
+  //     @include media(md) {
+  //       font-size: 4.8rem;
+  //     }
+  //     @include media(lg) {
+  //       font-size: 5.6rem;
+  //     }
+  //     transition: clip-path .7s cubic-bezier(0.18, 0.06, 0.23, 1) .2s;
+  //     clip-path: inset(0 100% 0 0);
+  //     padding: 0 12px 8px 0;
+  //     &.slid__open {
+  //       clip-path: inset(0);
+  //     }
+  //   }
+  // }
+
+  section.projects {
+    width: 80%;
+    margin: 0 auto;
+    // @include media(lg) {
+    //   padding: 80px 0;
+    // }
+    h2 {
+      text-align: center;
+      font-weight: 700;
       @include media(xs) {
         font-size: 3.2rem;
+        margin-bottom: 40px;
       }
       @include media(sm) {
         font-size: 4.8rem;
@@ -197,381 +228,375 @@ $breakpoints: (
         font-size: 4.8rem;
       }
       @include media(lg) {
+        padding-top: 120px;
         font-size: 5.6rem;
       }
-      transition: clip-path .7s cubic-bezier(0.18, 0.06, 0.23, 1) .2s;
-      clip-path: inset(0 100% 0 0);
-      padding: 0 12px 8px 0;
-      &.slid__open {
-        clip-path: inset(0);
-      }
     }
-  }
+    .container {
+      padding: 0;
+    }
+    .project_card {
 
-  section.projects {
-    margin: 100px 0;
-    @include media(lg) {
-      margin: 120px 0 150px;
     }
-    .project_wrapper1, .project_wrapper3 {
-      position: relative;
-      padding: 12% 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 80px;
-      @include media(md) {
-        padding: 8% 0;
-      }
-      @include media(lg) {
-        display: flex;
-        flex-direction:row;
-        padding: 5% 0;
-      }
-      .project_bg1, .project_bg3{
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        background: #EBE5DD;
-        transform-origin: left;
-        width: 100%;
-        height: 100%;
-      }
-      .project_desc {
-        @include media(xs) {
-          width: 80%;
-          margin: 0 auto;
-        }
-        @include media(lg) {
-          padding: 5%;
-        }
-        .project_title {
-          display: table;
-          position: relative;
-          h2 {
-            font-weight: 600;
-            @include media(xs) {
-              font-size: 2.4rem;
-              margin-bottom: 20px;
-            }
-            @include media(sm) {
-              font-size: 3.2rem;
-              margin-bottom: 20px;
-            }
-            @include media(md) {
-              font-size: 4rem;
-            }
-            @include media(lg) {
-              font-size: 4rem;
-            }
-          }
-          &_clip {
-            position: relative;
-            display: inline-block;
-            transition: clip-path .7s cubic-bezier(0.18, 0.06, 0.23, 1) .2s;
-            clip-path: inset(0 100% 0 0);
-            padding: 0 12px 8px 0;
-            &.slid__open {
-              clip-path: inset(0);
-            }
-          }
-        }
-        .projects_summary {
-          .summary {
-            @include media(xs) {
-              font-size: 1.6rem;
-              margin-bottom: 20px;
-            }
-            @include media(sm) {
-              font-size: 1.8rem;
-              margin-bottom: 40px;
-            }
-            @include media(lg) {
-              font-size: 2.4rem;
-              margin-bottom: 40px;
-            }
-          }
-          ul.technology_useds {
-            @include media(xs) {
-              margin-bottom: 20px;
-            }
-            @include media(sm) {
-              margin-bottom: 56px;
-            }
-            @include media(md) {
-              margin-bottom: 56px;
-            }
-            @include media(lg) {
-              margin-bottom: 40px;
-            }
-            display: flex;
-            flex-wrap: wrap;
-            padding-left: 0;
-            li {
-              list-style-type: none;
-              border-radius: 5px;
-              border: 1px solid #032059;
-              background-color: #faf8f6;
-              padding: 5px;
-              margin: 5px 5px 5px 0;
-              @include media(lg) {
-                font-size: 2rem;
-                margin: 10px 10px 10px 0;
-              }
-            }
-          }
-        }
-        .link_wrapper {
-          @include media(md) {
-            display: flex;
-          }
-          a {
-            display: block;
-            padding: 10px;
-            color: white;
-            text-align: center;
-            border-radius: 50px;
-            margin: 0 16px 20px 0px;
-            font-size: 1.8rem;
-            @include media(md) {
-              padding: 8px;
-            }
-          }
-          .viewSite {
-            background-color: #F27F3D;
-            width: 100%;
-            @include media(lg) {
-              width: 32%;
-            }
-            &:hover {
-              background-color: #f6a374;
-            }
-          }
-          .github {
-            background-color: #032059;
-            width: 100%;
-            @include media(lg) {
-              width: 32%;
-            }
-            i {
-              font-size: 2.8rem;
-              padding-left: 16px;
-            }
-            &:hover {
-              background-color: #355698;
-            }
-          }
-        }
-      }
-      .project_img {
-        margin-top: 10%;
-        overflow: hidden;
-        @include media(xs) {
-          width: 80%;
-        }
-        // @include media(md) {
-        //   margin-right: 5%;
-        //   width: 60%;
-        // }
-        @include media(lg) {
-          // margin-left: 5%;
-          margin-right: 5%;
-          width: 60%;
-        }
-        img {
-          width: 100%;
-          height: auto;
-          border-radius: 5px;
-          -webkit-box-shadow: 0px 0px 29px -7px rgba(143,143,143,1);
-          transition-duration: 0.3s;
-        }
-        img:hover {
-          transform: scale(1.1);
-          transition-duration: 0.3s;
-        }
-      }
-    }
+    // .project_wrapper1, .project_wrapper3 {
+    //   position: relative;
+    //   padding: 12% 0;
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: space-between;
+    //   align-items: center;
+    //   margin-bottom: 80px;
+    //   @include media(md) {
+    //     padding: 8% 0;
+    //   }
+    //   @include media(lg) {
+    //     display: flex;
+    //     flex-direction:row;
+    //     padding: 5% 0;
+    //   }
+    //   .project_bg1, .project_bg3{
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     z-index: -1;
+    //     background: #EBE5DD;
+    //     transform-origin: left;
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+    //   .project_desc {
+    //     @include media(xs) {
+    //       width: 80%;
+    //       margin: 0 auto;
+    //     }
+    //     @include media(lg) {
+    //       padding: 5%;
+    //     }
+    //     .project_title {
+    //       display: table;
+    //       position: relative;
+    //       h2 {
+    //         font-weight: 600;
+    //         @include media(xs) {
+    //           font-size: 2.4rem;
+    //           margin-bottom: 20px;
+    //         }
+    //         @include media(sm) {
+    //           font-size: 3.2rem;
+    //           margin-bottom: 20px;
+    //         }
+    //         @include media(md) {
+    //           font-size: 4rem;
+    //         }
+    //         @include media(lg) {
+    //           font-size: 4rem;
+    //         }
+    //       }
+    //       &_clip {
+    //         position: relative;
+    //         display: inline-block;
+    //         transition: clip-path .7s cubic-bezier(0.18, 0.06, 0.23, 1) .2s;
+    //         clip-path: inset(0 100% 0 0);
+    //         padding: 0 12px 8px 0;
+    //         &.slid__open {
+    //           clip-path: inset(0);
+    //         }
+    //       }
+    //     }
+    //     .projects_summary {
+    //       .summary {
+    //         @include media(xs) {
+    //           font-size: 1.6rem;
+    //           margin-bottom: 20px;
+    //         }
+    //         @include media(sm) {
+    //           font-size: 1.8rem;
+    //           margin-bottom: 40px;
+    //         }
+    //         @include media(lg) {
+    //           font-size: 2.4rem;
+    //           margin-bottom: 40px;
+    //         }
+    //       }
+    //       ul.technology_useds {
+    //         @include media(xs) {
+    //           margin-bottom: 20px;
+    //         }
+    //         @include media(sm) {
+    //           margin-bottom: 56px;
+    //         }
+    //         @include media(md) {
+    //           margin-bottom: 56px;
+    //         }
+    //         @include media(lg) {
+    //           margin-bottom: 40px;
+    //         }
+    //         display: flex;
+    //         flex-wrap: wrap;
+    //         padding-left: 0;
+    //         li {
+    //           list-style-type: none;
+    //           border-radius: 5px;
+    //           border: 1px solid #032059;
+    //           background-color: #faf8f6;
+    //           padding: 5px;
+    //           margin: 5px 5px 5px 0;
+    //           @include media(lg) {
+    //             font-size: 2rem;
+    //             margin: 10px 10px 10px 0;
+    //           }
+    //         }
+    //       }
+    //     }
+    //     .link_wrapper {
+    //       @include media(md) {
+    //         display: flex;
+    //       }
+    //       a {
+    //         display: block;
+    //         padding: 10px;
+    //         color: white;
+    //         text-align: center;
+    //         border-radius: 50px;
+    //         margin: 0 16px 20px 0px;
+    //         font-size: 1.8rem;
+    //         @include media(md) {
+    //           padding: 8px;
+    //         }
+    //       }
+    //       .viewSite {
+    //         background-color: #F27F3D;
+    //         width: 100%;
+    //         @include media(lg) {
+    //           width: 32%;
+    //         }
+    //         &:hover {
+    //           background-color: #f6a374;
+    //         }
+    //       }
+    //       .github {
+    //         background-color: #032059;
+    //         width: 100%;
+    //         @include media(lg) {
+    //           width: 32%;
+    //         }
+    //         i {
+    //           font-size: 2.8rem;
+    //           padding-left: 16px;
+    //         }
+    //         &:hover {
+    //           background-color: #355698;
+    //         }
+    //       }
+    //     }
+    //   }
+    //   .project_img {
+    //     margin-top: 10%;
+    //     overflow: hidden;
+    //     @include media(xs) {
+    //       width: 80%;
+    //     }
+    //     // @include media(md) {
+    //     //   margin-right: 5%;
+    //     //   width: 60%;
+    //     // }
+    //     @include media(lg) {
+    //       // margin-left: 5%;
+    //       margin-right: 5%;
+    //       width: 60%;
+    //     }
+    //     img {
+    //       width: 100%;
+    //       height: auto;
+    //       border-radius: 5px;
+    //       -webkit-box-shadow: 0px 0px 29px -7px rgba(143,143,143,1);
+    //       transition-duration: 0.3s;
+    //     }
+    //     img:hover {
+    //       transform: scale(1.1);
+    //       transition-duration: 0.3s;
+    //     }
+    //   }
+    // }
 
-    .project_wrapper2 {
-      position: relative;
-      padding: 12% 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 80px;
-      @include media(md) {
-        padding: 5% 0;
-      }
-      @include media(lg) {
-        display: flex;
-        flex-direction:row;
-        padding: 5% 0;
-      }
-      .project_bg2 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        background: #EBE5DD;
-        transform-origin: right;
-        width: 100%;
-        height: 100%;
-      }
-      .project_desc {
-        @include media(xs) {
-          width: 80%;
-          margin: 0 auto;
-        }
-        @include media(lg) {
-          padding: 5%;
-          order: 2;// *
-        }
-        .project_title {
-          display: table;
-          position: relative;
-          h2 {
-            font-weight: 600;
-            @include media(xs) {
-              font-size: 2.4rem;
-              margin-bottom: 20px;
-            }
-            @include media(sm) {
-              font-size: 3.2rem;
-              margin-bottom: 20px;
-            }
-            @include media(md) {
-              font-size: 4rem;
-            }
-            @include media(lg) {
-              font-size: 4rem;
-            }
-          }
-          &_clip {
-            position: relative;
-            display: inline-block;
-            transition: clip-path .7s cubic-bezier(0.18, 0.06, 0.23, 1) .2s;
-            clip-path: inset(0 100% 0 0);
-            padding: 0 12px 8px 0;
-            &.slid__open {
-              clip-path: inset(0);
-            }
-          }
-        }
-        .projects_summary {
-          .summary {
-            @include media(xs) {
-              font-size: 1.6rem;
-              margin-bottom: 20px;
-            }
-            @include media(sm) {
-              font-size: 1.8rem;
-              margin-bottom: 40px;
-            }
-            @include media(lg) {
-              font-size: 2.4rem;
-              margin-bottom: 40px;
-            }
-          }
-          ul.technology_useds {
-            @include media(xs) {
-              margin-bottom: 20px;
-            }
-            @include media(sm) {
-              margin-bottom: 56px;
-            }
-            @include media(md) {
-              margin-bottom: 56px;
-            }
-            @include media(lg) {
-              margin-bottom: 40px;
-            }
-            display: flex;
-            flex-wrap: wrap;
-            padding-left: 0;
-            li {
-              list-style-type: none;
-              border-radius: 5px;
-              border: 1px solid #032059;
-              background-color: #faf8f6;
-              padding: 5px;
-              margin: 5px 5px 5px 0;
-              @include media(lg) {
-                font-size: 2rem;
-                margin: 10px 10px 10px 0;
-              }
-            }
-          }
-        }
-        .link_wrapper {
-          @include media(md) {
-            display: flex;
-          }
-          a {
-            display: block;
-            padding: 10px;
-            color: white;
-            text-align: center;
-            border-radius: 50px;
-            margin: 0 16px 20px 0px;
-            font-size: 1.8rem;
-            @include media(md) {
-              padding: 8px;
-            }
-          }
-          .viewSite {
-            background-color: #F27F3D;
-            width: 100%;
-            @include media(lg) {
-              width: 32%;
-            }
-            &:hover {
-              background-color: #f6a374;
-            }
-          }
-          .github {
-            background-color: #032059;
-            width: 100%;
-            @include media(lg) {
-              width: 32%;
-            }
-            i {
-              font-size: 2.8rem;
-              padding-left: 16px;
-            }
-            &:hover {
-              background-color: #355698;
-            }
-          }
-        }
-      }
-      .project_img {
-        margin-top: 10%;
-        overflow: hidden;
-        @include media(xs) {
-          width: 80%;
-        }
-        @include media(lg) {
-          margin-left: 5%;
-          margin-right: 0;
-          width: 60%;
-          order: 1;// *
-        }
-        img {
-          width: 100%;
-          height: auto;
-          border-radius: 5px;
-          -webkit-box-shadow: 0px 0px 29px -7px rgba(143,143,143,1);
-          transition-duration: 0.3s;
-        }
-        img:hover {
-          transform: scale(1.1);
-          transition-duration: 0.3s;
-        }
-      }
-    }
+    // .project_wrapper2 {
+    //   position: relative;
+    //   padding: 12% 0;
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: space-between;
+    //   align-items: center;
+    //   margin-bottom: 80px;
+    //   @include media(md) {
+    //     padding: 5% 0;
+    //   }
+    //   @include media(lg) {
+    //     display: flex;
+    //     flex-direction:row;
+    //     padding: 5% 0;
+    //   }
+    //   .project_bg2 {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     z-index: -1;
+    //     background: #EBE5DD;
+    //     transform-origin: right;
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+    //   .project_desc {
+    //     @include media(xs) {
+    //       width: 80%;
+    //       margin: 0 auto;
+    //     }
+    //     @include media(lg) {
+    //       padding: 5%;
+    //       order: 2;// *
+    //     }
+    //     .project_title {
+    //       display: table;
+    //       position: relative;
+    //       h2 {
+    //         font-weight: 600;
+    //         @include media(xs) {
+    //           font-size: 2.4rem;
+    //           margin-bottom: 20px;
+    //         }
+    //         @include media(sm) {
+    //           font-size: 3.2rem;
+    //           margin-bottom: 20px;
+    //         }
+    //         @include media(md) {
+    //           font-size: 4rem;
+    //         }
+    //         @include media(lg) {
+    //           font-size: 4rem;
+    //         }
+    //       }
+    //       &_clip {
+    //         position: relative;
+    //         display: inline-block;
+    //         transition: clip-path .7s cubic-bezier(0.18, 0.06, 0.23, 1) .2s;
+    //         clip-path: inset(0 100% 0 0);
+    //         padding: 0 12px 8px 0;
+    //         &.slid__open {
+    //           clip-path: inset(0);
+    //         }
+    //       }
+    //     }
+    //     .projects_summary {
+    //       .summary {
+    //         @include media(xs) {
+    //           font-size: 1.6rem;
+    //           margin-bottom: 20px;
+    //         }
+    //         @include media(sm) {
+    //           font-size: 1.8rem;
+    //           margin-bottom: 40px;
+    //         }
+    //         @include media(lg) {
+    //           font-size: 2.4rem;
+    //           margin-bottom: 40px;
+    //         }
+    //       }
+    //       ul.technology_useds {
+    //         @include media(xs) {
+    //           margin-bottom: 20px;
+    //         }
+    //         @include media(sm) {
+    //           margin-bottom: 56px;
+    //         }
+    //         @include media(md) {
+    //           margin-bottom: 56px;
+    //         }
+    //         @include media(lg) {
+    //           margin-bottom: 40px;
+    //         }
+    //         display: flex;
+    //         flex-wrap: wrap;
+    //         padding-left: 0;
+    //         li {
+    //           list-style-type: none;
+    //           border-radius: 5px;
+    //           border: 1px solid #032059;
+    //           background-color: #faf8f6;
+    //           padding: 5px;
+    //           margin: 5px 5px 5px 0;
+    //           @include media(lg) {
+    //             font-size: 2rem;
+    //             margin: 10px 10px 10px 0;
+    //           }
+    //         }
+    //       }
+    //     }
+    //     .link_wrapper {
+    //       @include media(md) {
+    //         display: flex;
+    //       }
+    //       a {
+    //         display: block;
+    //         padding: 10px;
+    //         color: white;
+    //         text-align: center;
+    //         border-radius: 50px;
+    //         margin: 0 16px 20px 0px;
+    //         font-size: 1.8rem;
+    //         @include media(md) {
+    //           padding: 8px;
+    //         }
+    //       }
+    //       .viewSite {
+    //         background-color: #F27F3D;
+    //         width: 100%;
+    //         @include media(lg) {
+    //           width: 32%;
+    //         }
+    //         &:hover {
+    //           background-color: #f6a374;
+    //         }
+    //       }
+    //       .github {
+    //         background-color: #032059;
+    //         width: 100%;
+    //         @include media(lg) {
+    //           width: 32%;
+    //         }
+    //         i {
+    //           font-size: 2.8rem;
+    //           padding-left: 16px;
+    //         }
+    //         &:hover {
+    //           background-color: #355698;
+    //         }
+    //       }
+    //     }
+    //   }
+    //   .project_img {
+    //     margin-top: 10%;
+    //     overflow: hidden;
+    //     @include media(xs) {
+    //       width: 80%;
+    //     }
+    //     @include media(lg) {
+    //       margin-left: 5%;
+    //       margin-right: 0;
+    //       width: 60%;
+    //       order: 1;// *
+    //     }
+    //     img {
+    //       width: 100%;
+    //       height: auto;
+    //       border-radius: 5px;
+    //       -webkit-box-shadow: 0px 0px 29px -7px rgba(143,143,143,1);
+    //       transition-duration: 0.3s;
+    //     }
+    //     img:hover {
+    //       transform: scale(1.1);
+    //       transition-duration: 0.3s;
+    //     }
+    //   }
+    // }
 
     .projectsPageLink_btn {
       a {
