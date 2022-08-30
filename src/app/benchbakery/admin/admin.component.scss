@@ -153,7 +153,10 @@ main {
   background-color: #f9f9f9;
   margin-bottom: 100px;
   img {
-    width: 80%;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    padding-right: 8px;
   }
 
   h1 {
