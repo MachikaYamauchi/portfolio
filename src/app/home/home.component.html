@@ -29,7 +29,7 @@
 <section class="projects">
   <h2 id="projects_link">Projects</h2>
   <div class="project_card">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-lg-6">
           <div class="projectImage_wrapper">
@@ -43,7 +43,7 @@
               <li *ngFor="let tech of project1.attributes.technology_useds.data">{{tech.attributes.TechnologyName}}</li>
             </ul>
             <div class="link_wrapper">
-              <a class="viewSite" [routerLink]="[ '/projects', project1.id, project1.attributes.Slug]">More Details</a>
+              <a class="viewSite" [href]="project1.attributes.WebsiteLink" target="_blank">View Site</a>
               <a class="github" [href]="project1.attributes.GithubLink" target="_blank">Github<i class="fa-brands fa-github"></i></a>
             </div>
           </div>
@@ -52,7 +52,7 @@
     </div>
   </div>
   <div class="project_card">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-lg-6">
           <div class="projectImage_wrapper">
@@ -66,7 +66,7 @@
               <li *ngFor="let tech of project2.attributes.technology_useds.data">{{tech.attributes.TechnologyName}}</li>
             </ul>
             <div class="link_wrapper">
-              <a class="viewSite" [routerLink]="[ '/projects', project2.id, project2.attributes.Slug]">More Details</a>
+              <a class="viewSite" [href]="project2.attributes.WebsiteLink" target="_blank">View Site</a>
               <a class="github" [href]="project2.attributes.GithubLink" target="_blank">Github<i class="fa-brands fa-github"></i></a>
             </div>
           </div>
@@ -75,7 +75,7 @@
     </div>
   </div>
   <div class="project_card">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-lg-6">
           <div class="projectImage_wrapper">
@@ -89,7 +89,7 @@
               <li *ngFor="let tech of project3.attributes.technology_useds.data">{{tech.attributes.TechnologyName}}</li>
             </ul>
             <div class="link_wrapper">
-              <a class="viewSite" [routerLink]="[ '/projects', project3.id, project3.attributes.Slug]">More Details</a>
+              <a class="viewSite" [href]="project3.attributes.WebsiteLink" target="_blank">View Site</a>
               <a class="github" [href]="project3.attributes.GithubLink" target="_blank">Github<i class="fa-brands fa-github"></i></a>
             </div>
           </div>

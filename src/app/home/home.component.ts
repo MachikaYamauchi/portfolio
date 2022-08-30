@@ -28,55 +28,55 @@ export class HomeComponent implements OnInit {
     gsap.registerPlugin(ScrollTrigger);
    }
 
-  slideTitle () {
-    const title_clip = document.querySelectorAll('.title_clip');
+  // slideTitle () {
+  //   const title_clip = document.querySelectorAll('.title_clip');
 
-    title_clip.forEach((title_clip, index) => {
-      gsap.to(title_clip, {
-        scrollTrigger: {
-          trigger: title_clip,
-          start: 'top-=350 center+=100',
-          end: 'top top-=100',
-        }
-      });
+  //   title_clip.forEach((title_clip, index) => {
+  //     gsap.to(title_clip, {
+  //       scrollTrigger: {
+  //         trigger: title_clip,
+  //         start: 'top-=350 center+=100',
+  //         end: 'top top-=100',
+  //       }
+  //     });
 
-      ScrollTrigger.create({
-        trigger:title_clip,
-        id: 'index+1',
-        start: 'top center+=300',
-        end: 'top top-=100',
-        once: true,
-        toggleClass: {
-          targets: title_clip,
-          className: 'slid__open',
-        },
-      });
-    });
+  //     ScrollTrigger.create({
+  //       trigger:title_clip,
+  //       id: 'index+1',
+  //       start: 'top center+=300',
+  //       end: 'top top-=100',
+  //       once: true,
+  //       toggleClass: {
+  //         targets: title_clip,
+  //         className: 'slid__open',
+  //       },
+  //     });
+  //   });
 
-    const title_clip_line = document.querySelectorAll('.title_clip_line');
+  //   const title_clip_line = document.querySelectorAll('.title_clip_line');
 
-    title_clip_line.forEach((title_clip_line, index) => {
-      gsap.to(title_clip_line, {
-        scrollTrigger: {
-          trigger: title_clip_line,
-          start: 'top center+=300',
-          end: 'top top',
-        }
-      });
+  //   title_clip_line.forEach((title_clip_line, index) => {
+  //     gsap.to(title_clip_line, {
+  //       scrollTrigger: {
+  //         trigger: title_clip_line,
+  //         start: 'top center+=300',
+  //         end: 'top top',
+  //       }
+  //     });
 
-      ScrollTrigger.create({
-        trigger:title_clip_line,
-        id: 'index+1',
-        start: 'top center+=300',
-        end: 'top top',
-        once: true,
-        toggleClass: {
-          targets: title_clip_line,
-          className: 'slid__open',
-        },
-      });
-    });
-  }
+  //     ScrollTrigger.create({
+  //       trigger:title_clip_line,
+  //       id: 'index+1',
+  //       start: 'top center+=300',
+  //       end: 'top top',
+  //       once: true,
+  //       toggleClass: {
+  //         targets: title_clip_line,
+  //         className: 'slid__open',
+  //       },
+  //     });
+  //   });
+  // }
 
   slideProjectTitle () {
     const project_title_clip = document.querySelectorAll('.project_title_clip');
@@ -232,7 +232,7 @@ export class HomeComponent implements OnInit {
       this.skills=skills.data;
     })
 
-    this.slideTitle();
+    // this.slideTitle();
     this.slideProjectTitle();
     this.slideBackgroundLeft();
     this.slideBackgroundRight();

@@ -21,7 +21,7 @@ $breakpoints: (
   position: relative;
   width: 100%;
   height: 100vh;
-  margin-bottom: 80px;
+  // margin-bottom: 80px;
   img.hero_img_home {
     position: absolute;
     height: 100%;
@@ -169,79 +169,72 @@ $breakpoints: (
   }
 }
 
-  // Title "Projects"
-  // .title {
-  //   display: table;
-  //   position: relative;
-  //   padding-top: 140px;
-  //   @include media(xs) {
-  //     margin-bottom: 40px;
-  //     margin-left: 10%;
-  //   }
-  //   @include media(lg) {
-  //     margin-left: 5%;
-  //   }
-  //   &_clip {
-  //     position: relative;
-  //     display: inline-block;
-  //     font-weight: 700;
-
-  //     @include media(xs) {
-  //       font-size: 3.2rem;
-  //     }
-  //     @include media(sm) {
-  //       font-size: 4.8rem;
-  //     }
-  //     @include media(md) {
-  //       font-size: 4.8rem;
-  //     }
-  //     @include media(lg) {
-  //       font-size: 5.6rem;
-  //     }
-  //     transition: clip-path .7s cubic-bezier(0.18, 0.06, 0.23, 1) .2s;
-  //     clip-path: inset(0 100% 0 0);
-  //     padding: 0 12px 8px 0;
-  //     &.slid__open {
-  //       clip-path: inset(0);
-  //     }
-  //   }
-  // }
-
 section.projects {
     width: 80%;
     margin: 0 auto;
-    // @include media(lg) {
-    //   padding: 80px 0;
-    // }
+    @include media(xs) {
+      margin-bottom: 18%;
+    }
+    @include media(sm) {
+      margin-bottom: 16%;
+    }
+    @include media(md) {
+      margin-bottom: 16%;
+    }
+    @include media(lg) {
+      margin-bottom: 10%;
+    }
+
   h2 {
     text-align: center;
     font-weight: 700;
     @include media(xs) {
-      padding-top: 120px;
+      padding-top: 110px;
       font-size: 3.2rem;
-      margin-bottom: 40px;
+      margin-bottom: 16%;
     }
     @include media(sm) {
       padding-top: 120px;
       font-size: 4.8rem;
+      margin-bottom: 16%;
     }
     @include media(md) {
       padding-top: 120px;
       font-size: 4.8rem;
+      margin-bottom: 16%;
     }
     @include media(lg) {
       padding-top: 120px;
       font-size: 5.6rem;
+      margin-bottom:8%;
     }
   }
-  .container {
+  .container-fluid {
     padding: 0;
   }
   .project_card {
+    @include media(xs) {
+      margin-bottom: 20%;
+    }
+    @include media(sm) {
+      margin-bottom: 16%;
+    }
+    @include media(md) {
+      margin-bottom: 16%;
+    }
     @include media(lg) {
-      margin-bottom: 56px;
+      margin-bottom: 8%;
     }
     .projectImage_wrapper {
+      @include media(xs) {
+        margin-bottom: 10%;
+      }
+      @include media(sm) {
+        margin-bottom: 5%;
+      }
+      @include media(md) {
+        margin-bottom: 5%;
+      }
       img {
         border-radius: 5px;
         -webkit-box-shadow: 0px 0px 29px -7px rgba(143,143,143,1);
@@ -249,28 +242,33 @@ section.projects {
     }
     .projects_summary {
       .summary {
+        line-height: 1.5;
         @include media(xs) {
           font-size: 1.6rem;
-          margin-bottom: 20px;
+          margin-bottom: 16px;
         }
         @include media(sm) {
           font-size: 1.8rem;
-          margin-bottom: 40px;
+          margin-bottom: 16px;
+        }
+        @include media(md) {
+          font-size: 1.8rem;
+          margin-bottom: 16px;
         }
         @include media(lg) {
-          font-size: 2.4rem;
+          font-size: 2rem;
           margin-bottom: 16px;
         }
       }
       ul.technology_useds {
         @include media(xs) {
-          margin-bottom: 20px;
+          margin-bottom: 16px;
         }
         @include media(sm) {
-          margin-bottom: 56px;
+          margin-bottom: 24px;
         }
         @include media(md) {
-          margin-bottom: 56px;
+          margin-bottom: 24px;
         }
         @include media(lg) {
           margin-bottom: 16px;
@@ -282,17 +280,19 @@ section.projects {
           list-style-type: none;
           border-radius: 5px;
           border: 1px solid #032059;
-          background-color: #faf8f6;
-          padding: 5px;
+          // background-color: #faf8f6;
+          background-color: white;
+          padding: 4px 8px;
           margin: 5px 5px 5px 0;
+          font-size: 1.2rem;
           @include media(lg) {
-            font-size: 2rem;
+            font-size: 1.6rem;
             margin: 10px 10px 10px 0;
           }
         }
       }
       .link_wrapper {
-        @include media(md) {
+        @include media(sm) {
           display: flex;
         }
         a {
@@ -301,15 +301,25 @@ section.projects {
           color: white;
           text-align: center;
           border-radius: 50px;
-          margin: 0 16px 20px 0px;
+          // margin: 0 16px 20px 0px;
           font-size: 1.8rem;
+          @include media(xs) {
+            padding: 4px 8px;
+            margin-bottom: 8px;
+          }
+          @include media(sm) {
+            padding: 4px 0;
+          }
           @include media(md) {
-            padding: 8px;
+            padding: 4px 0;
           }
         }
         .viewSite {
           background-color: #F27F3D;
           width: 100%;
+          @include media(sm) {
+            margin-right: 16px;
+          }
           @include media(lg) {
             width: 32%;
           }
@@ -700,23 +710,23 @@ section.projects {
       justify-content: center;
       align-items: center;
       margin: 0 auto;
-      padding: 10px 25px;
+      padding: 10px 0;
       color: white;
       transition: 0.3s ease-in-out;
       font-weight: 700;
       @include media(xs) {
         font-size: 1.8rem;
-        max-width: 90%;
+        max-width: 100%;
       }
       @include media(sm) {
         font-size: 2.4rem;
         max-width: 80%;
       }
       @include media(md) {
-        max-width: 50%;
+        max-width: 60%;
       }
       @include media(lg) {
-        max-width: 30%;
+        max-width: 40%;
       }
       background: #F27F3D;
       border-radius: 50px;
