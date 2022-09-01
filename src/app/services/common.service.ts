@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment.prod';
-import { AboutMe, AboutMeCards, Project, Projects, ProjectsByCategory, Skill, Testimonials } from '../interfaces/interface';
+import { AboutMe, AboutMeCards, Project, Projects, ProjectsByCategory, Skill, Skills, Testimonials } from '../interfaces/interface';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +25,7 @@ export class CommonService {
   }
 
   getSkills() {
-    return this.http.get<{data:Skill[]}>(this.url + '/api/skills?populate=deep,3')
+    return this.http.get<Skills>(this.url + '/api/skills?populate=deep,3')
   }
 
 

@@ -190,6 +190,13 @@ export interface Project {
           CategoryName:string;
         }
       }
+    },
+    ProjectGIF: {
+      data: {
+        attributes: {
+          url:string;
+        }
+      }
     }
   }
 }
@@ -215,7 +222,6 @@ export interface Skill {
   id:number;
   attributes: {
     SkillName:string;
-    SkillScore:string;
     SkillLogo: {
       data: {
         attributes: {
@@ -224,6 +230,10 @@ export interface Skill {
       }
     }
   }
+}
+
+export interface Skills {
+  data:Skill[];
 }
 
 

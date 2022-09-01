@@ -226,6 +226,10 @@ section.projects {
       margin-bottom: 8%;
     }
     .projectImage_wrapper {
+      position:		relative;
+      overflow:		hidden;
+      cursor: pointer;
+      box-shadow: 0px 0px 29px -7px rgba(143,143,143,1);
       @include media(xs) {
         margin-bottom: 10%;
       }
@@ -235,12 +239,39 @@ section.projects {
       @include media(md) {
         margin-bottom: 5%;
       }
+      .click_change_display {
+        display: block;
+      }
       img {
         border-radius: 5px;
-        -webkit-box-shadow: 0px 0px 29px -7px rgba(143,143,143,1);
+      }
+      .mask {
+        width: 100%;
+        height: 100%;
+        position: absolute;	/* 絶対位置指定 */
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background-color:	rgba(0,0,0,0.4);	/* マスクは半透明 */
+        -webkit-transition:	all 0.2s ease;
+        transition:		all 0.2s ease;
+      }
+      .caption {
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-align: 		center;
+        padding-top:		140px;
+        color:			#fff;
+      }
+      &:hover .mask {
+        opacity: 1;
       }
     }
+
     .projects_summary {
+      @include media(lg) {
+        padding-left: 16px;
+      }
       .summary {
         line-height: 1.5;
         @include media(xs) {
@@ -343,365 +374,6 @@ section.projects {
         }
       }
     }
-    // .project_wrapper1, .project_wrapper3 {
-    //   position: relative;
-    //   padding: 12% 0;
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-content: space-between;
-    //   align-items: center;
-    //   margin-bottom: 80px;
-    //   @include media(md) {
-    //     padding: 8% 0;
-    //   }
-    //   @include media(lg) {
-    //     display: flex;
-    //     flex-direction:row;
-    //     padding: 5% 0;
-    //   }
-    //   .project_bg1, .project_bg3{
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     z-index: -1;
-    //     background: #EBE5DD;
-    //     transform-origin: left;
-    //     width: 100%;
-    //     height: 100%;
-    //   }
-    //   .project_desc {
-    //     @include media(xs) {
-    //       width: 80%;
-    //       margin: 0 auto;
-    //     }
-    //     @include media(lg) {
-    //       padding: 5%;
-    //     }
-    //     .project_title {
-    //       display: table;
-    //       position: relative;
-    //       h2 {
-    //         font-weight: 600;
-    //         @include media(xs) {
-    //           font-size: 2.4rem;
-    //           margin-bottom: 20px;
-    //         }
-    //         @include media(sm) {
-    //           font-size: 3.2rem;
-    //           margin-bottom: 20px;
-    //         }
-    //         @include media(md) {
-    //           font-size: 4rem;
-    //         }
-    //         @include media(lg) {
-    //           font-size: 4rem;
-    //         }
-    //       }
-    //       &_clip {
-    //         position: relative;
-    //         display: inline-block;
-    //         transition: clip-path .7s cubic-bezier(0.18, 0.06, 0.23, 1) .2s;
-    //         clip-path: inset(0 100% 0 0);
-    //         padding: 0 12px 8px 0;
-    //         &.slid__open {
-    //           clip-path: inset(0);
-    //         }
-    //       }
-    //     }
-    //     .projects_summary {
-    //       .summary {
-    //         @include media(xs) {
-    //           font-size: 1.6rem;
-    //           margin-bottom: 20px;
-    //         }
-    //         @include media(sm) {
-    //           font-size: 1.8rem;
-    //           margin-bottom: 40px;
-    //         }
-    //         @include media(lg) {
-    //           font-size: 2.4rem;
-    //           margin-bottom: 40px;
-    //         }
-    //       }
-    //       ul.technology_useds {
-    //         @include media(xs) {
-    //           margin-bottom: 20px;
-    //         }
-    //         @include media(sm) {
-    //           margin-bottom: 56px;
-    //         }
-    //         @include media(md) {
-    //           margin-bottom: 56px;
-    //         }
-    //         @include media(lg) {
-    //           margin-bottom: 40px;
-    //         }
-    //         display: flex;
-    //         flex-wrap: wrap;
-    //         padding-left: 0;
-    //         li {
-    //           list-style-type: none;
-    //           border-radius: 5px;
-    //           border: 1px solid #032059;
-    //           background-color: #faf8f6;
-    //           padding: 5px;
-    //           margin: 5px 5px 5px 0;
-    //           @include media(lg) {
-    //             font-size: 2rem;
-    //             margin: 10px 10px 10px 0;
-    //           }
-    //         }
-    //       }
-    //     }
-    //     .link_wrapper {
-    //       @include media(md) {
-    //         display: flex;
-    //       }
-    //       a {
-    //         display: block;
-    //         padding: 10px;
-    //         color: white;
-    //         text-align: center;
-    //         border-radius: 50px;
-    //         margin: 0 16px 20px 0px;
-    //         font-size: 1.8rem;
-    //         @include media(md) {
-    //           padding: 8px;
-    //         }
-    //       }
-    //       .viewSite {
-    //         background-color: #F27F3D;
-    //         width: 100%;
-    //         @include media(lg) {
-    //           width: 32%;
-    //         }
-    //         &:hover {
-    //           background-color: #f6a374;
-    //         }
-    //       }
-    //       .github {
-    //         background-color: #032059;
-    //         width: 100%;
-    //         @include media(lg) {
-    //           width: 32%;
-    //         }
-    //         i {
-    //           font-size: 2.8rem;
-    //           padding-left: 16px;
-    //         }
-    //         &:hover {
-    //           background-color: #355698;
-    //         }
-    //       }
-    //     }
-    //   }
-    //   .project_img {
-    //     margin-top: 10%;
-    //     overflow: hidden;
-    //     @include media(xs) {
-    //       width: 80%;
-    //     }
-    //     // @include media(md) {
-    //     //   margin-right: 5%;
-    //     //   width: 60%;
-    //     // }
-    //     @include media(lg) {
-    //       // margin-left: 5%;
-    //       margin-right: 5%;
-    //       width: 60%;
-    //     }
-    //     img {
-    //       width: 100%;
-    //       height: auto;
-    //       border-radius: 5px;
-    //       -webkit-box-shadow: 0px 0px 29px -7px rgba(143,143,143,1);
-    //       transition-duration: 0.3s;
-    //     }
-    //     img:hover {
-    //       transform: scale(1.1);
-    //       transition-duration: 0.3s;
-    //     }
-    //   }
-    // }
-
-    // .project_wrapper2 {
-    //   position: relative;
-    //   padding: 12% 0;
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-content: space-between;
-    //   align-items: center;
-    //   margin-bottom: 80px;
-    //   @include media(md) {
-    //     padding: 5% 0;
-    //   }
-    //   @include media(lg) {
-    //     display: flex;
-    //     flex-direction:row;
-    //     padding: 5% 0;
-    //   }
-    //   .project_bg2 {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     z-index: -1;
-    //     background: #EBE5DD;
-    //     transform-origin: right;
-    //     width: 100%;
-    //     height: 100%;
-    //   }
-    //   .project_desc {
-    //     @include media(xs) {
-    //       width: 80%;
-    //       margin: 0 auto;
-    //     }
-    //     @include media(lg) {
-    //       padding: 5%;
-    //       order: 2;// *
-    //     }
-    //     .project_title {
-    //       display: table;
-    //       position: relative;
-    //       h2 {
-    //         font-weight: 600;
-    //         @include media(xs) {
-    //           font-size: 2.4rem;
-    //           margin-bottom: 20px;
-    //         }
-    //         @include media(sm) {
-    //           font-size: 3.2rem;
-    //           margin-bottom: 20px;
-    //         }
-    //         @include media(md) {
-    //           font-size: 4rem;
-    //         }
-    //         @include media(lg) {
-    //           font-size: 4rem;
-    //         }
-    //       }
-    //       &_clip {
-    //         position: relative;
-    //         display: inline-block;
-    //         transition: clip-path .7s cubic-bezier(0.18, 0.06, 0.23, 1) .2s;
-    //         clip-path: inset(0 100% 0 0);
-    //         padding: 0 12px 8px 0;
-    //         &.slid__open {
-    //           clip-path: inset(0);
-    //         }
-    //       }
-    //     }
-    //     .projects_summary {
-    //       .summary {
-    //         @include media(xs) {
-    //           font-size: 1.6rem;
-    //           margin-bottom: 20px;
-    //         }
-    //         @include media(sm) {
-    //           font-size: 1.8rem;
-    //           margin-bottom: 40px;
-    //         }
-    //         @include media(lg) {
-    //           font-size: 2.4rem;
-    //           margin-bottom: 40px;
-    //         }
-    //       }
-    //       ul.technology_useds {
-    //         @include media(xs) {
-    //           margin-bottom: 20px;
-    //         }
-    //         @include media(sm) {
-    //           margin-bottom: 56px;
-    //         }
-    //         @include media(md) {
-    //           margin-bottom: 56px;
-    //         }
-    //         @include media(lg) {
-    //           margin-bottom: 40px;
-    //         }
-    //         display: flex;
-    //         flex-wrap: wrap;
-    //         padding-left: 0;
-    //         li {
-    //           list-style-type: none;
-    //           border-radius: 5px;
-    //           border: 1px solid #032059;
-    //           background-color: #faf8f6;
-    //           padding: 5px;
-    //           margin: 5px 5px 5px 0;
-    //           @include media(lg) {
-    //             font-size: 2rem;
-    //             margin: 10px 10px 10px 0;
-    //           }
-    //         }
-    //       }
-    //     }
-    //     .link_wrapper {
-    //       @include media(md) {
-    //         display: flex;
-    //       }
-    //       a {
-    //         display: block;
-    //         padding: 10px;
-    //         color: white;
-    //         text-align: center;
-    //         border-radius: 50px;
-    //         margin: 0 16px 20px 0px;
-    //         font-size: 1.8rem;
-    //         @include media(md) {
-    //           padding: 8px;
-    //         }
-    //       }
-    //       .viewSite {
-    //         background-color: #F27F3D;
-    //         width: 100%;
-    //         @include media(lg) {
-    //           width: 32%;
-    //         }
-    //         &:hover {
-    //           background-color: #f6a374;
-    //         }
-    //       }
-    //       .github {
-    //         background-color: #032059;
-    //         width: 100%;
-    //         @include media(lg) {
-    //           width: 32%;
-    //         }
-    //         i {
-    //           font-size: 2.8rem;
-    //           padding-left: 16px;
-    //         }
-    //         &:hover {
-    //           background-color: #355698;
-    //         }
-    //       }
-    //     }
-    //   }
-    //   .project_img {
-    //     margin-top: 10%;
-    //     overflow: hidden;
-    //     @include media(xs) {
-    //       width: 80%;
-    //     }
-    //     @include media(lg) {
-    //       margin-left: 5%;
-    //       margin-right: 0;
-    //       width: 60%;
-    //       order: 1;// *
-    //     }
-    //     img {
-    //       width: 100%;
-    //       height: auto;
-    //       border-radius: 5px;
-    //       -webkit-box-shadow: 0px 0px 29px -7px rgba(143,143,143,1);
-    //       transition-duration: 0.3s;
-    //     }
-    //     img:hover {
-    //       transform: scale(1.1);
-    //       transition-duration: 0.3s;
-    //     }
-    //   }
-    // }
   }
   .projectsPageLink_btn {
     a {
@@ -761,11 +433,9 @@ section.projects {
     }
     @keyframes slideBlink {
       from {
-        // opacity: 0;
         transform: translateX(8);
       }
       to {
-        // opacity: 1;
         transform: translateX(16px);
       }
     }
@@ -777,8 +447,19 @@ section.projects {
   margin: 0 auto;
   box-sizing: content-box;
   padding-top: 40px;
-  margin-bottom: 100px;
-  h2.skill_title {
+  @include media(xs) {
+    margin-bottom: 18%;
+  }
+  @include media(sm) {
+    margin-bottom: 16%;
+  }
+  @include media(md) {
+    margin-bottom: 16%;
+  }
+  @include media(lg) {
+    margin-bottom: 10%;
+  }
+  h2 {
     text-align: center;
     font-weight: 700;
     @include media(xs) {
@@ -820,21 +501,17 @@ section.projects {
     grid-template-columns: repeat(auto-fit, minmax(min(130px, 100%), 1fr));
     gap: 1rem;
     .skill_card {
-      padding: 10px;
+      padding: 20px 8px;
       margin: 8px;
       background-color: #EBE5DD;
       border-radius: 5px;
       display: flex;
       flex-direction: column;
-      justify-content:space-between;
+      justify-content:center;
       align-items: center;
       box-shadow: 0px 0px 8px 2px rgba(186,186,186,0.18);
-      i {
-        color: #032059;
-        font-size: 48px;
-      }
       img {
-        width: 50px;
+        height: 48px;
       }
       p {
         margin-bottom: 0;
@@ -847,30 +524,22 @@ section.projects {
 
 .contact {
   margin-bottom: 150px;
-  .text_up {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-  }
-  .contact_title {
-    span {
-      display: block;
-      font-weight: 700;
-      @include media(xs) {
-        font-size: 4.8rem;
-        margin-bottom: 20px;
-      }
-      @include media(sm) {
-        font-size: 4.8rem;
-        margin-bottom: 20px;
-      }
-      @include media(md) {
-        font-size: 4.8rem;
-      }
-      @include media(lg) {
-        font-size: 6.4rem;
-      }
-      letter-spacing: 0.04em;
+  h2 {
+    text-align: center;
+    font-weight: 700;
+    @include media(xs) {
+      font-size: 3.2rem;
+      margin-bottom: 24px;
+    }
+    @include media(sm) {
+      font-size: 4.8rem;
+    }
+    @include media(md) {
+      font-size: 4.8rem;
+    }
+    @include media(lg) {
+      font-size: 5.6rem;
+      margin-bottom: 40px;
     }
   }
   .contactMessage {

@@ -20,14 +20,19 @@ export class HomeComponent implements OnInit {
   project3:Project;
   loading = true;
   showElement = false;
-
+  displayImage = true;
+  displayGif = false;
   server = environment.server;
 
 
   constructor(private cs:CommonService) {
     gsap.registerPlugin(ScrollTrigger);
-   }
+  }
 
+  display() {
+    this.displayImage = false;
+    this.displayGif = true;
+  }
   // slideTitle () {
   //   const title_clip = document.querySelectorAll('.title_clip');
 
@@ -78,120 +83,120 @@ export class HomeComponent implements OnInit {
   //   });
   // }
 
-  slideProjectTitle () {
-    const project_title_clip = document.querySelectorAll('.project_title_clip');
+  // slideProjectTitle () {
+  //   const project_title_clip = document.querySelectorAll('.project_title_clip');
 
-    project_title_clip.forEach((project_title_clip, index) => {
-      gsap.to(project_title_clip, {
-        scrollTrigger: {
-          trigger: project_title_clip,
-          start: 'top-=350 center+=100',
-          end: 'top top-=100',
-        }
-      });
+  //   project_title_clip.forEach((project_title_clip, index) => {
+  //     gsap.to(project_title_clip, {
+  //       scrollTrigger: {
+  //         trigger: project_title_clip,
+  //         start: 'top-=350 center+=100',
+  //         end: 'top top-=100',
+  //       }
+  //     });
 
-      ScrollTrigger.create({
-        trigger:project_title_clip,
-        id: 'index+1',
-        start: 'top center+=300',
-        end: 'top top-=100',
-        once: true,
-        toggleClass: {
-          targets: project_title_clip,
-          className: 'slid__open',
-        },
-      });
-    });
-  }
+  //     ScrollTrigger.create({
+  //       trigger:project_title_clip,
+  //       id: 'index+1',
+  //       start: 'top center+=300',
+  //       end: 'top top-=100',
+  //       once: true,
+  //       toggleClass: {
+  //         targets: project_title_clip,
+  //         className: 'slid__open',
+  //       },
+  //     });
+  //   });
+  // }
 
   // Fade In from Bottom
-  fadein() {
-    const fadeUps = document.querySelectorAll('.project_desc, .project_img, .projectsPageLink_btn, .skill_title, .skill_desc, .skill_container, .contactMessage, .contact_btn_wrapper');
-    fadeUps.forEach((fadeUp, index) => {
-      gsap.fromTo(fadeUp, {
-        autoAlpha: 0,
-        y:20,
-      },
-      {
-        autoAlpha: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: fadeUp,
-          start: 'top center+=200',
-          end: 'top top',
-          // toggleActions: "play pause resume reverse",
-        }
-      });
-      ScrollTrigger.create({
-        trigger: fadeUp,
-        id: 'index+1',
-        start: 'top center+=200',
-        end: 'top top',
-        once: true,
-        // toggleActions: "play pause resume reverse",
-      });
-    })
-  }
+  // fadein() {
+  //   const fadeUps = document.querySelectorAll('.project_desc, .project_img, .projectsPageLink_btn, .skill_title, .skill_desc, .skill_container, .contactMessage, .contact_btn_wrapper');
+  //   fadeUps.forEach((fadeUp, index) => {
+  //     gsap.fromTo(fadeUp, {
+  //       autoAlpha: 0,
+  //       y:20,
+  //     },
+  //     {
+  //       autoAlpha: 1,
+  //       y: 0,
+  //       scrollTrigger: {
+  //         trigger: fadeUp,
+  //         start: 'top center+=200',
+  //         end: 'top top',
+  //         // toggleActions: "play pause resume reverse",
+  //       }
+  //     });
+  //     ScrollTrigger.create({
+  //       trigger: fadeUp,
+  //       id: 'index+1',
+  //       start: 'top center+=200',
+  //       end: 'top top',
+  //       once: true,
+  //       // toggleActions: "play pause resume reverse",
+  //     });
+  //   })
+  // }
 
 
   // Background shows gradually FROM LEFT
-  slideBackgroundLeft () {
-    gsap.fromTo('.project_bg1', {
-        x: "0",
-        scaleX: 0,
-        scaleY: 1,
-      },
-      {
-        x: '0',
-        scaleX: 1,
-        scrollTrigger: {
-          trigger: '.project_wrapper1',
-          start: 'top-=350 center+=100',
-          end: 'bottom-=400 center+=100',
-          scrub: 0.5,
-          once: false,
-        }
-      }
-    )
-    gsap.fromTo('.project_bg3', {
-      x: "0",
-      scaleX: 0,
-      scaleY: 1,
-    },
-    {
-      x: '0',
-      scaleX: 1,
-      scrollTrigger: {
-        trigger: '.project_wrapper3',
-        start: 'top-=350 center+=100',
-        end: 'bottom-=400 center+=100',
-        scrub: 0.5,
-        once: false,
-      }
-    }
-  )
-  }
+  // slideBackgroundLeft () {
+  //   gsap.fromTo('.project_bg1', {
+  //       x: "0",
+  //       scaleX: 0,
+  //       scaleY: 1,
+  //     },
+  //     {
+  //       x: '0',
+  //       scaleX: 1,
+  //       scrollTrigger: {
+  //         trigger: '.project_wrapper1',
+  //         start: 'top-=350 center+=100',
+  //         end: 'bottom-=400 center+=100',
+  //         scrub: 0.5,
+  //         once: false,
+  //       }
+  //     }
+  //   )
+  //   gsap.fromTo('.project_bg3', {
+  //     x: "0",
+  //     scaleX: 0,
+  //     scaleY: 1,
+  //   },
+  //   {
+  //     x: '0',
+  //     scaleX: 1,
+  //     scrollTrigger: {
+  //       trigger: '.project_wrapper3',
+  //       start: 'top-=350 center+=100',
+  //       end: 'bottom-=400 center+=100',
+  //       scrub: 0.5,
+  //       once: false,
+  //     }
+  //   }
+  // )
+  // }
 
   // Background shows gradually FROM RIGHT
-  slideBackgroundRight () {
-    gsap.fromTo('.project_bg2', {
-        x: "0",
-        scaleX: 0,
-        scaleY: 1,
-      },
-      {
-        x: '0',
-        scaleX: 1,
-        scrollTrigger: {
-          trigger: '.project_wrapper2',
-          start: 'top-=350 center+=100',
-          end: 'bottom-=400 center+=100',
-          scrub: 0.5,
-          once: false,
-        }
-      }
-    )
-  }
+  // slideBackgroundRight () {
+  //   gsap.fromTo('.project_bg2', {
+  //       x: "0",
+  //       scaleX: 0,
+  //       scaleY: 1,
+  //     },
+  //     {
+  //       x: '0',
+  //       scaleX: 1,
+  //       scrollTrigger: {
+  //         trigger: '.project_wrapper2',
+  //         start: 'top-=350 center+=100',
+  //         end: 'bottom-=400 center+=100',
+  //         scrub: 0.5,
+  //         once: false,
+  //       }
+  //     }
+  //   )
+  // }
 
   // textUp() {
   //   const text_ups = document.querySelectorAll('.text_up_js');
@@ -233,10 +238,10 @@ export class HomeComponent implements OnInit {
     })
 
     // this.slideTitle();
-    this.slideProjectTitle();
-    this.slideBackgroundLeft();
-    this.slideBackgroundRight();
-    this.fadein();
+    // this.slideProjectTitle();
+    // this.slideBackgroundLeft();
+    // this.slideBackgroundRight();
+    // this.fadein();
     // this.textUp();
   }
 
