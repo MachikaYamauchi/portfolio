@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-// import { Recommend } from '../interfaces/recommend.interface';
 import { CommonService } from './../services/common.service';
 import { Router } from '@angular/router';
 import { Product } from './../interfaces/benchbakeryInterface';
 import { environment } from 'src/environments/environment';
-// import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-admin',

@@ -26,6 +26,7 @@ import { BirdbooksComponent } from './birdbooks/birdbooks.component';
 import { ProductDetailsComponent } from './benchbakery/product-details/product-details.component';
 import {HeaderBenchBakeryComponent} from './benchbakery/header/header.component';
 import {FooterBenchBakeryComponent} from './benchbakery/footer/footer.component';
+import { SignupComponent } from './benchbakery/signup/signup.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import {FooterBenchBakeryComponent} from './benchbakery/footer/footer.component'
     BirdbooksComponent,
     ProductDetailsComponent,
     HeaderBenchBakeryComponent,
-    FooterBenchBakeryComponent
+    FooterBenchBakeryComponent,
+    SignupComponent
 
 
   ],

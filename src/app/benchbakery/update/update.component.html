@@ -36,7 +36,7 @@
     <input [(ngModel)]="display" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" >
     <label class="form-check-label" for="flexSwitchCheckDefault">Click if you want to display on the website</label>
   </div>
-  <button class="btn btn-primary w-100 btn_update" (click)="updateRecommend()">Update</button>
+  <button class="btn btn-primary w-100 btn_update" (click)="updateProduct()">Update</button>
   <button type="button" class="btn btn-outline-primary w-100 btn_admin" routerLink="/benchbakery/admin">Back to Admin page</button>
   <div *ngIf="!updateStatus" class = "error" [style.display]="displayMessage">Sorry, you cannot add products</div>
 </div>

@@ -13,6 +13,7 @@ import { PlusvaultComponent } from './plusvault/plusvault.component';
 import { BirdbooksComponent } from './birdbooks/birdbooks.component';
 import { AboutBenchBakeryComponent } from './benchbakery/about/about.component';
 import { ProductDetailsComponent } from './benchbakery/product-details/product-details.component';
+import { SignupComponent } from './benchbakery/signup/signup.component';
 
 const routes: Routes = [
   {path:"", component:HomeComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path:"benchbakery/admin", component:AdminComponent},
   {path:"benchbakery/login", component:LoginComponent},
   {path:"benchbakery/update/:id", component:UpdateComponent},
+  {path:"benchbakery/signup", component:SignupComponent},
   {path:"case_studies/plusvault", component:PlusvaultComponent},
   {path:"case_studies/birdbooks", component:BirdbooksComponent}
 ];

@@ -56,9 +56,6 @@ $breakpoints: (
      }
   }
   a:hover {
-    img {
-
-    }
     filter: alpha(opacity=60);        /* ie lt 8 */
     -ms-filter: "alpha(opacity=60)";  /* ie 8 */
     -moz-opacity:0.6;                 /* FF lt 1.5, Netscape */
@@ -66,5 +63,4 @@ $breakpoints: (
     opacity:0.7;
     zoom:1;
   }
-
 }

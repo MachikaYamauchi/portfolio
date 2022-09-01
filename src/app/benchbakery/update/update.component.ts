@@ -32,8 +32,6 @@ export class UpdateComponent implements OnInit {
   updateStatus:boolean = true;
 
 
-
-
   constructor(private cs:CommonService, private router:Router, private route:ActivatedRoute) { }
 
   trackFile1(event:any) {
@@ -72,7 +70,7 @@ export class UpdateComponent implements OnInit {
     console.log(this.myformdate3)
   }
 
-  updateRecommend() {
+  updateProduct() {
     let id:any = this.route.snapshot.paramMap.get("id");
     this.cs.updateProduct(id, this.filename1, this.filename2, this.filename3, this.name, this.rating, this.price, this.stock, this.description, this.display).subscribe(updateData => {
       console.log(updateData);
@@ -95,12 +93,8 @@ export class UpdateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // 要確認！！！！
     let id:any = this.route.snapshot.paramMap.get("id");
     this.cs.getProductByID(id).subscribe(productData=> {
-      // this.image1 = productData.data[0].image1;
-      // this.image2 = productData.data[0].image2;
-      // this.image3 = productData.data[0].image3;
       this.name = productData.name;
       this.rating = productData.rating;
       this.price = productData.price;

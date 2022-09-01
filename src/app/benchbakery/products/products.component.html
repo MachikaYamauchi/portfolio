@@ -11,6 +11,9 @@
         <div class="price">
           <p>{{products.price | currency:"CAD"}}</p>
         </div>
+        <div class="stock">
+          <p><stock [totalStocks]="products.stock" [isLessStock]="isLessStock(products.stock)"></stock></p>
+        </div>
         <div class="description">
           <p>{{products.description}}</p>
         </div>

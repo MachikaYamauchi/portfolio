@@ -21,7 +21,14 @@ export class ProductsComponent implements OnInit {
 
   constructor(private cs:CommonService) { }
 
-
+  isLessStock(stockNumber:number) {
+    if(stockNumber < 10) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 
   ngOnInit(): void {
     this.cs.displayProduct().subscribe((products) => {

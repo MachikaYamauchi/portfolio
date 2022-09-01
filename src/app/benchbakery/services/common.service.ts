@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Product, Add, Delete, Login, ToggleDisplay, UpdateProduct} from '../interfaces/benchbakeryInterface';
+import { Product, Add, Delete, Login, ToggleDisplay, UpdateProduct, SignUp} from '../interfaces/benchbakeryInterface';
 import { environment } from 'src/environments/environment';
 
 
@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 export class CommonService {
 
   private productsURL = environment.bakeryserver + "/products";
-  // private signupURL = "http://localhost:4400/signup";
+  private signupURL = "http://localhost:4400/signup";
   private loginURL = environment.bakeryserver + "/login";
   private displayProductURL = environment.bakeryserver + "/displayProduct";
   private toggleDisplayURL = environment.bakeryserver + "/toggleDisplay";
@@ -18,14 +18,14 @@ export class CommonService {
 
   constructor(private http:HttpClient) { }
 
-  // signup(username:string, email:string, password:string) {
-  //   let signupBody = {
-  //     username:username,
-  //     email:email,
-  //     password:password
-  //   }
-  //   return this.http.post<SignUp>(this.signupURL, signupBody);
-  // }
+  signup(username:string, email:string, password:string) {
+    let signupBody = {
+      username:username,
+      email:email,
+      password:password
+    }
+    return this.http.post<SignUp>(this.signupURL, signupBody);
+  }
 
   login(username:string, password:string) {
     let loginBody = {
