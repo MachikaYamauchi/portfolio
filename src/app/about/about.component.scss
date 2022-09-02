@@ -160,6 +160,7 @@ $breakpoints: (
       margin-bottom: 7%;
     }
     img {
+      transform: rotate(90deg);
       @include media(xs) {
         width: 8%;
         margin-right: 5px;
@@ -410,7 +411,6 @@ $breakpoints: (
     }
     .testimonial_card {
       margin-bottom: 10%;
-      padding: 8px;
       @include media(sm) {
         margin-bottom: 5%;
       }
@@ -422,13 +422,13 @@ $breakpoints: (
           padding: 10%;
         }
         @include media(sm) {
-          padding: 8%;
+          padding: 5%;
         }
         @include media(md) {
-          padding: 9%;
+          padding: 6%;
         }
         @include media(lg) {
-          padding: 5%;
+          padding: 6%;
         }
 
         background: #EBE5DD;
@@ -479,6 +479,7 @@ $breakpoints: (
         }
       }
     }
+
   }
   .favorite_points {
     @include media(xs) {

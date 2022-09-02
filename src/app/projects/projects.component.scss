@@ -166,6 +166,7 @@ $breakpoints: (
       margin-bottom: 7%;
     }
     img {
+      transform: rotate(90deg);
       @include media(xs) {
         width: 8%;
       }
@@ -240,7 +241,7 @@ $breakpoints: (
         .project_card_container {
           border-radius: 10px;
           box-shadow: 0 0 10px 0 rgb(96 108 123 / 20%);
-          margin-bottom: 24px;
+          margin-bottom: 32px;
           background-color: white;
           @include media(sm) {
             height: 640px;

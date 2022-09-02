@@ -252,11 +252,27 @@ section.projects {
         border-radius: 5px;
       }
       .caption {
-        font-size: 2.4rem;
+
         font-weight: 700;
         text-align: 		center;
         vertical-align: middle;
-        // padding-top:		140px;
+        @include media(xs) {
+          font-size: 1.8rem;
+          padding-top: 56px;
+        }
+        @include media(sm) {
+          font-size: 3.2rem;
+          padding-top: 120px;
+        }
+        @include media(md) {
+          font-size: 4rem;
+          padding-top: 140px;
+        }
+        @include media(lg) {
+          font-size: 3.2rem;
+          padding-top: 140px;
+        }
+
         color:			#fff;
       }
       &:hover .mask {

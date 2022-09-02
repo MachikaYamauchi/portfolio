@@ -62,18 +62,22 @@ $breakpoints: (
       }
       li.nav-item {
         @include media(xs) {
+          font-weight: 600;
           margin-bottom: 16px;
-          font-size: 20px;
-        }
-        @include media(sm) {
-          margin-bottom: 24px;
           font-size: 24px;
         }
+        @include media(sm) {
+          font-weight: 600;
+          margin-bottom: 24px;
+          font-size: 28px;
+        }
         @include media(md) {
+          font-weight: 600;
           margin-bottom: 24px;
           font-size: 32px;
         }
         @include media(lg) {
+          font-weight: 500;
           font-size: 24px;
           margin-left: 16px;
           margin-bottom: 0;
