@@ -198,14 +198,6 @@ $breakpoints: (
           margin: 0 auto;
           width: 50%;
         }
-        @include media(md) {
-          margin: 0 auto;
-          width: 40%;
-        }
-        @include media(lg) {
-          margin: 0 auto;
-          width: 50%;
-        }
         img {
           border-radius: 10px;
         }
@@ -376,9 +368,13 @@ $breakpoints: (
     @include media(lg) {
       margin-bottom: 12%;
     }
+    .container-fluid {
+      padding: 0;
+    }
     h2.section_title {
       letter-spacing: 0.2rem;
       font-weight: 700;
+      text-align: center;
       @include media(xs) {
         font-size: 2.4rem;
         margin-bottom: 5%;
@@ -476,9 +472,10 @@ $breakpoints: (
           }
         }
         .name_container {
-          .school_name {
-            font-size: 18px;
+          .school_name, .instructor_name {
+            font-size: 16px;
           }
+
         }
       }
     }
@@ -499,6 +496,7 @@ $breakpoints: (
     h2.section_title {
       letter-spacing: 0.2rem;
       font-weight: 700;
+      text-align: center;
       @include media(xs) {
         font-size: 2.4rem;
         margin-bottom: 10%;
@@ -533,78 +531,96 @@ $breakpoints: (
       }
     }
     .points_wrapper {
-      @include media(md) {
+      @include media(lg) {
         display: flex;
         flex-direction: row;
       }
       .backshot_image {
         @include media(xs) {
-          margin-bottom: 5%;
+          margin-bottom: 8%;
         }
         @include media(sm) {
           margin: 0 auto;
           margin-bottom: 8%;
-        }
-        @include media(md) {
-          width: 45%;
+          width: 50%;
         }
         @include media(lg) {
           width: 40%;
+          margin-bottom: 0;
+        }
+        img {
+          border-radius: 10px;
+          // @include media(sm) {
+          //   height: 300px;
+          //   width: 100%;
+          //   object-fit: cover;
+          // }
+          // @include media(md) {
+          //   height: 320px;
+          //   width: 100%;
+          //   object-fit: cover;
+          // }
         }
       }
       .points {
-        @include media(sm) {
-          padding-left: 3%;
-        }
         @include media(md) {
-          width: 55%;
+          padding: 0;
         }
-        @include media(lg) {
-          width: 60%;
-          padding-left: 4%;
-        }
+        // @include media(lg) {
+        //   display: flex;
+        //   flex-direction: column;
+        //   justify-content: center;
+        // }
         ul.content_points {
           list-style-type: none;
+          padding: 0;
+          @include media(sm) {
+            width: 80%;
+            margin: 0 auto;
+          }
+          @include media(md) {
+            width: 72%;
+            margin: 0 auto;
+          }
+          @include media(lg) {
+            width: 100%;
+            padding-left: 40px;
+          }
           li {
+            position: relative;
             @include media(xs) {
               padding-left: 24px;
               margin-bottom: 16px;
             }
             @include media(sm) {
-              padding-left: 32px;
+              padding-left: 24px;
               margin-bottom: 16px;
             }
             @include media(md) {
               padding-left: 24px;
             }
-            @include media(lg) {
-              margin-top: 3%;
-              padding-left: 40px;
-              // font-size: 2.4rem;
-            }
-            position: relative;
             &:before {
               content: url('../../assets/arrow_navy_right.svg');
               position: absolute;
               @include media(xs) {
-                top: 3%;
+                top: 0;
                 left: 0;
                 width: 5%;
               }
               @include media(sm) {
-                top: 3%;
+                top: 0;
                 left: 0;
                 width: 3%;
               }
               @include media(md) {
-                top: -2%;
+                top: 0;
                 left: 0;
-                width: 4%;
+                width: 3%;
               }
               @include media(lg) {
                 top: 3%;
                 left: 0;
-                width: 2.4%;
+                width: 2%;
               }
             }
           }
