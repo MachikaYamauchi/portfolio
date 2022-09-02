@@ -29,11 +29,11 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="projectImage_wrapper">
-            <img *ngIf="displayImage" [src]="project1.attributes.ProjectsImage.data.attributes.url" alt="Bench Bakery Machika Yamauchi web developer portfolio projects image">
-            <div class="mask" *ngIf="displayImage" (click)="display()">
+            <img *ngIf="displayImage1" [src]="project1.attributes.ProjectsImage.data.attributes.url" alt="Bench Bakery Machika Yamauchi web developer portfolio projects image">
+            <div class="mask" *ngIf="displayImage1" (click)="display1()">
               <div class="caption">Click to start Gif demo</div>
             </div>
-            <img *ngIf="displayGif" [src]="project1.attributes.ProjectGIF.data.attributes.url" alt="Bench Bakery Machika Yamauchi web developer portfolio projects GIF"/>
+            <img *ngIf="displayGif1" [src]="project1.attributes.ProjectGIF.data.attributes.url" alt="Bench Bakery Machika Yamauchi web developer portfolio projects GIF"/>
           </div>
         </div>
         <div class="col-lg-6">
@@ -56,11 +56,11 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="projectImage_wrapper">
-            <img *ngIf="displayImage" [src]="project2.attributes.ProjectsImage.data.attributes.url" alt="Machika Yamauchi web developer portfolio projects image">
-            <div class="mask" *ngIf="displayImage" (click)="display()">
+            <img *ngIf="displayImage2" [src]="project2.attributes.ProjectsImage.data.attributes.url" alt="Machika Yamauchi web developer portfolio image">
+            <div class="mask" *ngIf="displayImage2" (click)="display2()">
               <div class="caption">Click to start Gif demo</div>
             </div>
-            <img *ngIf="displayGif" src="../../assets/BenchBakery_loop1_pressed.gif" alt="some alt description"/>
+            <img *ngIf="displayGif2" [src]="project2.attributes.ProjectGIF.data.attributes.url" alt="Machika Yamauchi web developer portfolio GIF"/>
           </div>
         </div>
         <div class="col-lg-6">

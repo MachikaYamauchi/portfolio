@@ -17,10 +17,16 @@ export class HomeComponent implements OnInit {
   projects:Project[] = [];
   project1:Project;
   project2:Project;
+
   loading = true;
   showElement = false;
-  displayImage = true;
-  displayGif = false;
+
+  displayImage1 = true;
+  displayGif1 = false;
+
+  displayImage2 = true;
+  displayGif2 = false;
+
   server = environment.server;
 
 
@@ -28,9 +34,14 @@ export class HomeComponent implements OnInit {
     gsap.registerPlugin(ScrollTrigger);
   }
 
-  display() {
-    this.displayImage = false;
-    this.displayGif = true;
+  display1() {
+    this.displayImage1 = false;
+    this.displayGif1 = true;
+  }
+
+  display2() {
+    this.displayImage2 = false;
+    this.displayGif2 = true;
   }
 
   ngOnInit(): void {
@@ -41,7 +52,7 @@ export class HomeComponent implements OnInit {
       this.loading = false;
       this.showElement = true;
       this.project1 = projects.data[0];
-      this.project2 = projects.data[5];
+      this.project2 = projects.data[1];
     })
     this.cs.getSkills().subscribe( skills => {
       this.skills=skills.data;
