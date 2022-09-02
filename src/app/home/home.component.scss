@@ -12,6 +12,34 @@ $breakpoints: (
   }
 }
 
+// Firefox
+@-moz-document url-prefix(){
+  .projectsSectionLink_btn {
+    @include media(lg) {
+      width: 324px;
+    }
+  }
+}
+// Chrome
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+  .projectsSectionLink_btn {
+    @include media(lg) {
+      width: 60%;
+    }
+  }
+}
+// Safari
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  _::-webkit-full-page-media, _:future, :root .css-hack {
+    .projectsSectionLink_btn {
+      @include media(lg) {
+        width: 324px;
+      }
+    }
+  }
+}
+
+
 .data-scroll-container {
   overflow-x: hidden;
   min-height: 100vh;
@@ -96,8 +124,8 @@ $breakpoints: (
         @include media(lg) {
           transform: translateY(80px); // To set the margin from fome name_wrapper
         }
-        .projectsSectionLink_btn {
-          a {
+        .projectsSectionLink {
+          .projectsSectionLink_btn {
             position: relative;
             display: flex;
             justify-content: center;
@@ -108,18 +136,18 @@ $breakpoints: (
             font-weight: 700;
             @include media(xs) {
               font-size: 1.8rem;
-              max-width: 100%;
+              width: 100%;
             }
             @include media(sm) {
               font-size: 2.4rem;
-              max-width: 60%;
+              width: 60%;
             }
             @include media(md) {
-              max-width: 60%;
+              width: 60%;
             }
-            @include media(lg) {
-              max-width: 60%;
-            }
+            // @include media(lg) {
+            //   width: 60%;
+            // }
             background: #F27F3D;
             border-radius: 50px;
             border: 0.2rem solid #032059;
@@ -138,7 +166,7 @@ $breakpoints: (
                 margin-left: 10px;
               }
               @include media(lg) {
-                width: 7%;
+                width: 6%;
                 margin-left: 12px;
               }
               animation: slideBlink 1.2s linear infinite;
@@ -258,19 +286,19 @@ section.projects {
         vertical-align: middle;
         @include media(xs) {
           font-size: 1.8rem;
-          padding-top: 56px;
+          padding-top: 64px;
         }
         @include media(sm) {
           font-size: 3.2rem;
-          padding-top: 120px;
+          padding-top: 100px;
         }
         @include media(md) {
           font-size: 4rem;
-          padding-top: 140px;
+          padding-top: 120px;
         }
         @include media(lg) {
           font-size: 3.2rem;
-          padding-top: 140px;
+          padding-top: 120px;
         }
 
         color:			#fff;
