@@ -153,14 +153,14 @@ $breakpoints: (
       }
       li:before {
         content: "";
-        position: absolute; /*絶対配置*/
-        left: 0; /*点の位置*/
-        top: 0.6em; /*点の位置*/
-        border-radius: 50%; /*丸くする*/
-        width: 8px; /*点の幅*/
-        height: 8px; /*点の高さ*/
+        position: absolute;
+        left: 0;
+        top: 0.6em;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
         display: block;
-        background: #F27F3D; /*点の色*/
+        background: #F27F3D;
       }
     }
   }
@@ -282,14 +282,14 @@ $breakpoints: (
         }
         li:before {
           content: "";
-          position: absolute; /*絶対配置*/
-          left: 0; /*点の位置*/
-          top: 0.6em; /*点の位置*/
-          border-radius: 50%; /*丸くする*/
-          width: 8px; /*点の幅*/
-          height: 8px; /*点の高さ*/
+          position: absolute;
+          left: 0;
+          top: 0.6em;
+          border-radius: 50%;
+          width: 8px;
+          height: 8px;
           display: block;
-          background: #F27F3D; /*点の色*/
+          background: #F27F3D;
         }
       }
 
@@ -402,14 +402,14 @@ $breakpoints: (
           }
           li:before {
             content: "";
-            position: absolute; /*絶対配置*/
-            left: 0; /*点の位置*/
-            top: 0.6em; /*点の位置*/
-            border-radius: 50%; /*丸くする*/
-            width: 8px; /*点の幅*/
-            height: 8px; /*点の高さ*/
+            position: absolute;
+            left: 0;
+            top: 0.6em;
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
             display: block;
-            background: #F27F3D; /*点の色*/
+            background: #F27F3D;
           }
         }
 
@@ -494,14 +494,14 @@ $breakpoints: (
         }
         li:before {
           content: "";
-          position: absolute; /*絶対配置*/
-          left: 0; /*点の位置*/
-          top: 0.6em; /*点の位置*/
-          border-radius: 50%; /*丸くする*/
-          width: 8px; /*点の幅*/
-          height: 8px; /*点の高さ*/
+          position: absolute;
+          left: 0;
+          top: 0.6em;
+          border-radius: 50%;
+          width: 8px;
+          height: 8px;
           display: block;
-          background: #F27F3D; /*点の色*/
+          background: #F27F3D;
         }
       }
     }
@@ -612,7 +612,6 @@ $breakpoints: (
           @include media(lg) {
             margin-bottom: 5%;
           }
-
         }
       }
     }
@@ -920,7 +919,6 @@ $breakpoints: (
           color: white;
           font-weight: 500;
           @include media(xs) {
-            // width: 100%;
             padding: 10px 32px;
             font-size: 2rem;
           }
@@ -942,7 +940,6 @@ $breakpoints: (
             background-color: #f6a374;
           }
         }
-
       }
     }
   }
@@ -1040,14 +1037,14 @@ $breakpoints: (
         }
         li:before {
           content: "";
-          position: absolute; /*絶対配置*/
-          left: 0; /*点の位置*/
-          top: 0.6em; /*点の位置*/
-          border-radius: 50%; /*丸くする*/
-          width: 8px; /*点の幅*/
-          height: 8px; /*点の高さ*/
+          position: absolute;
+          left: 0;
+          top: 0.6em;
+          border-radius: 50%;
+          width: 8px;
+          height: 8px;
           display: block;
-          background: #F27F3D; /*点の色*/
+          background: #F27F3D;
         }
       }
       .thank_you {
@@ -1063,49 +1060,6 @@ $breakpoints: (
           font-size: 3.2rem;
         }
       }
-    }
-  }
-}
-
-.btn_projects_wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20%;
-  a {
-    display: block;
-    background-color: #F8F7F7;
-    border: 2px solid #032059;
-    font-weight: 700;
-    padding: 10px 24px;
-    width: 100%;
-    text-align: center;
-    @include media(sm) {
-      width: 90%;
-    }
-    @include media(md) {
-      width: 70%;
-    }
-    @include media(lg) {
-      width: 60%;
-    }
-    img {
-      width: 8%;
-      margin-right: 8px;
-      @include media(sm) {
-        width: 5%;
-      }
-      @include media(md) {
-        width: 5%;
-        margin-right: 20px;
-      }
-      @include media(lg) {
-        width: 3%;
-        // margin-right: 3px;
-      }
-    }
-    &:hover {
-      background-color: #032059;
-      color: white;
     }
   }
 }

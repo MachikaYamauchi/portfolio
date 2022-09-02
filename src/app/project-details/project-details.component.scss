@@ -147,8 +147,6 @@ section.projectDetail_page {
     }
     @include media(sm) {
       padding: 180px 0 80px 0;
-      // min-height: 400px;
-      // margin-bottom: 56px;
     }
     @include media(md) {
       width: 100%;
@@ -296,23 +294,6 @@ section.projectDetail_page {
         margin-left: 8%;
       }
     }
-    // .heroImage_wrapper {
-    //   @include media(xs) {
-    //     display: flex;
-    //     justify-content: center;
-    //     margin-bottom: 56px;
-    //   }
-    //   @include media(sm) {
-    //     margin-bottom: 56px;
-    //   }
-    //   @include media(md) {
-    //     width: 50%;
-    //     padding: 5% 5% 0 0; // To adjust page grid and height of heroContent_wrapper
-    //   }
-    //   @include media(lg) {
-    //     padding: 8%; // To adjust page grid
-    //   }
-    // }
   }
 
   .overview {
@@ -392,24 +373,6 @@ section.projectDetail_page {
     }
 
   }
-  // .images {
-  //   padding: 10%;
-  //   .bg_image {
-  //     background-color: #ebebeb;
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: center;
-  //     align-items: center;
-  //     margin-bottom: 24px;
-  //     padding: 10%;
-  //     img {
-  //       display: block;
-  //       width: 80%;
-  //       box-shadow: 0px 0px 8px 2px rgba(186,186,186,0.18);
-  //     }
-  //   }
-
-  // }
 
   .btn_projects_wrapper {
     @include media(xs) {
@@ -460,11 +423,9 @@ section.projectDetail_page {
     }
     @keyframes slideBlink {
       from {
-        // opacity: 0;
         transform: translateX(3);
       }
       to {
-        // opacity: 1;
         transform: translateX(20px);
       }
     }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AboutMe, Project, Skill } from '../interfaces/interface';
+import { AboutMe } from '../interfaces/interface';
 import { CommonService } from '../services/common.service';
 
 @Component({
@@ -13,7 +13,6 @@ export class HeaderComponent implements OnInit {
 
   constructor(private cs:CommonService) {
   }
-
 
   ngOnInit(): void {
     this.cs.getAboutMe().subscribe( aboutMe => {

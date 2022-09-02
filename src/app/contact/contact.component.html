@@ -1,20 +1,18 @@
 <portfolio-header></portfolio-header>
 <section class="contact_page">
-  <h1 class="pageTitle">
-    <span><img src="../../assets/arrow_orange_right.svg" alt="Machika Yamauchi portfolio web developer arrow icon">Contact me</span>
-  </h1>
   <div class="contact_container">
     <div class="left_message">
+      <h1 class="pageTitle">
+        <!-- <img src="../../assets/arrow_orange_right.svg" alt="Machika Yamauchi portfolio web developer arrow icon"> -->
+        Contact me
+      </h1>
       <h2 class="message">I'm looking for <span>full-time work</span> in the Vancouver area. I'm open to <span>all possibilities.</span></h2>
       <h2 class="message">If you are interested in me, I am looking forward to <span>talking with you.</span></h2>
       <h2 class="message">Thank you!</h2>
-      <a class="social_icon_bg" [href]="aboutMe.data.attributes.LinkedInLink" target="_blank"><i class="fa-brands fa-linkedin-in linkedin"></i></a>
-      <a class="social_icon_bg" [href]="aboutMe.data.attributes.GithubLink" target="_blank"><i class="fa-brands fa-github github"></i></a>
-
     </div>
     <div class="right_form">
-      <img class="form_bg" src="../../assets/home_hero.png" alt="Machika Yamauchi portfolio web developer hero image">
-      <div class="container">
+      <!-- <img class="form_bg" src="../../assets/home_hero.png" alt="Machika Yamauchi portfolio web developer hero image"> -->
+      <div class="container-fluid">
         <form #form="ngForm" (ngSubmit)="submit(form)">
           <div class="inputList">
             <label for="name" class="form-label">Your Name</label>
@@ -29,7 +27,7 @@
               id="name"
             />
             <div
-            class="alert alert-danger"
+            class="alert"
             role="alert"
             *ngIf="name_.touched && name_.invalid"
             >
@@ -52,7 +50,7 @@
               We'll never share your email with anyone else.
             </div>
             <div
-              class="alert alert-danger"
+              class="alert"
               role="alert"
               *ngIf="email_.touched && email_.invalid"
             >
@@ -70,11 +68,11 @@
               id="message"
               rows="5"
               required
-              minlength="3"
+              minlength="2"
               >
             </textarea>
             <div
-              class="alert alert-danger"
+              class="alert"
               role="alert"
               *ngIf="message_.touched && message_.invalid"
               >

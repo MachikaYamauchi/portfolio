@@ -11,33 +11,46 @@
 
 <portfolio-header></portfolio-header>
 <section class="projects_page" *ngIf="showElement">
-  <h1 class="pageTitle" *ngIf="showElement"><img src="../../assets/arrow_orange_right.svg" alt="Machika Yamauchi portfolio web developer arrow icon" *ngIf="showElement">Projects
+  <h1 class="pageTitle" *ngIf="showElement">
+    <img src="../../assets/arrow_orange_right.svg" alt="Machika Yamauchi portfolio web developer arrow icon" *ngIf="showElement">
+    Projects
   </h1>
   <div class="projects_card">
     <div class="container" *ngFor="let project of projects.data">
       <h2 class="projects_category">
         {{project.attributes.CategoryName}}
-        <img src="../../assets/arrow_navy_bottom.svg" alt="Machika Yamauchi portfolio web developer arrow icon" *ngIf="showElement">
       </h2>
       <section class="category_container">
         <div class="row">
           <div class="col-lg-4" *ngFor="let item of project.attributes.projects.data">
             <div class="project_card_container">
-              <a [routerLink]="[ '/projects', item.id, item.attributes.Slug]">
-                <div class="projectImg_wrapper">
-                  <img [src]="item.attributes.ProjectsHero.data.attributes.url" alt="Machika Yamauchi portfolio web developer projects image">
+              <div class="projectImg_wrapper">
+                <img [src]="item.attributes.ProjectsImage.data.attributes.url" alt="Machika Yamauchi portfolio web developer projects image">
+              </div>
+              <div class="project_desc">
+                <h3 class="project_title">{{item.attributes.Title}}</h3>
+                <p class="project_summary">{{item.attributes.Summary}}</p>
+                <ul class="technology_used">
+                  <li *ngFor="let tech of item.attributes.technology_useds.data">{{tech.attributes.TechnologyName}}</li>
+                </ul>
+                <div class="link_wrapper" *ngIf="item.attributes.projects_category.data.attributes.CategoryName === 'Web Development'">
+                  <a class="viewSite" [href]="item.attributes.WebsiteLink" target="_blank">
+                    View Site
+                  </a>
+                  <a class="github_casestudy" [href]="item.attributes.Github_CaseStudy_Link" target="_blank">
+                    Github
+                    <i class="fa-brands fa-github"></i>
+                  </a>
                 </div>
-                <div class="project_desc">
-                  <h3 class="project_title">{{item.attributes.Title}}</h3>
-                  <p class="project_summary">{{item.attributes.Summary}}</p>
-                  <ul class="technology_used">
-                    <li *ngFor="let tech of item.attributes.technology_useds.data">{{tech.attributes.TechnologyName}}</li>
-                  </ul>
-                  <!-- <div class="arrowIcon_wrapper">
-                    <img src="../../assets/arrow_orange_right.svg" alt="Machika Yamauchi portfolio web developer arrow icon">
-                  </div> -->
+                <div class="link_wrapper" *ngIf="item.attributes.projects_category.data.attributes.CategoryName === 'Case Studies'">
+                  <a class="viewSite" [href]="item.attributes.WebsiteLink" target="_blank">
+                    Prototype
+                  </a>
+                  <a class="github_casestudy" [href]="item.attributes.Github_CaseStudy_Link" target="_blank">
+                    Case Study
+                  </a>
                 </div>
-              </a>
+              </div>
             </div>
           </div>
         </div>

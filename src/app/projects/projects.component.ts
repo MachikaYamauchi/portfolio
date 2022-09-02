@@ -13,7 +13,6 @@ export class ProjectsComponent implements OnInit {
   projects:ProjectsByCategory;
   loading = true;
   showElement = false;
-
   server = environment.server;
 
   constructor(private cs:CommonService) { }
@@ -27,5 +26,4 @@ export class ProjectsComponent implements OnInit {
       console.log(this.projects);
     })
   }
-
 }

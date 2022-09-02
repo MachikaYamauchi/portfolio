@@ -19,11 +19,11 @@
           View Site
           <i class="fa-solid fa-laptop"></i>
         </a>
-        <a class="viewSite" [routerLink]="project.attributes.RouterLink" target="_blank" *ngIf="isWebDevRouterLink">
+        <!-- <a class="viewSite" [routerLink]="project.attributes.RouterLink" target="_blank" *ngIf="isWebDevRouterLink">
           View Site
           <i class="fa-solid fa-laptop"></i>
-        </a>
-        <a class="github_casestudy" [href]="project.attributes.GithubLink" [hidden]="isGithub" target="_blank">
+        </a> -->
+        <a class="github_casestudy" [href]="project.attributes.Github_CaseStudy_Link" [hidden]="isGithub" target="_blank">
           Github
           <i class="fa-brands fa-github"></i>
         </a>
@@ -33,15 +33,14 @@
           Prototype
           <i class="fa-solid fa-laptop"></i>
         </a>
-        <a class="github_casestudy" [routerLink]="project.attributes.RouterLink" target="_blank">
+        <!-- <a class="github_casestudy" [routerLink]="project.attributes.RouterLink" target="_blank">
           Case Study
           <i class="fa-solid fa-pencil"></i>
-        </a>
+        </a> -->
       </div>
     </div>
-    <div class="projectImage" style="background-image: url({{project.attributes.ProjectsHero.data.attributes.url}});"></div>
+    <div class="projectImage" style="background-image: url({{project.attributes.ProjectsImage.data.attributes.url}});"></div>
     <div class="heroImage_wrapper">
-      <!-- <img [src]="project.attributes.ProjectsHero.data.attributes.url" alt="Machika Yamauchi portfolio web developer project image"> -->
     </div>
   </div>
   <div class="overview">
@@ -62,9 +61,9 @@
               <div class="col-sm-5">
                 <h3 class="title">Role</h3>
               </div>
-              <div class="col-sm-7">
+              <!-- <div class="col-sm-7">
                 <p>{{project.attributes.Role}}</p>
-              </div>
+              </div> -->
             </div>
             <div class="row item">
               <div class="col-sm-5">
@@ -80,9 +79,9 @@
         </div>
         <div class="col-lg-6">
           <div class="right_panel">
-            <div class="overview_text">
+            <!-- <div class="overview_text">
               <p [innerHTML]="project.attributes.Description"></p>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

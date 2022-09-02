@@ -5,32 +5,26 @@
         <a class="navbar-brand" routerLink="/"><img class="logo" src="../../assets/logo.png" alt="Machika Yamauchi Portfolio Logo"></a>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav main_nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" routerLink="/projects">
-                  <img src="../../assets/arrow_orange_45deg.svg" alt="">
-                  Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/about"><img src="../../assets/arrow_orange_45deg.svg" alt="">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/contact"><img src="../../assets/arrow_orange_45deg.svg" alt="">Contact</a>
-              </li>
-              <!-- <li class="nav-item border">
-                <span></span>
-              </li> -->
-              <li class="nav-item social">
-                <a [href]="aboutMe.data.attributes.LinkedInLink" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a [href]="aboutMe.data.attributes.GithubLink" target="_blank"><i class="fa-brands fa-github"></i></a>
-              </li>
-              <!-- <li class="nav-item">
-                <a [href]="aboutMe.data.attributes.GithubLink"><i class="fa-brands fa-github"></i></a>
-              </li> -->
-          </ul>
-        </div>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav main_nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/projects">
+              <img src="../../assets/arrow_orange_45deg.svg" alt="">
+              Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about"><img src="../../assets/arrow_orange_45deg.svg" alt="">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact"><img src="../../assets/arrow_orange_45deg.svg" alt="">Contact</a>
+          </li>
+          <li class="nav-item social">
+            <a [href]="aboutMe.data.attributes.LinkedInLink" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a [href]="aboutMe.data.attributes.GithubLink" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 </div>

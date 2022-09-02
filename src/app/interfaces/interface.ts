@@ -2,23 +2,14 @@ export interface AboutMe {
   data: {
     attributes: {
       Name:string;
-      Email:string;
       BioSubtitle:string;
       BioDescription:string;
       LinkedInLink:string;
       GithubLink:string;
       JobTitle:string;
-      Quote:string;
       WhatILike1:string;
       WhatILike2:string;
       WhatILike3:string;
-      Logo: {
-        data:{
-          attributes: {
-            url:string;
-          }
-        }
-      },
       HeadShot: {
         data: {
           attributes: {
@@ -26,84 +17,7 @@ export interface AboutMe {
           }
         }
       },
-      HomeHeroImage: {
-        data: {
-          attributes: {
-            url:string;
-          }
-        }
-      },
       BackShot: {
-        data: {
-          attributes: {
-            url:string;
-          }
-        }
-      },
-      Resume: {
-        data: {
-          attributes: {
-            url:string;
-          }
-        }
-      },
-      Arrow_White_Right: {
-        data: {
-          attributes: {
-            url:string;
-          }
-        }
-      },
-      Arrow_Orange_Right: {
-        data: {
-          attributes: {
-            url:string;
-          }
-        }
-      },
-      Arrow_Orange_45deg: {
-        data: {
-          attributes: {
-            url:string;
-          }
-        }
-      },
-      Arrow_Orange_Left: {
-        data: {
-          attributes: {
-            url:string;
-          }
-        }
-      },
-      Arrow_Navy_Bottom: {
-        data: {
-          attributes: {
-            url:string;
-          }
-        }
-      },
-      Arrow_Navy_Right: {
-        data: {
-          attributes: {
-            url:string;
-          }
-        }
-      },
-      HomeProject1: {
-        data: {
-          attributes: {
-            url:string;
-          }
-        }
-      },
-      HomeProject2: {
-        data: {
-          attributes: {
-            url:string;
-          }
-        }
-      },
-      HomeProject3: {
         data: {
           attributes: {
             url:string;
@@ -159,15 +73,11 @@ export interface Project {
   attributes: {
     Title:string;
     Summary:string;
-    Description:string;
     Startdate:string;
     EndDate:string;
     WebsiteLink:string;
-    Slug:string;
-    Role:string;
-    GithubLink:string;
-    RouterLink:string;
-    ProjectsHero: {
+    Github_CaseStudy_Link:string;
+    ProjectsImage: {
       data: {
         attributes: {
           url:string;

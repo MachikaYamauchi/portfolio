@@ -31,7 +31,7 @@ export class ProjectDetailsComponent implements OnInit {
       this.showElement = true;
       this.project = res.data;
       console.log(this.technologyUsed);
-      if(res.data.attributes.GithubLink == null) {
+      if(res.data.attributes.Github_CaseStudy_Link == null) {
         this.isGithub = true;
       }
       if(res.data.attributes.WebsiteLink === "") {

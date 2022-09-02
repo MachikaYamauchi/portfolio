@@ -29,7 +29,7 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="projectImage_wrapper">
-            <img *ngIf="displayImage" [src]="project1.attributes.ProjectsHero.data.attributes.url" alt="Bench Bakery Machika Yamauchi web developer portfolio projects image">
+            <img *ngIf="displayImage" [src]="project1.attributes.ProjectsImage.data.attributes.url" alt="Bench Bakery Machika Yamauchi web developer portfolio projects image">
             <div class="mask" *ngIf="displayImage" (click)="display()">
               <div class="caption">Click to start Gif demo</div>
             </div>
@@ -44,7 +44,7 @@
             </ul>
             <div class="link_wrapper">
               <a class="viewSite" [href]="project1.attributes.WebsiteLink" target="_blank">View Site</a>
-              <a class="github" [href]="project1.attributes.GithubLink" target="_blank">Github<i class="fa-brands fa-github"></i></a>
+              <a class="github" [href]="project1.attributes.Github_CaseStudy_Link" target="_blank">Github<i class="fa-brands fa-github"></i></a>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="projectImage_wrapper">
-            <img *ngIf="displayImage" [src]="project2.attributes.ProjectsHero.data.attributes.url" alt="Machika Yamauchi web developer portfolio projects image">
+            <img *ngIf="displayImage" [src]="project2.attributes.ProjectsImage.data.attributes.url" alt="Machika Yamauchi web developer portfolio projects image">
             <div class="mask" *ngIf="displayImage" (click)="display()">
               <div class="caption">Click to start Gif demo</div>
             </div>
@@ -71,7 +71,7 @@
             </ul>
             <div class="link_wrapper">
               <a class="viewSite" [href]="project2.attributes.WebsiteLink" target="_blank">View Site</a>
-              <a class="github" [href]="project2.attributes.GithubLink" target="_blank">Github<i class="fa-brands fa-github"></i></a>
+              <a class="github" [href]="project2.attributes.Github_CaseStudy_Link" target="_blank">Github<i class="fa-brands fa-github"></i></a>
             </div>
           </div>
         </div>
@@ -88,7 +88,7 @@
 <section class="skills">
   <h2>Skills</h2>
   <p class="skill_desc">
-    I have learned web development and web design skills to become a front-end developer.<br>I list all the skills that I have learned until now.
+    I have learned web development and web design skills to become a front-end developer.
   </p>
   <div class="skill_container">
     <div class="skill_card" *ngFor="let skill of skills">

@@ -133,22 +133,23 @@ $breakpoints: (
 
 .about_page {
   padding-top: 150px;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   .container {
     padding: 0;
   }
-  .pageTitle {
+  h1.pageTitle {
     font-weight: 800;
     letter-spacing: 0.5rem;
     color: #032059;
+    text-align: center;
     @include media(xs) {
       font-size: 3.2rem;
-      margin-bottom: 13%;
+      margin-bottom: 16%;
     }
     @include media(sm) {
-      font-size: 4rem;
-      margin-bottom: 7%;
+      font-size: 4.8rem;
+      margin-bottom: 10%;
     }
     @include media(md) {
       font-size: 5.6rem;
@@ -159,18 +160,21 @@ $breakpoints: (
       margin-bottom: 7%;
     }
     img {
-      width: 9%;
-      margin-right: 16px;
-      @include media(sm) {
+      @include media(xs) {
         width: 8%;
+        margin-right: 5px;
+      }
+      @include media(sm) {
+        width: 6%;
+        margin-right: 8px;
       }
       @include media(md) {
-        width: 7%;
-        margin-right: 20px;
+        width: 6%;
+        margin-right: 10px;
       }
       @include media(lg) {
-        width: 4%;
-        margin-right: 20px;
+        width: 3%;
+        margin-right: 14px;
       }
     }
   }
@@ -376,19 +380,19 @@ $breakpoints: (
       letter-spacing: 0.2rem;
       font-weight: 700;
       @include media(xs) {
-        font-size: 3.2rem;
+        font-size: 2.4rem;
         margin-bottom: 5%;
       }
       @include media(sm) {
-        font-size: 4rem;
+        font-size: 3.2rem;
         margin-bottom: 2%;
       }
       @include media(md) {
-        font-size: 4.8rem;
+        font-size: 3.2rem;
         margin-bottom: 3%;
       }
       @include media(lg) {
-        font-size: 5.6rem;
+        font-size: 4.8rem;
         margin-bottom: 2%;
       }
       img {
@@ -496,19 +500,19 @@ $breakpoints: (
       letter-spacing: 0.2rem;
       font-weight: 700;
       @include media(xs) {
-        font-size: 3.2rem;
+        font-size: 2.4rem;
         margin-bottom: 10%;
       }
       @include media(sm) {
-        font-size: 4rem;
+        font-size: 3.2rem;
         margin-bottom: 7%;
       }
       @include media(md) {
-        font-size: 4.6rem;
+        font-size: 3.2rem;
         margin-bottom: 8%;
       }
       @include media(lg) {
-        font-size: 5.6rem;
+        font-size: 4.8rem;
         margin-bottom: 5%;
       }
       img {
@@ -538,7 +542,6 @@ $breakpoints: (
           margin-bottom: 5%;
         }
         @include media(sm) {
-          width: 80%;
           margin: 0 auto;
           margin-bottom: 8%;
         }
@@ -571,10 +574,13 @@ $breakpoints: (
               padding-left: 32px;
               margin-bottom: 16px;
             }
+            @include media(md) {
+              padding-left: 24px;
+            }
             @include media(lg) {
               margin-top: 3%;
               padding-left: 40px;
-              font-size: 2.4rem;
+              // font-size: 2.4rem;
             }
             position: relative;
             &:before {
@@ -590,10 +596,15 @@ $breakpoints: (
                 left: 0;
                 width: 3%;
               }
+              @include media(md) {
+                top: -2%;
+                left: 0;
+                width: 4%;
+              }
               @include media(lg) {
                 top: 3%;
                 left: 0;
-                width: 3%;
+                width: 2.4%;
               }
             }
           }
