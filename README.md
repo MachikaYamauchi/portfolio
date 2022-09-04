@@ -1,27 +1,16 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+Here is my [Portfolio](https://machikayamauchi.me).
 
-## Development server
+![GitHub MyPortfolio_infinite_pressed](https://user-images.githubusercontent.com/95946408/188283831-7b298de9-62f4-4045-a94d-6368bbe0f969.gif)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Skill & Tools
+- Angular
+- REST APIs
+- Strapi(Headless CMS)
+- DigitalOcean
+- Figma
+- Illustrator
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Background
+My portfolio uses Angular as the front-end and Strapi(Headless CMS) as the back-end. The Strapi exposes REST APIs and Angular consumes them in the front-end through microservices. I created branding with a logo, design, and color scheme from the scratch.
