@@ -49,10 +49,12 @@ export class HomeComponent implements OnInit {
       this.aboutMe = aboutMe;
     })
     this.cs.getProjects().subscribe(projects => {
+      console.log(projects);
       this.loading = false;
       this.showElement = true;
-      this.project1 = projects.data[0];
-      this.project2 = projects.data[1];
+      this.project1 = projects.data[7];
+
+      this.project2 = projects.data[0];
     })
     this.cs.getSkills().subscribe( skills => {
       this.skills=skills.data;
